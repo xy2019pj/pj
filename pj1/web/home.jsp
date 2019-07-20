@@ -19,10 +19,10 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 
     <!-- Bootstrap -->
-    <link href="./js/bootstrap.min.js" rel="stylesheet">
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/js/bootstrap.min.js" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="css/mycover.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/mycover.css" rel="stylesheet">
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
