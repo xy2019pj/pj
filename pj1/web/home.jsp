@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="entity.Item" %><%--
   Created by IntelliJ IDEA.
   User: hexi4
   Date: 2019/7/20
@@ -6,6 +7,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%
+    ArrayList<Item>items =  (ArrayList<Item>)request.getAttribute("items");
+%>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -22,7 +29,7 @@
     <link href="./js/bootstrap.min.js" rel="stylesheet">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="css/mycover.css" rel="stylesheet">
+    <link href="./css/mycover.css" rel="stylesheet">
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -90,9 +97,9 @@
             </li>
         </ul>
         <!--搜索-->
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search" action="show">
             <div class="form-group">
-                <input class="form-control" type="text" />
+                <input class="form-control" type="text" name="category"/>
             </div> <button class="btn btn-default" type="submit">搜索</button>
         </form>
         <!--右侧用户操作-->
@@ -136,13 +143,13 @@
             <div class="carousel-inner">
                 <!--图片1-->
                 <div class="item active ">
-                    <a href="#"><img alt="图片无法显示" src="images/1.jpg" align="center" /></a>
+                    <a href="#"><img alt="图片无法显示" src="<%=items.get(0).getPicture() %>" align="center" /></a>
                     <div class="carousel-caption">
                         <h4>
-                            第一件热门展品名称
+                            <%=items.get(0).getName() %>
                         </h4>
                         <p>
-                            第一件热门展品的描述详情，第一件热门展品的描述详情，第一件热门展品的描述详情，第一件热门展品的描述详情，第一件热门展品的描述详情，第一件热门展品的描述详情
+                            <%=items.get(0).getIntro() %>
                         </p>
                     </div>
                 </div>
@@ -282,3 +289,4 @@
 
 </body>
 </html>
+
