@@ -24,7 +24,7 @@ public class Login extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         char auth=req.getParameter("auth").charAt(0);
-        User user=new User(username,auth,password,null);
+        User user=new User(username,auth,password,null,null);
         //登录
         status = user.login();
         if (status == 0) {//登陆成功

@@ -25,7 +25,7 @@ public class Register extends HttpServlet {
         String password = req.getParameter("password");
         String email = req.getParameter("email");
         char auth=req.getParameter("auth").charAt(0);
-        User user = new User(username,auth, password, email);
+        User user = new User(username,auth, password, email,null);
         /*注册*/
         flag = user.signup();
         if (flag == 0) {//注册成功
