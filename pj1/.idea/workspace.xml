@@ -91,8 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/servlet/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="218">
+              <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -224,24 +224,24 @@
             <path>
               <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
               <item name="pj1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
               <item name="pj1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pj1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
               <item name="pj1" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pj1" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
@@ -257,6 +257,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="module" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -278,19 +279,19 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\web" />
-      <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\web\js" />
-      <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\web\images" />
-      <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\web\WEB-INF" />
-      <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\src" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\web\css" />
       <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\web\js" />
       <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\web" />
       <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1" />
       <recent name="D:\codeDev\java\workplace\pj1\web\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\web" />
+      <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\web\js" />
+      <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\web\images" />
+      <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\web\WEB-INF" />
+      <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -421,11 +422,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563630521481</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="我也不知道我改了什么">
+      <created>1563682074297</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1563682074297</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47099000" />
+    <option name="totallyTimeSpent" value="47376000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -439,7 +447,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.108208954" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.108208954" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -457,7 +465,7 @@
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32956153" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3286334" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
@@ -480,7 +488,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加了很多servlet" />
     <MESSAGE value="求您能打开" />
-    <option name="LAST_COMMIT_MESSAGE" value="求您能打开" />
+    <MESSAGE value="我也不知道我改了什么" />
+    <option name="LAST_COMMIT_MESSAGE" value="我也不知道我改了什么" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -853,8 +862,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="218">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
