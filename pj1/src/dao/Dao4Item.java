@@ -7,6 +7,7 @@ public class Dao4Item {
     private static final int HOTNUM=3;
     private static DAO dao=new DAO();
 
+
     public static ArrayList<Item> getHotItems(){
         String sql="select * from item_info order by clickNum DESC;";
         ArrayList<Item> allItems=null;
@@ -46,5 +47,38 @@ public class Dao4Item {
     public static void increaseClickNum(String itemName){
         String sql="update item_info set clickNum=clickNum+1 where name=?";
         dao.update(sql,itemName);
+    }
+
+    public static int addItem(Item item){
+        if(getItemByName(item.getName())!=null)
+            return 1;
+        String sql="insert into item_info(name,category,clickNum,picture,pushTime,intro)" +
+                "values(?,?,?,?,?,?)";
+        dao.update(sql,
+                item.getName(),
+                item.getCategory(),
+                item.getClickNum(),
+                item.getPicture(),
+                item.getPushTime(),
+                item.getIntro()
+        );
+        return 0;
+    }
+    public static void deleteItem(String itemName){
+        String sql="delete from item_info where name=?";
+        dao.update(sql,itemName);
+    }
+
+    public static void changeItem(String oldname,Item item){
+        String sql="update item_info " +
+                "set name=?,category=?,picture=?,intro=?" +
+                " where username=?";
+        dao.update(sql,
+                item.getName(),
+                item.getCategory(),
+                item.getPicture(),
+                item.getIntro(),
+                oldname
+        );
     }
 }
