@@ -1,0 +1,70 @@
+.addForm{
+    font-size: 20px;
+    color: #165f84;
+    text-decoration: none;
+}
+
+.addForm:hover{
+    font-size: 20px;
+    text-decoration: none;
+    color:  #ec971f;
+    /*color: #ec971f;*/
+    /*outline: 5px dashed #fff560;*/
+    /*outline-offset: -5px;*/
+}
+.addText{
+    color: #57350e;
+}
+
+.left{
+    color: #2aabd2;
+}
+
+.right{
+    color: #2aabd2;
+    background-color: whitesmoke;
+    min-height: 1000px;
+}
+
+.rightL{
+    color: #2aabd2;
+}
+
+.rightR{
+    color: #2aabd2;
+    background-color: #cccccc;
+    min-height: 1000px;
+}
+
+.active{
+    color: #ffffff;
+    background-color: #165f84;
+}
+.active:hover{
+    color: #0c3347;
+    background-color: #9d9d9d;
+}
+
+.notActive{
+    color: #165f84;
+    background-color: whitesmoke;
+}
+
+.notActive:hover{
+    color: #0c3347;
+    background-color: #9d9d9d;
+}
+.line{
+    size: 14px;
+    color: whitesmoke;
+    background-color: #165f84;
+}
+.bottomThings{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.imgcontrol img{
+    width:320px;
+    height:320px;
+}

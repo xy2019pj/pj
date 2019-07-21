@@ -1,0 +1,24 @@
+.topSpace{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.textForm{
+    text-align: center;
+    margin-top: 30px;
+    background-color: #ebebeb;
+    color: #000;
+
+}
+
+.collectForm{
+    font-size: 20px;
+    color: #ec971f;
+    text-decoration: none;
+}
+
+.collectForm:hover{
+    font-size: 20px;
+    color: #fff560;
+    text-decoration: none;
+}
