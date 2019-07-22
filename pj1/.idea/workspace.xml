@@ -6,178 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b433dbb-1c0e-4cbb-9123-e779ed05129a" name="Default Changelist" comment="home.jsp完成动态生成">
-      <change afterPath="$PROJECT_DIR$/../pj2/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/.idea/libraries/lib1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/pj2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/dao/DAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/dao/DAOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/dao/Dao4Fav.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/dao/Dao4Friend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/dao/Dao4Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/dao/Dao4User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/dao/JDBCTools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/entity/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/filter/EncodeFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/Favorite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/Friend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/FriendRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/Home.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/ItemAdd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/ItemChange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/ItemDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/ItemManage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/Profile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/Register.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/Show.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/UserManage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/WEB-INF/lib/commons-beanutils-1.9.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/WEB-INF/lib/mysql-connector-java-8.0.16.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/adduser.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/adminuserhome.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/css/all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/css/cover.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/css/favorite.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/css/friends.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/css/itemdetail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/css/mycover.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/css/profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/css/signup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/favorite.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/friendrequest.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/friends.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/images/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/images/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/images/museum.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/itemadd.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/itemchange.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/itemdetail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/itemmanage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/js/html5shiv.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/js/respond.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/js/show.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/normaluserhome.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/profile.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/profilechange.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/show.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/signup.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/styles/jquery-3.4.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj2/web/usermanage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/.idea/artifacts/pj3_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/.idea/libraries/lib1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/pj3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/dao/DAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/dao/DAOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/dao/Dao4Fav.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/dao/Dao4Friend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/dao/Dao4Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/dao/Dao4User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/dao/JDBCTools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/entity/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/filter/EncodeFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/Favorite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/Friend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/FriendRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/Home.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/ItemAdd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/ItemChange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/ItemDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/ItemManage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/Profile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/Register.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/Show.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/UserManage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/WEB-INF/lib/commons-beanutils-1.9.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/WEB-INF/lib/mysql-connector-java-8.0.16.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/adduser.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/adminuserhome.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/css/all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/css/cover.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/css/favorite.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/css/friends.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/css/itemdetail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/css/mycover.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/css/profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/css/signup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/favorite.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/friendrequest.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/friends.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/images/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/images/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/images/museum.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/itemadd.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/itemchange.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/itemdetail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/itemmanage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/js/all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/js/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/js/html5shiv.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/js/respond.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/js/show.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/normaluserhome.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/profile.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/profilechange.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/register.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/show.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/styles/jquery-3.4.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pj3/web/usermanage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/adduser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/adduser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/adduser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/adduser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/center.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/center.js" afterDir="false" />
+    <list default="true" id="4b433dbb-1c0e-4cbb-9123-e779ed05129a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web/js/ajaxTry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -210,14 +42,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1178">
-              <caret line="73" column="37" lean-forward="true" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+            <state relative-caret-position="266">
+              <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
               <folding>
                 <element signature="n#ul#0;n#li#2;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/ajaxTry.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/itemadd.jsp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entity/Item.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="8" selection-start-column="8" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1110#1111#0" expanded="true" />
+                <element signature="e#1148#1149#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/adduser.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -227,9 +105,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -240,7 +118,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/new.jsp" />
         <option value="$PROJECT_DIR$/web/css/cover.css" />
         <option value="$PROJECT_DIR$/web/home0.jsp" />
         <option value="$PROJECT_DIR$/web/try.jsp" />
@@ -287,9 +164,11 @@
         <option value="$PROJECT_DIR$/src/servlet/Home.java" />
         <option value="$PROJECT_DIR$/src/servlet/FriendRequest.java" />
         <option value="$PROJECT_DIR$/web/js/home.js" />
-        <option value="$PROJECT_DIR$/web/home.jsp" />
         <option value="$PROJECT_DIR$/web/js/center.js" />
         <option value="$PROJECT_DIR$/web/adduser.jsp" />
+        <option value="$PROJECT_DIR$/web/home.jsp" />
+        <option value="$PROJECT_DIR$/web/js/ajaxTry.css" />
+        <option value="$PROJECT_DIR$/web/js/ajaxTry.js" />
       </list>
     </option>
   </component>
@@ -323,18 +202,6 @@
               <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
               <item name="pj1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pj1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pj1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
@@ -557,11 +424,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563778465548</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="hex15:10">
+      <created>1563779471266</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1563779471266</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69558000" />
+    <option name="totallyTimeSpent" value="72878000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -574,6 +448,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19235925" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -621,26 +496,14 @@
     <MESSAGE value="css文件和js文件终于可以找到了！" />
     <MESSAGE value="home.jsp完成动态生成" />
     <MESSAGE value="home.jsp完成动态生成bug1修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="home.jsp完成动态生成bug1修改" />
+    <MESSAGE value="hex15:10" />
+    <option name="LAST_COMMIT_MESSAGE" value="hex15:10" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/css/mycover.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/html5shiv.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/respond.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -703,13 +566,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp" />
-    <entry file="file://$PROJECT_DIR$/web/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/Dao4User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -941,18 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1110#1111#0" expanded="true" />
-            <element signature="e#1148#1149#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -1004,16 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/adduser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="227" column="46" selection-start-line="227" selection-start-column="46" selection-end-line="227" selection-end-column="46" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/ItemDetail.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-75">
@@ -1034,15 +868,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/adduser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1110#1111#0" expanded="true" />
+            <element signature="e#1148#1149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1178">
-          <caret line="73" column="37" lean-forward="true" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+        <state relative-caret-position="266">
+          <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
           <folding>
             <element signature="n#ul#0;n#li#2;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/ajaxTry.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/ajaxTry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/itemadd.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

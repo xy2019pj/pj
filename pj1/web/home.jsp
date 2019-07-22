@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="entity.Item" %><%--
   Created by IntelliJ IDEA.
   User: hexi4
   Date: 2019/7/20
@@ -46,13 +47,14 @@
             userAuth=null;
         }
     </script>
-
     <!-- 热门展品 -->
     <script>
         var hotItems=new Array();
         for(var i =0;i<3;i++){
             hotItems[i]={name:"${requestScope.hotItems[i].name}", src:"${requestScope.hotItems[i].picture}", intro:"${requestScope.hotItems[i].intro}"};
         }
+
+        var s="${requestScope.hotItems[i].name}";
         //测试占位用，实际删除
         hotItems[0]={name:"热门展品1", src:"images/1.jpg", intro:"展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
         hotItems[1]={name:"热门展品2", src:"images/2.jpg", intro:"展品介绍2展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
@@ -61,6 +63,8 @@
 
     <!-- 最新展品 -->
     <script>
+
+
         var recentItems=new Array();
         for(var i =0;i<6;i++){
             recentItems[i]={name:"${requestScope.recentItems[i].name}", src:"${requestScope.recentItems[i].picture}", intro:"${requestScope.recentItems[i].intro}"};
