@@ -4,6 +4,7 @@ import dao.Dao4User;
 import java.io.IOException;
 import java.sql.Date;
 import java.sql.Time;
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
 public class User {
@@ -12,10 +13,10 @@ public class User {
     private String password=null;
     private String email=null;
     private String intro=null;
-    private Date recent_login_time=null;
+    private Timestamp recent_login_time=null;
 
     public User(){}
-    public User(String name,char auth, String password,String email,Date recent_login_time) throws IOException {
+    public User(String name,char auth, String password,String email,Timestamp recent_login_time) throws IOException {
         this.setUsername( name);
         this.setAuth(auth);
         this.setPassword(password);
@@ -31,7 +32,7 @@ public class User {
         else if(!password.equals(this.getPassword()))
             return 2;//密码不正确
         else {
-            java.sql.Date currentTime = new java.sql.Date(new java.util.Date().getTime());
+            Timestamp currentTime = new Timestamp(new java.util.Date().getTime());
             setRecent_login_time(currentTime);
             Dao4User.updateRecentTime(this);
             return 0;//登陆成功
@@ -39,6 +40,10 @@ public class User {
     }
 
     public int signup(){
+        return Dao4User.addUser(this);
+    }
+
+    public int add(){
         return Dao4User.addUser(this);
     }
     public String getUsername() {
@@ -80,11 +85,11 @@ public class User {
         this.intro = intro;
     }
 
-    public Date getRecent_login_time() {
+    public Timestamp getRecent_login_time() {
         return recent_login_time;
     }
 
-    public void setRecent_login_time(Date recent_login_time) {
+    public void setRecent_login_time(Timestamp recent_login_time) {
         this.recent_login_time = recent_login_time;
     }
 }

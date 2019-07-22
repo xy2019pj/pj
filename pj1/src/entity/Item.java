@@ -1,19 +1,19 @@
 package entity;
 
 import dao.Dao4Item;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 public class Item {
     private String name=null;
     private String category=null;
     private String picture=null;
-    private Date pushTime=null;
+    private Timestamp pushTime=null;
     private int clickNum=0;
     private String intro=null;
 
     public Item() { }
 
-    public Item(String name, String category, String picture, Date pushTime,int clickNum) {
+    public Item(String name, String category, String picture, Timestamp pushTime,int clickNum) {
         this.setName(name);
         this.setCategory(category);
         this.setPicture(picture);
@@ -22,7 +22,7 @@ public class Item {
     }
 
     public int add(){
-        java.sql.Date currentTime = new java.sql.Date(new java.util.Date().getTime());
+        Timestamp currentTime = new Timestamp(new java.util.Date().getTime());
         setPushTime(currentTime);
         setClickNum(0);
         return Dao4Item.addItem(this);
@@ -52,11 +52,11 @@ public class Item {
         this.category = category;
     }
 
-    public Date getPushTime() {
+    public Timestamp getPushTime() {
         return pushTime;
     }
 
-    public void setPushTime(Date pushTime) {
+    public void setPushTime(Timestamp pushTime) {
         this.pushTime = pushTime;
     }
 

@@ -9,7 +9,7 @@ public class Dao4Fav {
 
     public static ArrayList<Item> getFavByName(String username){
         String sql="select itemname from fav_pair where username=?";
-        ArrayList<String> favItemNames=(ArrayList<String>) dao.getForList(String.class,sql,username);
+        ArrayList<String> favItemNames=(ArrayList<String>) dao.getForValue(sql,username);
         ArrayList<Item> favItems=new ArrayList<>();
         for(int i=0;i<favItemNames.size();i++){
             Item item=Dao4Item.getItemByName(favItemNames.get(i));

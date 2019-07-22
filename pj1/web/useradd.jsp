@@ -108,7 +108,7 @@
         <!--右侧用户操作-->
         <ul class="nav navbar-nav navbar-right">
             <!--管理栏-->
-            <li class="dropdown active">
+            <li class="dropdown">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown">管理中心<strong class="caret"></strong></a>
                 <ul class="dropdown-menu">
                     <li>

@@ -7,7 +7,7 @@ public class Dao4Friend {
 
     public static ArrayList<String> getFriendsByName(String username){
         String sql="select friendname from friend_pair where username=?,available=1;";
-        ArrayList<String> friends=(ArrayList<String>) dao.getForList(String.class,sql,username);
+        ArrayList<String> friends=(ArrayList<String>) dao.getForValue(sql,username);
         return friends;
     }
     public static void addFriendByName(String username,String friName){
@@ -32,7 +32,7 @@ public class Dao4Friend {
 
     public static ArrayList<String> getRequestByName(String username){
         String sql="select username from friend_pair where friendname=?,available=0;";
-        ArrayList<String> requests=(ArrayList<String>) dao.getForList(String.class,sql,username);
+        ArrayList<String> requests=(ArrayList<String>) dao.getForValue(sql,username);
         return requests;
     }
 

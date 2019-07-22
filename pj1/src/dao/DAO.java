@@ -190,17 +190,16 @@ public class DAO {
 
 	/**
 	 * 返回某条记录的某一个字段的值，或一个统计的值（一共有多少条记录等）
-	 * @param <E>
 	 * @param sql
 	 * @param objects
 	 * @return
 	 */
-	<E> E getForValue(String sql,Object ...objects) {
+	List<String> getForValue(String sql,Object ...objects) {
 		//1.得到结果集：结果集只有一行，且只有一列
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		ResultSet resultSet = null;
-
+		List<String> eList=new ArrayList<>();
 		try {
 			connection = JDBCTools.getConnection();
 			preparedStatement=connection.prepareStatement(sql);
@@ -211,8 +210,9 @@ public class DAO {
 
 			resultSet = preparedStatement.executeQuery();
 
-			if(resultSet.next()) {
-				return (E) resultSet.getObject(1);
+
+			while(resultSet.next()) {
+				eList.add ((String) resultSet.getString(1));
 			}
 
 		}catch (Exception e) {
@@ -222,7 +222,7 @@ public class DAO {
 		}
 		//2.取得结果集的
 
-		return null;
+		return eList;
 	}
 
 }
