@@ -13,22 +13,27 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet("/show/itemdetail")
+@WebServlet("/itemdetail")
 public class ItemDetail extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String username=((User)req.getSession().getAttribute("user")).getUsername();
+        User user=((User)req.getSession().getAttribute("user"));
         String itemName=req.getParameter("itemName");
         if(itemName!=null)
             Dao4Item.increaseClickNum(itemName);
         else itemName=(String)req.getAttribute("itemName");
         Item item= Dao4Item.getItemByName(itemName);
-        ArrayList<Item> favItems= Dao4Fav.getFavByName(username);
-        String fav="false";
-        for(int i=0;i<favItems.size();i++){
-            if(favItems.get(i).getName().equals(item.getName()))
-                fav="true";
+        String fav;
+        if(user!=null) {
+            String username=user.getUsername();
+            ArrayList<Item> favItems = Dao4Fav.getFavByName(username);
+            fav = "false";
+            for (int i = 0; i < favItems.size(); i++) {
+                if (favItems.get(i).getName().equals(item.getName()))
+                    fav = "true";
+            }
         }
+        else fav="false";
         req.setAttribute("item",item);
         req.setAttribute("fav",fav);
         req.getRequestDispatcher("itemdetail.jsp").forward(req,resp);

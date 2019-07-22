@@ -43,19 +43,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-        </button> <a class="navbar-brand" href="home">博物馆logo</a>
+        </button> <a class="navbar-brand" >博物馆logo</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li >
+            <li class="active">
                 <a href="home">首页</a>
             </li>
             <li>
-                <a href="show?category=全部">所有展品</a>
+                <a href="show?category=全部"  >所有展品</a>
             </li>
             <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
+                <a class="dropdown-toggle" href="" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
                 <!--下拉展品分类菜单-->
                 <ul class="dropdown-menu">
                     <li>
@@ -83,21 +83,10 @@
             </div> <button class="btn btn-default" type="submit">搜索</button>
         </form>
         <!--右侧用户操作-->
-        <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="profile" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="login">登录</a>
-                    </li>
-                    <li>
-                        <a href="register">注册</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav navbar-right" id="userManage">
+            <script>myFunction(user,userAuth)</script>
         </ul>
     </div>
-
 </nav>
 <!--博物馆大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >

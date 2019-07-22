@@ -25,7 +25,7 @@ function myFunction(user,userAuth)
         "                <a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">个人中心<strong class=\"caret\"></strong></a>\n" +
         "                <ul class=\"dropdown-menu\">\n" +
         "                    <li>\n" +
-        "                        <a href=\"profile.jsp\">个人首页</a>\n" +
+        "                        <a href=\"profile\">个人首页</a>\n" +
         "                    </li>\n" +
         "                    <li>\n" +
         "                        <a href=\"favorite\">收藏夹</a>\n" +
@@ -82,26 +82,11 @@ function myFunction(user,userAuth)
 
 function hotItem(items) {
     var form="";
-    form+="<div class=\"item active \" >\n" +
-        "                    <a href=\"show/itemdetail?" +items[0].name+
-        "\"><img alt=\"图片无法显示\" src=\"" +
-        items[0].src +
-        "\" align=\"center\" /></a>\n" +
-        "                    <div class=\"carousel-caption\">\n" +
-        "                        <h4>\n" +
-        items[0].name+"\n" +
-        "                        </h4>\n" +
-        "                        <p>\n" +
-        items[0].intro+
-        "                        </p>\n" +
-        "                    </div>\n" +
-        "                </div>";
-
-    for(var i=1;i<items.length;i++){
+    for(var i=0;i<3;i++){
         form+="<div class=\"item \" >\n" +
-            "                    <a href=\"show/itemdetail?" + +items[i].name+
+            "                    <a href=\"itemdetail?itemName=" +items[i].name+
             "\"><img alt=\"图片无法显示\" src=\"" +
-            items[i].src +
+            items[i].picture +
             "\" align=\"center\" /></a>\n" +
             "                    <div class=\"carousel-caption\">\n" +
             "                        <h4>\n" +
@@ -113,9 +98,7 @@ function hotItem(items) {
             "                    </div>\n" +
             "                </div>";
     }
-
     document.getElementById("hotItems").innerHTML=form;
-
 }
 
 function newItem(line,items) {
@@ -125,7 +108,7 @@ function newItem(line,items) {
         form+="<div class=\"col-md-4 column\">\n" +
             "            <div class=\"imgcontrol\">\n" +
             "                <img src=\"" +
-            items[i].src +
+            items[i].picture +
             "\" align=\"center\">\n" +
             "            </div>\n" +
             "            <h2>\n" +
@@ -135,13 +118,12 @@ function newItem(line,items) {
             items[i].intro+
             "            </p>\n" +
             "            <p>\n" +
-            "                <a class=\"btn mycolor\" href=\"show/itemdetail?" +
+            "                <a class=\"btn mycolor\" href=\"itemdetail?itemName=" +
             items[i].name +
             "\" >点击详情 »</a>\n" +
             "            </p>\n" +
             "        </div>";
     }
-
     switch (line) {
         case 1:document.getElementById("newItems1").innerHTML=form;
             break;

@@ -32,7 +32,27 @@
     <script src="./styles/jquery-3.4.1.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="./js/bootstrap.min.js"></script>
-
+<script>
+    $.ajax({
+        url: "friend",
+        type: "get",
+        success: function (res) {
+            friends =JSON.parse(res)[0];
+            friendsRequests = JSON.parse(res)[1];
+            var form="";
+            for(var i=0;i<friends.length;i++)
+                form+="<li><a href=\"profile?destUser="+friends[i].username+"\"  class=\"active\">好友1</a></li>\n";
+            document.getElementById("friends").innerHTML=form;
+            form="";
+            // for(var j=0;j<friendsRequests.length;j++)
+                // form+="<li><a href=\"profile?destUser="+friends[i].username+"\"  class=\"active\">好友1</a></li>\n";
+            // document.getElementById("friends").innerHTML=form;
+        },
+        error:function () {
+            window.alert("????");
+        }
+    });
+</script>
 </head>
 <body>
 
@@ -44,71 +64,50 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-        </button> <a class="navbar-brand" href="#">博物馆logo</a>
+        </button> <a class="navbar-brand" >博物馆logo</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li >
-                <a href="#">首页</a>
+            <li class="active">
+                <a href="home">首页</a>
             </li>
             <li>
-                <a href="show.jsp">所有展品</a>
+                <a href="show?category=全部"  >所有展品</a>
             </li>
             <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
+                <a class="dropdown-toggle" href="" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
                 <!--下拉展品分类菜单-->
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="#">工艺</a>
+                        <a href="show?category=工艺">工艺</a>
                     </li>
                     <li>
-                        <a href="#">金石</a>
+                        <a href="show?category=金石">金石</a>
                     </li>
                     <li>
-                        <a href="#">书画</a>
+                        <a href="show?category=书画">书画</a>
                     </li>
                     <li>
-                        <a href="#">陶瓷</a>
+                        <a href="show?category=陶瓷">陶瓷</a>
                     </li>
                     <li>
-                        <a href="#">其他</a>
-                    </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                        <a href="#">考虑是否拓展朝代分类方式</a>
-                    </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                        <a href="#">考虑是否拓展其他分类方式</a>
+                        <a href="show?category=其他">其他</a>
                     </li>
                 </ul>
             </li>
         </ul>
         <!--搜索-->
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search" action="show">
             <div class="form-group">
-                <input class="form-control" type="text" />
+                <input class="form-control" type="text" name="search"/>
             </div> <button class="btn btn-default" type="submit">搜索</button>
         </form>
         <!--右侧用户操作-->
-        <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#">登录</a>
-                    </li>
-                    <li>
-                        <a href="#">注册</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav navbar-right" id="userManage">
+            <script>myFunction(user,userAuth)</script>
         </ul>
     </div>
-
 </nav>
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >
@@ -152,13 +151,8 @@
             <div class="container">
                 <div class="row ">
                     <!--左侧列表-->
-                    <div class="col-sm-2 col-md-2 sidebar">
-                        <ul class="nav nav-sidebar ">
-                            <li><a href="#" class="active">好友1</a></li>
-                            <li class="notActive"><a href="#">好友2</a></li>
-                            <li class="notActive"><a href="#">好友3</a></li>
-                            <li class="notActive"><a href="#">好友4</a></li>
-                            <li class="notActive"><a href="">好友5</a></li>
+                    <div class="col-sm-2 col-md-2 sidebar" >
+                        <ul class="nav nav-sidebar " id="friends">
                         </ul>
 
                     </div>
