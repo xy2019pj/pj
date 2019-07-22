@@ -13,26 +13,22 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet("/profile")
-public class Profile extends HttpServlet {
+@WebServlet("/getfav")
+public class GetFav extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user=(User)req.getSession().getAttribute("user");
         User destUser=(User)req.getAttribute("destUser");
-        if(user==null)
-            resp.sendRedirect("login.jsp");
-        else {
-            if (destUser == null) {
-                destUser = user;
-                req.setAttribute("destUser", destUser);
-            }
-            System.out.println("????");
-            req.getRequestDispatcher("profile.jsp").forward(req, resp);
+        if(destUser==null) {
+            destUser = user;
+            req.setAttribute("destUser",destUser);
         }
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        if (user!=null) {
+            ArrayList<Item> favItems = Dao4Fav.getFavByName(destUser.getUsername());
+            String favArray = (JSONArray.fromObject(favItems)).toString();
+            resp.setCharacterEncoding("utf8");
+            resp.getWriter().write(favArray);
+        }
+        else resp.sendRedirect("login.jsp");
     }
 }

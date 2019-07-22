@@ -26,13 +26,15 @@ function showOpenItems() {
         xmlHttp = new ActiveXObject("MicroSoft.XMLHTTP"); //老版本的 Internet Explorer （IE5 和 IE6）使用 ActiveX 对象
     }
 
-    var url="profile";
+    var url="getfav";
     xmlHttp.open("get", url, true);
     xmlHttp.onreadystatechange = function() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
             //获取后台传递过来的字符串并转换为json
+            window.alert(xmlHttp.responseText);
             var responseJson=JSON.parse(xmlHttp.responseText);
             var out="";
+            alert(responseJson[0].name);
             for (item in responseJson) {
                 out+=creatForm(item.name,item.src,item.intro);
             }
