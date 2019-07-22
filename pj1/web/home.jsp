@@ -32,6 +32,20 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="./js/bootstrap.min.js"></script>
 
+    <!-- 自定义的js -->
+    <script src="./js/home.js"></script>
+
+    <script>
+        var user='${sessionScope.user.name}';
+        var userAuth;
+        if(user!=""){
+            userAuth='${sessionScope.user.auth}';
+        }else {
+            user=null;
+            userAuth=null;
+        }
+    </script>
+
 </head>
 <body>
 <!--导航条-->
@@ -42,13 +56,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-        </button> <a class="navbar-brand" href="#">博物馆logo</a>
+        </button> <a class="navbar-brand" >博物馆logo</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li class="active">
-                <a href="#">首页</a>
+                <a href="#" >首页</a>
             </li>
             <li>
                 <a href="show.jsp">所有展品</a>
@@ -92,18 +106,8 @@
             </div> <button class="btn btn-default" type="submit">搜索</button>
         </form>
         <!--右侧用户操作-->
-        <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#">登录</a>
-                    </li>
-                    <li>
-                        <a href="#">注册</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav navbar-right" id="userManage">
+            <script>myFunction(user,userAuth)</script>
         </ul>
     </div>
 

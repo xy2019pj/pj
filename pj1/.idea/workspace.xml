@@ -6,43 +6,219 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b433dbb-1c0e-4cbb-9123-e779ed05129a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/pj1_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/pj1_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9210288c-dfd0-4de7-84fe-395b24c09587.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_beanutils_1_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+    <list default="true" id="4b433dbb-1c0e-4cbb-9123-e779ed05129a" name="Default Changelist" comment="基本jsp外观格式完成">
+      <change afterPath="$PROJECT_DIR$/web/js/all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/.idea/libraries/lib1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/pj2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/dao/DAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/dao/DAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/dao/Dao4Fav.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/dao/Dao4Friend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/dao/Dao4Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/dao/Dao4User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/dao/JDBCTools.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/entity/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/filter/EncodeFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/Favorite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/Friend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/FriendRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/ItemAdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/ItemChange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/ItemDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/ItemManage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/Profile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/Register.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/Show.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/src/servlet/UserManage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/WEB-INF/lib/commons-beanutils-1.9.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/WEB-INF/lib/mysql-connector-java-8.0.16.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/adduser.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/adminuserhome.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/css/all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/css/cover.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/css/favorite.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/css/friends.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/css/itemdetail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/css/mycover.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/css/profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/css/signup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/favorite.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/friendrequest.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/friends.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/images/museum.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/itemadd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/itemchange.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/itemdetail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/itemmanage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/js/html5shiv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/js/respond.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/js/show.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/normaluserhome.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/profile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/profilechange.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/show.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/signup.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/styles/jquery-3.4.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj2/web/usermanage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/.idea/artifacts/pj3_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/.idea/libraries/lib1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/pj3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/dao/DAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/dao/DAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/dao/Dao4Fav.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/dao/Dao4Friend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/dao/Dao4Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/dao/Dao4User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/dao/JDBCTools.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/entity/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/filter/EncodeFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/Favorite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/Friend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/FriendRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/ItemAdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/ItemChange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/ItemDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/ItemManage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/Profile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/Register.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/Show.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/src/servlet/UserManage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/WEB-INF/lib/commons-beanutils-1.9.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/WEB-INF/lib/mysql-connector-java-8.0.16.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/adduser.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/adminuserhome.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/css/all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/css/cover.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/css/favorite.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/css/friends.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/css/itemdetail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/css/mycover.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/css/profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/css/signup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/favorite.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/friendrequest.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/friends.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/images/museum.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/itemadd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/itemchange.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/itemdetail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/itemmanage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/js/all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/js/home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/js/html5shiv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/js/respond.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/js/show.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/normaluserhome.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/profile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/profilechange.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/show.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/styles/jquery-3.4.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pj3/web/usermanage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/DAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/DAOTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/Dao4Fav.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/Dao4Fav.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/Dao4Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/Dao4Item.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/Dao4User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/Dao4User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/JDBCTools.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/JDBCTools.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/entity/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/entity/Item.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/filter/EncodeFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/filter/EncodeFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/servlet/Favorite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/servlet/Favorite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/servlet/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/servlet/Home.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/servlet/ItemDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/servlet/ItemDetail.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/servlet/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/servlet/Login.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/servlet/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/servlet/Register.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/servlet/Show.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/servlet/Show.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/adduser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/adduser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/css/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/css/all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/favorite.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/favorite.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/friendrequest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/friendrequest.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/friends.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/friends.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/show.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/show.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/itemadd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/itemadd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/itemchange.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/itemchange.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/itemdetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/itemdetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/itemmanage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/itemmanage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/profilechange.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/profilechange.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/usermanage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/usermanage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pj1/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/dao/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pj1/dao/DAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/dao/DAOTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pj1/dao/Dao4Fav.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/dao/Dao4Fav.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/pj1/dao/Dao4Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/dao/Dao4Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pj1/dao/Dao4User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/dao/Dao4User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pj1/dao/JDBCTools.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/dao/JDBCTools.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pj1/entity/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/entity/Item.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/pj1/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pj1/filter/EncodeFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/filter/EncodeFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pj1/servlet/Favorite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/servlet/Favorite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pj1/servlet/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/servlet/Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pj1/servlet/ItemDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/servlet/ItemDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pj1/servlet/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/servlet/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pj1/servlet/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/servlet/Register.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pj1/servlet/Show.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/servlet/Show.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pj1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pj1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/Dao4Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/Dao4Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/Dao4User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/Dao4User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,11 +226,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DatabaseLocalColorSettings">
-    <colors>
-      <entry key="9210288c-dfd0-4de7-84fe-395b24c09587" value="Green" />
-    </colors>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -76,10 +247,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/Login.java">
+        <entry file="file://$PROJECT_DIR$/src/dao/DAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+            <state relative-caret-position="3059">
+              <caret line="161" selection-start-line="161" selection-end-line="162" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,10 +259,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/Register.java">
+        <entry file="file://$PROJECT_DIR$/src/servlet/Favorite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="31" column="55" lean-forward="true" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+            <state relative-caret-position="323">
+              <caret line="17" column="58" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,65 +271,44 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/User.java">
+        <entry file="file://$PROJECT_DIR$/src/jdbc.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="33" column="66" lean-forward="true" selection-start-line="32" selection-start-column="11" selection-end-line="33" selection-end-column="66" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1019#1020#0" expanded="true" />
-                <element signature="e#1064#1065#0" expanded="true" />
-                <element signature="e#1320#1321#0" expanded="true" />
-                <element signature="e#1408#1409#0" expanded="true" />
-                <element signature="e#1474#1475#0" expanded="true" />
-                <element signature="e#1562#1563#0" expanded="true" />
-                <element signature="e#1622#1623#0" expanded="true" />
-                <element signature="e#1698#1699#0" expanded="true" />
-                <element signature="e#1753#1754#0" expanded="true" />
-                <element signature="e#1823#1824#0" expanded="true" />
-                <element signature="e#1883#1884#0" expanded="true" />
-                <element signature="e#1959#1960#0" expanded="true" />
-                <element signature="e#2041#2042#0" expanded="true" />
-                <element signature="e#2163#2164#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/Item.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1148#1149#0" expanded="true" />
-                <element signature="e#1179#1180#0" expanded="true" />
-                <element signature="e#1354#1355#0" expanded="true" />
-                <element signature="e#1382#1383#0" expanded="true" />
-                <element signature="e#1424#1425#0" expanded="true" />
-                <element signature="e#1458#1459#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/ItemManage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="114">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/home.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="41" column="49" lean-forward="true" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/home.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlet/Home.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/servlet/ItemAdd.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
+            <state relative-caret-position="410">
               <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -168,10 +318,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/ItemChange.java">
+        <entry file="file://$PROJECT_DIR$/src/servlet/ItemDetail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="18" column="44" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="18" selection-end-column="44" />
+            <state relative-caret-position="361">
+              <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -180,37 +330,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/Home.java">
+        <entry file="file://$PROJECT_DIR$/web/profile.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="6802">
+              <caret line="358" selection-start-line="358" selection-end-line="358" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/Dao4User.java">
+        <entry file="file://$PROJECT_DIR$/web/profilechange.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="34" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/Dao4Item.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="3971">
+              <caret line="209" selection-start-line="209" selection-end-line="209" />
             </state>
           </provider>
         </entry>
@@ -227,6 +359,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="hex &lt;hexi4399@163.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
@@ -239,20 +376,6 @@
         <option value="$PROJECT_DIR$/web/css/mycover.css" />
         <option value="$PROJECT_DIR$/web/normaluserhome.jsp" />
         <option value="$PROJECT_DIR$/web/adminuserhome.jsp" />
-        <option value="$PROJECT_DIR$/web/show.jsp" />
-        <option value="$PROJECT_DIR$/web/itemdetail.jsp" />
-        <option value="$PROJECT_DIR$/web/profile.jsp" />
-        <option value="$PROJECT_DIR$/web/profilechange.jsp" />
-        <option value="$PROJECT_DIR$/web/favorite.jsp" />
-        <option value="$PROJECT_DIR$/web/friends.jsp" />
-        <option value="$PROJECT_DIR$/web/friendrequest.jsp" />
-        <option value="$PROJECT_DIR$/web/usermanage.jsp" />
-        <option value="$PROJECT_DIR$/web/itemmanage.jsp" />
-        <option value="$PROJECT_DIR$/web/itemadd.jsp" />
-        <option value="$PROJECT_DIR$/web/itemchange.jsp" />
-        <option value="$PROJECT_DIR$/web/login.jsp" />
-        <option value="$PROJECT_DIR$/web/signup.jsp" />
-        <option value="$PROJECT_DIR$/web/adduser.jsp" />
         <option value="$PROJECT_DIR$/src/servlet/Index.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9210288c-dfd0-4de7-84fe-395b24c09587/console.sql" />
         <option value="$PROJECT_DIR$/src/servlet/Favourite.java" />
@@ -264,8 +387,6 @@
         <option value="$PROJECT_DIR$/src/dao/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/jdbc.properties" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/servlet/Home.java" />
-        <option value="$PROJECT_DIR$/web/home.jsp" />
         <option value="$PROJECT_DIR$/src/dao/Dao4Friend.java" />
         <option value="$PROJECT_DIR$/src/servlet/Friend.java" />
         <option value="$PROJECT_DIR$/src/servlet/FriendRequest.java" />
@@ -280,6 +401,22 @@
         <option value="$PROJECT_DIR$/src/dao/Dao4Item.java" />
         <option value="$PROJECT_DIR$/src/entity/Item.java" />
         <option value="$PROJECT_DIR$/src/servlet/ItemAdd.java" />
+        <option value="$PROJECT_DIR$/web/adduser.jsp" />
+        <option value="$PROJECT_DIR$/web/favorite.jsp" />
+        <option value="$PROJECT_DIR$/web/friendrequest.jsp" />
+        <option value="$PROJECT_DIR$/web/itemadd.jsp" />
+        <option value="$PROJECT_DIR$/web/itemchange.jsp" />
+        <option value="$PROJECT_DIR$/web/itemdetail.jsp" />
+        <option value="$PROJECT_DIR$/web/itemmanage.jsp" />
+        <option value="$PROJECT_DIR$/web/login.jsp" />
+        <option value="$PROJECT_DIR$/web/profile.jsp" />
+        <option value="$PROJECT_DIR$/web/profilechange.jsp" />
+        <option value="$PROJECT_DIR$/web/show.jsp" />
+        <option value="$PROJECT_DIR$/web/signup.jsp" />
+        <option value="$PROJECT_DIR$/web/usermanage.jsp" />
+        <option value="$PROJECT_DIR$/web/friends.jsp" />
+        <option value="$PROJECT_DIR$/src/servlet/Home.java" />
+        <option value="$PROJECT_DIR$/web/home.jsp" />
       </list>
     </option>
   </component>
@@ -290,10 +427,11 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="558" />
-    <option name="width" value="1369" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -301,7 +439,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -312,53 +449,31 @@
             <path>
               <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
               <item name="pj1" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pj1" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pj1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pj1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pj1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pj1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pj1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
               <item name="pj1" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pj1" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pj1" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -368,7 +483,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="E:/apache-tomcat-9.0.21/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -378,18 +493,18 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20441176" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\codeDev\java\workplace\pj\pj1\web\js" />
+      <recent name="D:\codeDev\java\workplace\pj\pj1\web\css" />
       <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\web\css" />
       <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\web\js" />
       <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\web" />
-      <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1" />
-      <recent name="D:\codeDev\java\workplace\pj1\web\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\0.NULL\FDU\study\卓越软件设计\pj\pj1\web" />
@@ -411,17 +526,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.21">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.22">
     <configuration name="home0.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/pj1_war_exploded/home0.jsp">
       <method v="2" />
     </configuration>
-    <configuration name="Tomcat 9.0.21" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.21" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.22" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.22" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/jiuzhou/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="pj1:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="" />
+            <option name="CONTEXT_PATH" value="/jiuzhou" />
           </settings>
         </artifact>
       </deployment>
@@ -490,7 +606,7 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.home0.jsp" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.21" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.22" />
     </list>
     <recent_temporary>
       <list>
@@ -512,6 +628,8 @@
       <workItem from="1563344373316" duration="266000" />
       <workItem from="1563516359543" duration="1898000" />
       <workItem from="1563587001847" duration="8988000" />
+      <workItem from="1563756782013" duration="2810000" />
+      <workItem from="1563765175692" duration="347000" />
     </task>
     <task id="LOCAL-00001" summary="增加了很多servlet">
       <created>1563626348064</created>
@@ -541,11 +659,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563682332368</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="尝试commit">
+      <created>1563702261452</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1563702261452</updated>
+    </task>
+    <task id="LOCAL-00006" summary="基本jsp外观格式完成">
+      <created>1563702644999</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1563702644999</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54925000" />
+    <option name="totallyTimeSpent" value="61790000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -557,9 +689,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="558" y="0" width="1369" height="1047" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15508021" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18967828" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -569,7 +702,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.75248283" visible="true" weight="0.32968238" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.75" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978093" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -577,11 +710,11 @@
       <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49946696" weight="0.3286334" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.24751718" side_tool="true" visible="true" weight="0.32968238" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49946696" weight="0.3286334" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.25" side_tool="true" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49798927" weight="0.04249292" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49731904" weight="0.3753541" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.32968238" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -601,98 +734,11 @@
     <MESSAGE value="增加了很多servlet" />
     <MESSAGE value="求您能打开" />
     <MESSAGE value="我也不知道我改了什么" />
-    <option name="LAST_COMMIT_MESSAGE" value="我也不知道我改了什么" />
+    <MESSAGE value="尝试commit" />
+    <MESSAGE value="基本jsp外观格式完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="基本jsp外观格式完成" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/dao/DAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="1388" column="16" lean-forward="true" selection-start-line="1388" selection-start-column="16" selection-end-line="1388" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-beanutils-1.9.3.jar!/org/apache/commons/beanutils/BeanUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-beanutils-1.9.3.jar!/org/apache/commons/beanutils/BeanUtilsBean.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="384" column="41" selection-start-line="384" selection-start-column="41" selection-end-line="384" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/JDBCTools.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/pj1_war_exploded/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/pj1_war_exploded/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/adduser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/bootstrap.css.map">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="sourcemapFileViewerProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/bootstrap.min.css.map">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="sourcemapFileViewerProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/cover.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/mycover.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/html5shiv.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -708,8 +754,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        <state relative-caret-position="95">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -733,13 +779,6 @@
     <entry file="file://$PROJECT_DIR$/web/css/all.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/itemmanage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/styles/jquery-3.4.1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
@@ -749,26 +788,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/itemdetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1946">
-          <caret line="171" column="28" selection-start-line="171" selection-start-column="28" selection-end-line="171" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/show.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/profile.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -780,44 +799,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/DAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2975">
-          <caret line="161" selection-start-line="161" selection-end-line="161" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp" />
     <entry file="file://$PROJECT_DIR$/src/dao/Dao4Friend.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
           <caret line="40" column="45" lean-forward="true" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/Favorite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="17" column="58" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -835,16 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/ItemDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -898,40 +874,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/ItemChange.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="18" column="44" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="18" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/Home.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/Register.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="31" column="55" lean-forward="true" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -998,13 +944,201 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/ItemChange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="18" column="44" selection-start-line="17" selection-start-column="8" selection-end-line="18" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/cover.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/adduser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="244" selection-start-line="244" selection-end-line="244" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/adminuserhome.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/favorite.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="238" selection-start-line="238" selection-end-line="238" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/friendrequest.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="315" selection-start-line="315" selection-end-line="315" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/itemadd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="191" selection-start-line="191" selection-end-line="191" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/itemchange.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="191" selection-start-line="191" selection-end-line="191" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/itemdetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="185" selection-start-line="185" selection-end-line="185" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/itemmanage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="246" selection-start-line="246" selection-end-line="246" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="152" selection-start-line="152" selection-end-line="152" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/normaluserhome.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/show.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5035">
+          <caret line="265" column="3" selection-start-line="265" selection-start-column="3" selection-end-line="265" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/signup.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3097">
+          <caret line="163" selection-start-line="163" selection-end-line="163" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/usermanage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6308">
+          <caret line="332" selection-start-line="332" selection-end-line="332" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/friends.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2812">
+          <caret line="148" column="23" selection-start-line="148" selection-start-column="23" selection-end-line="148" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3059">
+          <caret line="161" selection-start-line="161" selection-end-line="162" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/Favorite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="58" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6802">
+          <caret line="358" selection-start-line="358" selection-end-line="358" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/profilechange.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3971">
+          <caret line="209" selection-start-line="209" selection-end-line="209" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/home.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/ItemAdd.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
+        <state relative-caret-position="410">
           <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/ItemDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/Home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="41" column="49" lean-forward="true" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
         </state>
       </provider>
     </entry>

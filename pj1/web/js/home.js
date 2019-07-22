@@ -1,0 +1,81 @@
+function myFunction(user,userAuth)
+{
+
+    var manager="<li class=\"dropdown\">\n" +
+        "                <a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">管理中心<strong class=\"caret\"></strong></a>\n" +
+        "                <ul class=\"dropdown-menu\">\n" +
+        "                    <li>\n" +
+        "                        <a href=\"#\">人员管理</a>\n" +
+        "                    </li>\n" +
+        "                    <li>\n" +
+        "                        <a href=\"#\">创建用户</a>\n" +
+        "                    </li>\n" +
+        "                    <li class=\"divider\">\n" +
+        "                    </li>\n" +
+        "                    <li>\n" +
+        "                        <a href=\"#\">作品管理</a>\n" +
+        "                    </li>\n" +
+        "                    <li>\n" +
+        "                        <a href=\"#\">上传作品</a>\n" +
+        "                    </li>\n" +
+        "                </ul>\n" +
+        "            </li>\n" +
+        "            <!--用户栏-->\n" +
+        "            <li class=\"dropdown\">\n" +
+        "                <a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">个人中心<strong class=\"caret\"></strong></a>\n" +
+        "                <ul class=\"dropdown-menu\">\n" +
+        "                    <li>\n" +
+        "                        <a href=\"#\">个人首页</a>\n" +
+        "                    </li>\n" +
+        "                    <li>\n" +
+        "                        <a href=\"#\">收藏夹</a>\n" +
+        "                    </li>\n" +
+        "                    <li class=\"divider\">\n" +
+        "                    </li>\n" +
+        "                    <li>\n" +
+        "                        <a href=\"#\">退出登录</a>\n" +
+        "                    </li>\n" +
+        "                </ul>\n" +
+        "            </li>";
+
+
+        var normalUser=" <li class=\"dropdown\">\n" +
+            "                <a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">个人中心<strong class=\"caret\"></strong></a>\n" +
+            "                <ul class=\"dropdown-menu\">\n" +
+            "                    <li>\n" +
+            "                        <a href=\"#\">个人首页</a>\n" +
+            "                    </li>\n" +
+            "                    <li>\n" +
+            "                        <a href=\"#\">收藏夹</a>\n" +
+            "                    </li>\n" +
+            "                    <li class=\"divider\">\n" +
+            "                    </li>\n" +
+            "                    <li>\n" +
+            "                        <a href=\"#\">退出登录</a>\n" +
+            "                    </li>\n" +
+            "                </ul>\n" +
+            "            </li>";
+
+    var visitor="<li class=\"dropdown\">\n" +
+        "                <a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">个人中心<strong class=\"caret\"></strong></a>\n" +
+        "                <ul class=\"dropdown-menu\">\n" +
+        "                    <li>\n" +
+        "                        <a href=\"#\">登录</a>\n" +
+        "                    </li>\n" +
+        "                    <li>\n" +
+        "                        <a href=\"#\">注册</a>\n" +
+        "                    </li>\n" +
+        "                </ul>\n" +
+        "            </li>";
+
+    if(user==null){
+        document.getElementById("userManage").innerHTML=visitor;
+    }else {
+        if(userAuth == 'n'){
+            document.getElementById("userManage").innerHTML=normalUser;
+        }else {
+            document.getElementById("userManage").innerHTML=manager;
+        }
+    }
+    console.log("进入了function,user="+user+";userAuth="+userAuth);
+}

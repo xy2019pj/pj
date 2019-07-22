@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet("/")
+@WebServlet("/home")
 public class Home extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse res)throws ServletException,IOException{

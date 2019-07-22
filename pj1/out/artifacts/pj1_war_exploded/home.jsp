@@ -1,5 +1,4 @@
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="entity.Item" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: hexi4
   Date: 2019/7/20
@@ -7,29 +6,19 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-<%
-    ArrayList<Item>items =  (ArrayList<Item>)request.getAttribute("items");
-%>
-
-
 <!doctype html>
 <html lang="en">
 <head>
     <title>博物馆首页</title>
 
     <meta charset="utf-8">
-    <!--
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
--->
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 
     <!-- Bootstrap -->
     <link href="./js/bootstrap.min.js" rel="stylesheet">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="./css/mycover.css" rel="stylesheet">
+    <!-- 自定义的格式css -->
+    <link href="css/mycover.css" rel="stylesheet">
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -43,6 +32,23 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="./js/bootstrap.min.js"></script>
 
+    <!-- 自定义的js -->
+    <script src="./js/home.js"></script>
+
+    <script>
+        var user='${sessionScope.user.name}';
+        var userAuth;
+        if(user!=""){
+            userAuth='${sessionScope.user.auth}';
+        }else {
+            user=null;
+            userAuth=null;
+        }
+
+        user=1;
+        userAuth=21;
+    </script>
+
 </head>
 <body>
 <!--导航条-->
@@ -53,16 +59,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-        </button> <a class="navbar-brand" href="#">博物馆logo</a>
+        </button> <a class="navbar-brand" >博物馆logo</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li class="active">
-                <a href="#">首页</a>
+                <a href="#" >首页</a>
             </li>
             <li>
-                <a href="#">所有展品</a>
+                <a href="show.jsp">所有展品</a>
             </li>
             <li class="dropdown">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
@@ -97,24 +103,14 @@
             </li>
         </ul>
         <!--搜索-->
-        <form class="navbar-form navbar-left" role="search" action="show">
+        <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
-                <input class="form-control" type="text" name="category"/>
+                <input class="form-control" type="text" />
             </div> <button class="btn btn-default" type="submit">搜索</button>
         </form>
         <!--右侧用户操作-->
-        <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#">登录</a>
-                    </li>
-                    <li>
-                        <a href="#">注册</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav navbar-right" id="userManage">
+            <script>myFunction(user,userAuth)</script>
         </ul>
     </div>
 
@@ -122,7 +118,7 @@
 <!--博物馆大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >
     <h1 style="color: #000000;">
-        某某博物馆
+        九州博物馆
     </h1>
     <p style="color: #000000;">
         博物馆详情介绍，藏品1000xx+
@@ -143,13 +139,13 @@
             <div class="carousel-inner">
                 <!--图片1-->
                 <div class="item active ">
-                    <a href="#"><img alt="图片无法显示" src="<%=items.get(0).getPicture() %>" align="center" /></a>
+                    <a href="#"><img alt="图片无法显示" src="images/1.jpg" align="center" /></a>
                     <div class="carousel-caption">
                         <h4>
-                            <%=items.get(0).getName() %>
+                            第一件热门展品名称
                         </h4>
                         <p>
-                            <%=items.get(0).getIntro() %>
+                            第一件热门展品的描述详情，第一件热门展品的描述详情，第一件热门展品的描述详情，第一件热门展品的描述详情，第一件热门展品的描述详情，第一件热门展品的描述详情
                         </p>
                     </div>
                 </div>
@@ -192,7 +188,7 @@
         <!--第一件-->
         <div class="col-md-4 column">
             <div class="imgcontrol">
-            <img src="images/1.jpg" align="center">
+                <img src="images/1.jpg" align="center">
             </div>
             <h2>
                 第一件最新展品
@@ -289,4 +285,3 @@
 
 </body>
 </html>
-
