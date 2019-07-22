@@ -1,5 +1,6 @@
 package dao;
 
+import entity.Item;
 import entity.User;
 
 import java.util.ArrayList;
@@ -14,6 +15,14 @@ public class Dao4User {
         User actUser=dao.get(User.class,sql,username,auth);
         return actUser;
     }
+
+    public static ArrayList<User> getUserBySearch(String search){
+        String sql="select * from user_account where username like ?";
+        ArrayList<User> users=(ArrayList<User>) dao.getForList(User.class,sql,
+                "%"+search+"%");
+        return users;
+    }
+
     public static String getPwdByUser(User user){
         User actUser=getActuserByUser(user);
         if(actUser==null)
