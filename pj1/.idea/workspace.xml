@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b433dbb-1c0e-4cbb-9123-e779ed05129a" name="Default Changelist" comment="home.jsp完成动态生成">
-      <change afterPath="$PROJECT_DIR$/web/js/center.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pj2/.idea/libraries/lib.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pj2/.idea/libraries/lib1.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pj2/pj2.iml" afterDir="false" />
@@ -175,10 +174,10 @@
       <change afterPath="$PROJECT_DIR$/../pj3/web/show.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pj3/web/styles/jquery-3.4.1.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pj3/web/usermanage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/adduser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/adduser.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/adduser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/adduser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/center.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/center.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -214,8 +213,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="145" column="67" lean-forward="true" selection-start-line="145" selection-start-column="15" selection-end-line="145" selection-end-column="67" />
+            <state relative-caret-position="595">
+              <caret line="147" column="67" lean-forward="true" selection-start-line="147" selection-start-column="67" selection-end-line="147" selection-end-column="67" />
               <folding>
                 <element signature="n#!!block;n#myFunction#0" />
               </folding>
@@ -223,50 +222,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/adduser.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="155" column="47" lean-forward="true" selection-start-line="155" selection-start-column="47" selection-end-line="156" selection-end-column="14" />
+            <state relative-caret-position="81">
+              <caret line="219" column="38" selection-start-line="219" selection-start-column="38" selection-end-line="219" selection-end-column="38" />
               <folding>
                 <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1289#1290#0" expanded="true" />
-                <element signature="e#1320#1321#0" expanded="true" />
-                <element signature="e#1368#1369#0" expanded="true" />
-                <element signature="e#1408#1409#0" expanded="true" />
-                <element signature="e#1443#1444#0" expanded="true" />
-                <element signature="e#1474#1475#0" expanded="true" />
-                <element signature="e#1522#1523#0" expanded="true" />
-                <element signature="e#1562#1563#0" expanded="true" />
-                <element signature="e#1594#1595#0" expanded="true" />
-                <element signature="e#1622#1623#0" expanded="true" />
-                <element signature="e#1664#1665#0" expanded="true" />
-                <element signature="e#1698#1699#0" expanded="true" />
-                <element signature="e#1726#1727#0" expanded="true" />
-                <element signature="e#1753#1754#0" expanded="true" />
-                <element signature="e#1791#1792#0" expanded="true" />
-                <element signature="e#1823#1824#0" expanded="true" />
-                <element signature="e#1855#1856#0" expanded="true" />
-                <element signature="e#1883#1884#0" expanded="true" />
-                <element signature="e#1925#1926#0" expanded="true" />
-                <element signature="e#1959#1960#0" expanded="true" />
-                <element signature="e#2001#2002#0" expanded="true" />
-                <element signature="e#2041#2042#0" expanded="true" />
-                <element signature="e#2105#2106#0" expanded="true" />
-                <element signature="e#2163#2164#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -275,8 +237,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/center.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="65" lean-forward="true" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+            <state relative-caret-position="95">
+              <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -307,10 +269,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="2869">
               <caret line="177" column="48" lean-forward="true" selection-start-line="177" selection-start-column="48" selection-end-line="177" selection-end-column="48" />
               <folding>
                 <element signature="n#ul#0;n#li#2;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" />
@@ -384,9 +346,9 @@
         <option value="$PROJECT_DIR$/src/servlet/Home.java" />
         <option value="$PROJECT_DIR$/src/servlet/FriendRequest.java" />
         <option value="$PROJECT_DIR$/web/js/home.js" />
+        <option value="$PROJECT_DIR$/web/home.jsp" />
         <option value="$PROJECT_DIR$/web/js/center.js" />
         <option value="$PROJECT_DIR$/web/adduser.jsp" />
-        <option value="$PROJECT_DIR$/web/home.jsp" />
       </list>
     </option>
   </component>
@@ -653,11 +615,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563777491142</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="home.jsp完成动态生成bug1修改">
+      <created>1563778465548</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1563778465548</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69000000" />
+    <option name="totallyTimeSpent" value="69499000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -682,7 +651,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.75" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.74932975" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -690,8 +659,8 @@
       <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49946696" weight="0.3286334" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013405" side_tool="true" visible="true" weight="0.2549575" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49865952" visible="true" weight="0.2549575" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.25067025" side_tool="true" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49865952" weight="0.2549575" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49932975" weight="0.06657224" />
@@ -717,7 +686,8 @@
     <MESSAGE value="基本完成了所有的servlet，但是yy还没有测试，也不知道有没有bug。" />
     <MESSAGE value="css文件和js文件终于可以找到了！" />
     <MESSAGE value="home.jsp完成动态生成" />
-    <option name="LAST_COMMIT_MESSAGE" value="home.jsp完成动态生成" />
+    <MESSAGE value="home.jsp完成动态生成bug1修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="home.jsp完成动态生成bug1修改" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1047,6 +1017,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/ItemDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-152">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -1059,47 +1039,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/ItemDetail.java">
+    <entry file="file://$PROJECT_DIR$/web/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-152">
-          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="29" />
+        <state relative-caret-position="2869">
+          <caret line="177" column="48" lean-forward="true" selection-start-line="177" selection-start-column="48" selection-end-line="177" selection-end-column="48" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#ul#0;n#li#2;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="145" column="67" lean-forward="true" selection-start-line="145" selection-start-column="15" selection-end-line="145" selection-end-column="67" />
+        <state relative-caret-position="595">
+          <caret line="147" column="67" lean-forward="true" selection-start-line="147" selection-start-column="67" selection-end-line="147" selection-end-column="67" />
           <folding>
             <element signature="n#!!block;n#myFunction#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/center.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="65" lean-forward="true" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/adduser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="155" column="47" lean-forward="true" selection-start-line="155" selection-start-column="47" selection-end-line="156" selection-end-column="14" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
+        <state relative-caret-position="57">
           <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1131,12 +1093,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/home.jsp">
+    <entry file="file://$PROJECT_DIR$/web/js/center.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="177" column="48" lean-forward="true" selection-start-line="177" selection-start-column="48" selection-end-line="177" selection-end-column="48" />
+        <state relative-caret-position="95">
+          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/adduser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="219" column="38" selection-start-line="219" selection-start-column="38" selection-end-line="219" selection-end-column="38" />
           <folding>
-            <element signature="n#ul#0;n#li#2;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>

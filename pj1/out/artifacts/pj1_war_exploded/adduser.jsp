@@ -33,6 +33,18 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="./js/bootstrap.min.js"></script>
 
+    <!-- 自定义的js -->
+    <script src="./js/center.js"></script>
+
+    <!-- 导航栏用户个人中心 -->
+    <script>
+        var user='${sessionScope.user.name}';
+        var userInfo='${sessionScope.user.intro}';
+        //测试用，实际删除
+        user="user";
+        userInfo="unserinfo";
+    </script>
+
 </head>
 <body>
 
@@ -138,19 +150,16 @@
 </nav>
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >
-    <h1 style="color: #000000;">
-        用户名
+    <h1 style="color: #000000;" id="userNameShow">
+        <script>
+            name(user);
+        </script>
     </h1>
-    <p style="color: #000000;">
-        个人简介签名
+    <p style="color: #000000;" id="userSignNS">
+        <script>
+            nameInfo(userInfo);
+        </script>
     </p>
-    <!--添加好友按钮
-    <div class="row clearfix" style="text-align:center">
-        <div class="col-md-12 column addText">
-            添加好友 <a class="glyphicon glyphicon-user addForm" href="#" title="点击添加"> </a>
-        </div>
-    </div>
-    -->
 </div>
 <!--正文-->
 <div class="container">
@@ -207,12 +216,6 @@
                                     <label class="col-sm-2 control-label" for="inputEmail3">邮箱</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" id="inputEmail3" type="email" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="inputMessage">签名</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="inputMessage" type="text" />
                                     </div>
                                 </div>
                                 <div class="form-group">

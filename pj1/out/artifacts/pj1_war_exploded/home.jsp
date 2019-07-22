@@ -49,29 +49,29 @@
 
     <!-- 热门展品 -->
     <script>
-        var items=new Array();
+        var hotItems=new Array();
         for(var i =0;i<3;i++){
-            items[i]={name:"${requestScope.hotItems[i].name}", src:"${requestScope.hotItems[i].picture}", intro:"${requestScope.hotItems[i].intro}"};
+            hotItems[i]={name:"${requestScope.hotItems[i].name}", src:"${requestScope.hotItems[i].picture}", intro:"${requestScope.hotItems[i].intro}"};
         }
         //测试占位用，实际删除
-        items[0]={name:"热门展品1", src:"images/1.jpg", intro:"展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
-        items[1]={name:"热门展品2", src:"images/2.jpg", intro:"展品介绍2展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
-        items[2]={name:"热门展品3", src:"images/3.jpg", intro:"展品介绍3展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        hotItems[0]={name:"热门展品1", src:"images/1.jpg", intro:"展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        hotItems[1]={name:"热门展品2", src:"images/2.jpg", intro:"展品介绍2展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        hotItems[2]={name:"热门展品3", src:"images/3.jpg", intro:"展品介绍3展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
     </script>
 
     <!-- 最新展品 -->
     <script>
-        var items=new Array();
+        var recentItems=new Array();
         for(var i =0;i<6;i++){
-            items[i]={name:"${requestScope.recentItems[i].name}", src:"${requestScope.recentItems[i].picture}", intro:"${requestScope.recentItems[i].intro}"};
+            recentItems[i]={name:"${requestScope.recentItems[i].name}", src:"${requestScope.recentItems[i].picture}", intro:"${requestScope.recentItems[i].intro}"};
         }
         //测试占位用，实际删除
-        items[0]={name:"最新展品1", src:"images/1.jpg", intro:"展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
-        items[1]={name:"最新展品2", src:"images/2.jpg", intro:"展品介绍2展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
-        items[2]={name:"最新展品3", src:"images/3.jpg", intro:"展品介绍3展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
-        items[3]={name:"最新展品4", src:"images/1.jpg", intro:"展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
-        items[4]={name:"最新展品5", src:"images/2.jpg", intro:"展品介绍2展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
-        items[5]={name:"最新展品6", src:"images/3.jpg", intro:"展品介绍3展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        recentItems[0]={name:"最新展品1", src:"images/1.jpg", intro:"展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        recentItems[1]={name:"最新展品2", src:"images/2.jpg", intro:"展品介绍2展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        recentItems[2]={name:"最新展品3", src:"images/3.jpg", intro:"展品介绍3展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        recentItems[3]={name:"最新展品4", src:"images/1.jpg", intro:"展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        recentItems[4]={name:"最新展品5", src:"images/2.jpg", intro:"展品介绍2展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        recentItems[5]={name:"最新展品6", src:"images/3.jpg", intro:"展品介绍3展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
     </script>
 
 </head>
@@ -162,7 +162,7 @@
                 </li>
             </ol>
             <div class="carousel-inner" id="hotItems">
-                <script>hotItem(items);</script>
+                <script>hotItem(hotItems);</script>
             </div> <a class="left carousel-control" href="#carousel-368079" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-368079" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
         </div>
     </div>
@@ -175,12 +175,12 @@
     </h1>
     <!--第一行-->
     <div class="row clearfix" id="newItems1">
-        <script>newItem(1,items);</script>
+        <script>newItem(1,recentItems);</script>
     </div>
     <br><br>
     <!--第二行-->
     <div class="row clearfix" id="newItems2">
-        <script>newItem(2,items);</script>
+        <script>newItem(2,recentItems);</script>
     </div>
 
 </div>
