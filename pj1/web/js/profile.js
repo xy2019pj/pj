@@ -57,3 +57,4 @@ function creatForm(name,src,intro){
         "                </div>";
     return form;
 }
+
