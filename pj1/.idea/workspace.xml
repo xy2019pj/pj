@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b433dbb-1c0e-4cbb-9123-e779ed05129a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/js/ajaxTry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/usermanage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/usermanage.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,9 +70,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/itemadd.jsp">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -96,6 +98,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="309">
               <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/usermanage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="57" column="33" lean-forward="true" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -131,7 +142,6 @@
         <option value="$PROJECT_DIR$/web/favorite.jsp" />
         <option value="$PROJECT_DIR$/web/friends.jsp" />
         <option value="$PROJECT_DIR$/web/friendrequest.jsp" />
-        <option value="$PROJECT_DIR$/web/usermanage.jsp" />
         <option value="$PROJECT_DIR$/web/itemmanage.jsp" />
         <option value="$PROJECT_DIR$/web/itemadd.jsp" />
         <option value="$PROJECT_DIR$/web/itemchange.jsp" />
@@ -169,6 +179,7 @@
         <option value="$PROJECT_DIR$/web/home.jsp" />
         <option value="$PROJECT_DIR$/web/js/ajaxTry.css" />
         <option value="$PROJECT_DIR$/web/js/ajaxTry.js" />
+        <option value="$PROJECT_DIR$/web/usermanage.jsp" />
       </list>
     </option>
   </component>
@@ -431,11 +442,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563779471266</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="hex16:30">
+      <created>1563784208792</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1563784208792</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72878000" />
+    <option name="totallyTimeSpent" value="73086000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -497,20 +515,14 @@
     <MESSAGE value="home.jsp完成动态生成" />
     <MESSAGE value="home.jsp完成动态生成bug1修改" />
     <MESSAGE value="hex15:10" />
-    <option name="LAST_COMMIT_MESSAGE" value="hex15:10" />
+    <MESSAGE value="hex16:30" />
+    <option name="LAST_COMMIT_MESSAGE" value="hex16:30" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -868,13 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/adduser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -919,7 +924,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/itemadd.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/adduser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/usermanage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="57" column="33" lean-forward="true" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
