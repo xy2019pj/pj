@@ -89,24 +89,14 @@
                     <li>
                         <a href="show?category=其他">其他</a>
                     </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                        <a href="#">考虑是否拓展朝代分类方式</a>
-                    </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                        <a href="#">考虑是否拓展其他分类方式</a>
-                    </li>
                 </ul>
             </li>
         </ul>
         <!--搜索-->
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search" name="fname" action="show" onsubmit="return searchI()">
             <div class="form-group">
-                <input class="form-control" type="text" />
-            </div> <button class="btn btn-default" type="submit">搜索</button>
+                <input class="form-control" type="text" name="search" />
+            </div> <button class="btn btn-default" type="submit" >搜索</button>
         </form>
         <!--右侧用户操作-->
         <ul class="nav navbar-nav navbar-right" id="userManage">
@@ -118,10 +108,10 @@
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >
     <h1 style="color: #000000;" id="userNameShow">
-        ${sessionScope.destUser.username}
+        ${requestScope.destUser.username}
     </h1>
     <p style="color: #000000;" id="userSignNS">
-        ${sessionScope.destUser.Intro}
+        ${requestScope.destUser.intro}
     </p>
 </div>
 <!--正文-->
@@ -132,7 +122,7 @@
             <script>
                 var isSelf;
                 var userName="${sessionScope.user.name}";
-                var destName="${sessionScope.destUser.name}";
+                var destName="${requestScope.destUser.name}";
                 if(userName==destName && userName!=""){
                     isSelf=true;
                 }else {
@@ -152,14 +142,14 @@
                 ta的邮箱：
             </b>
             <p style="color: #0f0f0f">
-                ${sessionScope.destUser.email}
+                ${requestScope.destUser.email}
             </p>
             <br>
             <b>
                 ta的个性签名：
             </b>
             <p style="color: #0f0f0f">
-                ${sessionScope.destUser.Intro}
+                ${requestScope.destUser.intro}
             </p>
             <br>
             <br>
