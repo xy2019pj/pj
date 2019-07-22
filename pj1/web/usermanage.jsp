@@ -44,16 +44,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-        </button> <a class="navbar-brand" href="#">博物馆logo</a>
+        </button> <a class="navbar-brand" href="home">博物馆logo</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li >
-                <a href="#">首页</a>
+                <a href="home">首页</a>
             </li>
             <li>
-                <a href="show.jsp">所有展品</a>
+                <a href="show">所有展品</a>
             </li>
             <li class="dropdown">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
