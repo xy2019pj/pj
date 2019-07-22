@@ -37,7 +37,7 @@
 
     <!-- 导航栏用户个人中心 -->
     <script>
-        var user='${sessionScope.user.name}';
+        var user='${sessionScope.user.username}';
         var userAuth;
         if(user!=""){
             userAuth='${sessionScope.user.auth}';

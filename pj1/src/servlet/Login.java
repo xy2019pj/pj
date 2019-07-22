@@ -28,7 +28,7 @@ public class Login extends HttpServlet {
         if (status == 0) {//登陆成功
             req.getSession().setAttribute("user", user);
             res.getWriter().append("登录成功！");
-            req.getRequestDispatcher("home").forward(req, res);
+            res.sendRedirect("home");
         }
         else if(status==1)
             res.getWriter().append("用户名不存在。");

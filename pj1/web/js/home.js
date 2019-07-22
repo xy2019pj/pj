@@ -5,18 +5,18 @@ function myFunction(user,userAuth)
         "                <a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">管理中心<strong class=\"caret\"></strong></a>\n" +
         "                <ul class=\"dropdown-menu\">\n" +
         "                    <li>\n" +
-        "                        <a href=\"#\">人员管理</a>\n" +
+        "                        <a href=\"usermanage\">人员管理</a>\n" +
         "                    </li>\n" +
         "                    <li>\n" +
-        "                        <a href=\"#\">创建用户</a>\n" +
+        "                        <a href=\"useradd\">创建用户</a>\n" +
         "                    </li>\n" +
         "                    <li class=\"divider\">\n" +
         "                    </li>\n" +
         "                    <li>\n" +
-        "                        <a href=\"#\">作品管理</a>\n" +
+        "                        <a href=\"itemmanage\">作品管理</a>\n" +
         "                    </li>\n" +
         "                    <li>\n" +
-        "                        <a href=\"#\">上传作品</a>\n" +
+        "                        <a href=\"itemadd\">上传作品</a>\n" +
         "                    </li>\n" +
         "                </ul>\n" +
         "            </li>\n" +
@@ -25,15 +25,15 @@ function myFunction(user,userAuth)
         "                <a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">个人中心<strong class=\"caret\"></strong></a>\n" +
         "                <ul class=\"dropdown-menu\">\n" +
         "                    <li>\n" +
-        "                        <a href=\"#\">个人首页</a>\n" +
+        "                        <a href=\"profile\">个人首页</a>\n" +
         "                    </li>\n" +
         "                    <li>\n" +
-        "                        <a href=\"#\">收藏夹</a>\n" +
+        "                        <a href=\"favorite\">收藏夹</a>\n" +
         "                    </li>\n" +
         "                    <li class=\"divider\">\n" +
         "                    </li>\n" +
         "                    <li>\n" +
-        "                        <a href=\"#\">退出登录</a>\n" +
+        "                        <a href=\"logout\">退出登录</a>\n" +
         "                    </li>\n" +
         "                </ul>\n" +
         "            </li>";
@@ -43,15 +43,15 @@ function myFunction(user,userAuth)
             "                <a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">个人中心<strong class=\"caret\"></strong></a>\n" +
             "                <ul class=\"dropdown-menu\">\n" +
             "                    <li>\n" +
-            "                        <a href=\"#\">个人首页</a>\n" +
+            "                        <a href=\"profile\">个人首页</a>\n" +
             "                    </li>\n" +
             "                    <li>\n" +
-            "                        <a href=\"#\">收藏夹</a>\n" +
+            "                        <a href=\"favorite\">收藏夹</a>\n" +
             "                    </li>\n" +
             "                    <li class=\"divider\">\n" +
             "                    </li>\n" +
             "                    <li>\n" +
-            "                        <a href=\"#\">退出登录</a>\n" +
+            "                        <a href=\"logout\">退出登录</a>\n" +
             "                    </li>\n" +
             "                </ul>\n" +
             "            </li>";
