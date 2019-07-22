@@ -33,6 +33,15 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="./js/bootstrap.min.js"></script>
 
+    <!-- 自定义的js -->
+    <script src="./js/center.js"></script>
+
+    <!-- 导航栏用户个人中心 -->
+    <script>
+        var user='${sessionScope.user.name}';
+        var userInfo='${sessionScope.user.intro}';
+    </script>
+
 </head>
 <body>
 
@@ -138,10 +147,13 @@
 </nav>
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >
-    <h1 style="color: #000000;">
+    <h1 style="color: #000000;" id="userNameShow">
+        <script>
+            name(user,userInfo)
+        </script>
         用户名
     </h1>
-    <p style="color: #000000;">
+    <p style="color: #000000;" id="userSignNS">
         个人简介签名
     </p>
     <!--添加好友按钮

@@ -35,6 +35,7 @@
     <!-- 自定义的js -->
     <script src="./js/home.js"></script>
 
+    <!-- 导航栏用户个人中心 -->
     <script>
         var user='${sessionScope.user.name}';
         var userAuth;
@@ -44,9 +45,33 @@
             user=null;
             userAuth=null;
         }
+    </script>
 
-        user=1;
-        userAuth=21;
+    <!-- 热门展品 -->
+    <script>
+        var items=new Array();
+        for(var i =0;i<3;i++){
+            items[i]={name:"${requestScope.hotItems[i].name}", src:"${requestScope.hotItems[i].picture}", intro:"${requestScope.hotItems[i].intro}"};
+        }
+        //测试占位用，实际删除
+        items[0]={name:"热门展品1", src:"images/1.jpg", intro:"展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        items[1]={name:"热门展品2", src:"images/2.jpg", intro:"展品介绍2展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        items[2]={name:"热门展品3", src:"images/3.jpg", intro:"展品介绍3展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+    </script>
+
+    <!-- 最新展品 -->
+    <script>
+        var items=new Array();
+        for(var i =0;i<6;i++){
+            items[i]={name:"${requestScope.recentItems[i].name}", src:"${requestScope.recentItems[i].picture}", intro:"${requestScope.recentItems[i].intro}"};
+        }
+        //测试占位用，实际删除
+        items[0]={name:"最新展品1", src:"images/1.jpg", intro:"展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        items[1]={name:"最新展品2", src:"images/2.jpg", intro:"展品介绍2展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        items[2]={name:"最新展品3", src:"images/3.jpg", intro:"展品介绍3展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        items[3]={name:"最新展品4", src:"images/1.jpg", intro:"展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        items[4]={name:"最新展品5", src:"images/2.jpg", intro:"展品介绍2展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        items[5]={name:"最新展品6", src:"images/3.jpg", intro:"展品介绍3展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
     </script>
 
 </head>
@@ -65,29 +90,29 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li class="active">
-                <a href="#" >首页</a>
+                <a href="home">首页</a>
             </li>
             <li>
-                <a href="show.jsp">所有展品</a>
+                <a href="show?category=全部"  >所有展品</a>
             </li>
             <li class="dropdown">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
                 <!--下拉展品分类菜单-->
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="#">工艺</a>
+                        <a href="show?category=工艺">工艺</a>
                     </li>
                     <li>
-                        <a href="#">金石</a>
+                        <a href="show?category=金石">金石</a>
                     </li>
                     <li>
-                        <a href="#">书画</a>
+                        <a href="show?category=书画">书画</a>
                     </li>
                     <li>
-                        <a href="#">陶瓷</a>
+                        <a href="show?category=陶瓷">陶瓷</a>
                     </li>
                     <li>
-                        <a href="#">其他</a>
+                        <a href="show?category=其他">其他</a>
                     </li>
                     <li class="divider">
                     </li>
@@ -136,43 +161,8 @@
                 <li data-target="#carousel-368079" data-slide-to="2">
                 </li>
             </ol>
-            <div class="carousel-inner">
-                <!--图片1-->
-                <div class="item active ">
-                    <a href="#"><img alt="图片无法显示" src="images/1.jpg" align="center" /></a>
-                    <div class="carousel-caption">
-                        <h4>
-                            第一件热门展品名称
-                        </h4>
-                        <p>
-                            第一件热门展品的描述详情，第一件热门展品的描述详情，第一件热门展品的描述详情，第一件热门展品的描述详情，第一件热门展品的描述详情，第一件热门展品的描述详情
-                        </p>
-                    </div>
-                </div>
-                <!--图片2-->
-                <div class="item">
-                    <a href="#"><img alt="图片无法显示" src="images/2.jpg" align="center" /></a>
-                    <div class="carousel-caption">
-                        <h4>
-                            第二件热门展品名称
-                        </h4>
-                        <p>
-                            第二件热门展品的描述详情，第二件热门展品的描述详情，第二件热门展品的描述详情，第二件热门展品的描述详情，第二件热门展品的描述详情，第二件热门展品的描述详情
-                        </p>
-                    </div>
-                </div>
-                <!--图片3-->
-                <div class="item">
-                    <a href="#"><img alt="图片无法显示" src="images/3.jpg" align="center" /></a>
-                    <div class="carousel-caption">
-                        <h4>
-                            第三件热门展品名称
-                        </h4>
-                        <p>
-                            第三件热门展品的描述详情，第三件热门展品的描述详情，第三件热门展品的描述详情，第三件热门展品的描述详情，第三件热门展品的描述详情，第三件热门展品的描述详情
-                        </p>
-                    </div>
-                </div>
+            <div class="carousel-inner" id="hotItems">
+                <script>hotItem(items);</script>
             </div> <a class="left carousel-control" href="#carousel-368079" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-368079" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
         </div>
     </div>
@@ -184,101 +174,13 @@
         ▽<br><br>
     </h1>
     <!--第一行-->
-    <div class="row clearfix">
-        <!--第一件-->
-        <div class="col-md-4 column">
-            <div class="imgcontrol">
-                <img src="images/1.jpg" align="center">
-            </div>
-            <h2>
-                第一件最新展品
-            </h2>
-            <p>
-                第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。
-            </p>
-            <p>
-                <a class="btn mycolor" href="#" >点击详情 »</a>
-            </p>
-        </div>
-        <!--第二件-->
-        <div class="col-md-4 column">
-            <div class="imgcontrol">
-                <img src="images/2.jpg" align="center">
-            </div>
-            <h2>
-                第二件最新展品
-            </h2>
-            <p>
-                第二件最新展品的各种详情。第二件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。
-            </p>
-            <p>
-                <a class="btn mycolor" href="#">点击详情 »</a>
-            </p>
-        </div>
-        <!--第三件-->
-        <div class="col-md-4 column">
-            <div class="imgcontrol">
-                <img src="images/3.jpg" align="center">
-            </div>
-            <h2>
-                第三件最新展品
-            </h2>
-            <p>
-                第三件最新展品的各种详情。第二件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。
-            </p>
-            <p>
-                <a class="btn mycolor" href="#">点击详情 »</a>
-            </p>
-        </div>
+    <div class="row clearfix" id="newItems1">
+        <script>newItem(1,items);</script>
     </div>
     <br><br>
     <!--第二行-->
-    <div class="row clearfix">
-        <!--第一件-->
-        <div class="col-md-4 column">
-            <div class="imgcontrol">
-                <img src="images/1.jpg" align="center">
-            </div>
-            <h2>
-                第一件最新展品
-            </h2>
-            <p>
-                第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。
-            </p>
-            <p>
-                <a class="btn mycolor" href="#" >点击详情 »</a>
-            </p>
-        </div>
-        <!--第二件-->
-        <div class="col-md-4 column">
-            <div class="imgcontrol">
-                <img src="images/2.jpg" align="center">
-            </div>
-            <h2>
-                第二件最新展品
-            </h2>
-            <p>
-                第二件最新展品的各种详情。第二件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。
-            </p>
-            <p>
-                <a class="btn mycolor" href="#">点击详情 »</a>
-            </p>
-        </div>
-        <!--第三件-->
-        <div class="col-md-4 column">
-            <div class="imgcontrol">
-                <img src="images/3.jpg" align="center">
-            </div>
-            <h2>
-                第三件最新展品
-            </h2>
-            <p>
-                第三件最新展品的各种详情。第二件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。
-            </p>
-            <p>
-                <a class="btn mycolor" href="#">点击详情 »</a>
-            </p>
-        </div>
+    <div class="row clearfix" id="newItems2">
+        <script>newItem(2,items);</script>
     </div>
 
 </div>
