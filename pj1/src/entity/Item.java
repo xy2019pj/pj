@@ -1,9 +1,7 @@
 package entity;
 
 import dao.Dao4Item;
-
 import java.sql.Date;
-import java.text.SimpleDateFormat;
 
 public class Item {
     private String name=null;
@@ -24,9 +22,8 @@ public class Item {
     }
 
     public int add(){
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String currentTime = sdf.format(new java.util.Date());
-        setPushTime(Date.valueOf(currentTime));
+        java.sql.Date currentTime = new java.sql.Date(new java.util.Date().getTime());
+        setPushTime(currentTime);
         setClickNum(0);
         return Dao4Item.addItem(this);
     }

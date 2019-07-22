@@ -56,35 +56,35 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-        </button> <a class="navbar-brand" href="#">博物馆logo</a>
+        </button> <a class="navbar-brand" href="home">博物馆logo</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="#">首页</a>
+            <li >
+                <a href="home" >首页</a>
             </li>
             <li>
-                <a href="#">所有展品</a>
+                <a href="show?category=全部">所有展品</a>
             </li>
             <!--下拉展品分类菜单-->
             <li class="dropdown">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="#">工艺</a>
+                        <a href="show?category=工艺">工艺</a>
                     </li>
                     <li>
-                        <a href="#">金石</a>
+                        <a href="show?category=金石">金石</a>
                     </li>
                     <li>
-                        <a href="#">书画</a>
+                        <a href="show?category=书画">书画</a>
                     </li>
                     <li>
-                        <a href="#">陶瓷</a>
+                        <a href="show?category=陶瓷">陶瓷</a>
                     </li>
                     <li>
-                        <a href="#">其他</a>
+                        <a href="show?category=其他">其他</a>
                     </li>
                     <li class="divider">
                     </li>
@@ -103,12 +103,12 @@
         <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
                 <input class="form-control" type="text" />
-            </div> <button class="btn btn-default" type="submit">搜索</button>
+            </div> <button class="btn btn-default" type="submit" onclick="">搜索</button>
         </form>
         <!--右侧用户操作-->
         <ul class="nav navbar-nav navbar-right">
             <!--管理栏-->
-            <li class="dropdown">
+            <li class="dropdown active">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown">管理中心<strong class="caret"></strong></a>
                 <ul class="dropdown-menu">
                     <li>

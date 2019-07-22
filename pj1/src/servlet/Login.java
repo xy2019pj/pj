@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
 
 @WebServlet("/login")
 public class Login extends HttpServlet {
@@ -28,10 +27,13 @@ public class Login extends HttpServlet {
         status = user.login();
         if (status == 0) {//登陆成功
             req.getSession().setAttribute("user", user);
-            req.getRequestDispatcher("").forward(req,res);
-        } else {//登陆失败
-            req.setAttribute("status", status);
-            req.getRequestDispatcher("login").forward(req, res);
+            res.getWriter().append("登录成功！");
+            req.getRequestDispatcher("home").forward(req, res);
         }
+        else if(status==1)
+            res.getWriter().append("用户名不存在。");
+        else if(status==2)
+             res.getWriter().append("密码错误，请重新输入。");
+
     }
 }

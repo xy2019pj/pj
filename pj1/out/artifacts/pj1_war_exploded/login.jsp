@@ -43,65 +43,55 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-        </button> <a class="navbar-brand" href="#">博物馆logo</a>
+        </button> <a class="navbar-brand" href="home">博物馆logo</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li >
-                <a href="#">首页</a>
+                <a href="home">首页</a>
             </li>
             <li>
-                <a href="show.jsp">所有展品</a>
+                <a href="show?category=全部">所有展品</a>
             </li>
             <li class="dropdown">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
                 <!--下拉展品分类菜单-->
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="#">工艺</a>
+                        <a href="show?category=工艺">工艺</a>
                     </li>
                     <li>
-                        <a href="#">金石</a>
+                        <a href="show?category=金石">金石</a>
                     </li>
                     <li>
-                        <a href="#">书画</a>
+                        <a href="show?category=书画">书画</a>
                     </li>
                     <li>
-                        <a href="#">陶瓷</a>
+                        <a href="show?category=陶瓷">陶瓷</a>
                     </li>
                     <li>
-                        <a href="#">其他</a>
-                    </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                        <a href="#">考虑是否拓展朝代分类方式</a>
-                    </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                        <a href="#">考虑是否拓展其他分类方式</a>
+                        <a href="show?category=其他">其他</a>
                     </li>
                 </ul>
             </li>
         </ul>
         <!--搜索-->
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search" action="show">
             <div class="form-group">
-                <input class="form-control" type="text" />
+                <input class="form-control" type="text" name="search"/>
             </div> <button class="btn btn-default" type="submit">搜索</button>
         </form>
         <!--右侧用户操作-->
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
+                <a class="dropdown-toggle" href="profile" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="#">登录</a>
+                        <a href="login">登录</a>
                     </li>
                     <li>
-                        <a href="#">注册</a>
+                        <a href="register">注册</a>
                     </li>
                 </ul>
             </li>
@@ -124,24 +114,24 @@
         <div class="col-md-12 column mybody">
             <br>
             <h3 style="text-align: center">用户登录</h3>
-            <form class="form-horizontal " role="form">
+            <form class="form-horizontal " role="form" action="login" method="post">
                 <br>
                 <div class="form-group">
                     <label class="col-sm-2 control-label" for="inputUserName">用户名</label>
                     <div class="col-sm-10">
-                        <input class="form-control" id="inputUserName" type="text" />
+                        <input class="form-control" id="inputUserName" type="text" name="username" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label" for="inputPassword">密码</label>
                     <div class="col-sm-10">
-                        <input class="form-control" id="inputPassword" type="password" />
+                        <input class="form-control" id="inputPassword" type="password" name="password"/>
                     </div>
                 </div>
                 <div class="form-group" style="text-align: center">
                     <div class="col-sm-offset-1 col-sm-10">
                         <br>
-                        <button class="btn btn-default" type="submit">登录</button>
+                        <button class="btn btn-default" type="submit" >登录</button>
                     </div>
                 </div>
             </form>

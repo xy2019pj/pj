@@ -3,6 +3,7 @@ package entity;
 import dao.Dao4User;
 import java.io.IOException;
 import java.sql.Date;
+import java.sql.Time;
 import java.text.SimpleDateFormat;
 
 public class User {
@@ -30,9 +31,9 @@ public class User {
         else if(!password.equals(this.getPassword()))
             return 2;//密码不正确
         else {
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            String currentTime = sdf.format(new java.util.Date());
-            setRecent_login_time(Date.valueOf(currentTime));
+            java.sql.Date currentTime = new java.sql.Date(new java.util.Date().getTime());
+            setRecent_login_time(currentTime);
+            Dao4User.updateRecentTime(this);
             return 0;//登陆成功
         }
     }

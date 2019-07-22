@@ -9,10 +9,9 @@ public class Dao4User {
     private static DAO dao=new DAO();
 
     public static User getActuserByUser(User user){
-        String sql="select * from user_account where username=?,auth=?;";
+        String sql="select * from user_account where username=?";
         String username=user.getUsername();
-        char auth=user.getAuth();
-        User actUser=dao.get(User.class,sql,username,auth);
+        User actUser=dao.get(User.class,sql,username);
         return actUser;
     }
 
@@ -78,5 +77,12 @@ public class Dao4User {
         String sql="select * from user_account;";
         ArrayList<User> allUser=(ArrayList<User>) dao.getForList(User.class,sql);
         return allUser;
+    }
+
+    public static void updateRecentTime(User user){
+        String sql="update user_account " +
+                "set recent_login_time=?" +
+                " where username=?";
+        dao.update(sql,user.getRecent_login_time(),user.getUsername());
     }
 }
