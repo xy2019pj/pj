@@ -60,10 +60,10 @@ function myFunction(user,userAuth)
         "                <a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">个人中心<strong class=\"caret\"></strong></a>\n" +
         "                <ul class=\"dropdown-menu\">\n" +
         "                    <li>\n" +
-        "                        <a href=\"#\">登录</a>\n" +
+        "                        <a href=\"login\">登录</a>\n" +
         "                    </li>\n" +
         "                    <li>\n" +
-        "                        <a href=\"#\">注册</a>\n" +
+        "                        <a href=\"register\">注册</a>\n" +
         "                    </li>\n" +
         "                </ul>\n" +
         "            </li>";
