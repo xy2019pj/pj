@@ -80,6 +80,10 @@ function myFunction(user,userAuth)
     console.log("进入了function,user="+user+";userAuth="+userAuth);
 }
 
-function f() {
-    
+function searchI() {
+    var x = document.forms["fname"]["search"].value;
+    if (x == null || x == "") {
+        alert("请输入搜索内容。");
+        return false;
+    }
 }

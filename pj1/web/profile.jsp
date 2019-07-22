@@ -102,10 +102,10 @@
             </li>
         </ul>
         <!--搜索-->
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search" name="fname" action="show" onsubmit="return searchI()">
             <div class="form-group">
-                <input class="form-control" type="text" />
-            </div> <button class="btn btn-default" type="submit">搜索</button>
+                <input class="form-control" type="text" name="search" />
+            </div> <button class="btn btn-default" type="submit" >搜索</button>
         </form>
         <!--右侧用户操作-->
         <ul class="nav navbar-nav navbar-right" id="userManage">
