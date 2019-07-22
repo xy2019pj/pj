@@ -26,13 +26,15 @@ function showOpenItems() {
         xmlHttp = new ActiveXObject("MicroSoft.XMLHTTP"); //老版本的 Internet Explorer （IE5 和 IE6）使用 ActiveX 对象
     }
 
-    var url="profile";
+    var url="getfav";
     xmlHttp.open("get", url, true);
     xmlHttp.onreadystatechange = function() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
             //获取后台传递过来的字符串并转换为json
+            window.alert(xmlHttp.responseText);
             var responseJson=JSON.parse(xmlHttp.responseText);
             var out="";
+            alert(responseJson[0].name);
             // JSONArray jsonArray = JSONArray.fromObject(responseJson);
             // Object[] strs = jsonArray.toArray();
             for (item in responseJson) {
@@ -44,7 +46,28 @@ function showOpenItems() {
     xmlHttp.send(null);
 }
 
-function  tryi() {
+function  tryi(visitName) {
+
+    $.ajax({
+        url:"fetfav",    //请求的url地址
+        dataType:"json",   //返回格式为json
+        async:true,//请求是否异步，默认为异步，这也是ajax重要特性
+        // data:{"destUser":visitName},    //参数值
+        data:{"destUser":visitName},    //参数值
+        type:"GET",   //请求方式
+        success:function(req){
+            //alert(req[0].name);
+            var out="";
+            for (item in req) {
+                out+=creatForm(item.name,item.src,item.intro);
+            }
+            document.getElementById("collections").innerHTML=out;
+        },
+        error:function(){
+            //请求出错处理
+            alert("请求出错，visitname："+visitName);
+        }
+    });
 
 }
 

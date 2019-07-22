@@ -1,5 +1,6 @@
 package servlet;
 
+import dao.Dao4User;
 import entity.User;
 
 import javax.servlet.ServletException;
@@ -26,7 +27,8 @@ public class Login extends HttpServlet {
         //登录
         status = user.login();
         if (status == 0) {//登陆成功
-            req.getSession().setAttribute("user", user);
+            User actUser= Dao4User.getActuserByUser(user);
+            req.getSession().setAttribute("user", actUser);
             res.getWriter().append("登录成功！");
             res.sendRedirect("home");
         }

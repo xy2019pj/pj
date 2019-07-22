@@ -25,7 +25,7 @@ function myFunction(user,userAuth)
         "                <a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">个人中心<strong class=\"caret\"></strong></a>\n" +
         "                <ul class=\"dropdown-menu\">\n" +
         "                    <li>\n" +
-        "                        <a href=\"profile\">个人首页</a>\n" +
+        "                        <a href=\"profile.jsp\">个人首页</a>\n" +
         "                    </li>\n" +
         "                    <li>\n" +
         "                        <a href=\"favorite\">收藏夹</a>\n" +

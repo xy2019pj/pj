@@ -10,8 +10,7 @@
 <html lang="en">
 <head>
     <title>个人主页</title>
-
-    <meta charset="utf-8">
+、
 
     <!-- Bootstrap -->
     <link href="./js/bootstrap.min.js" rel="stylesheet">
@@ -35,7 +34,6 @@
 
     <!-- 自定义的js -->
     <script src="./js/all.js"></script>
-    <script src="./js/center.js"></script>
     <script src="./js/profile.js"></script>
     <!-- 导航栏用户个人中心 -->
     <script>
@@ -121,8 +119,8 @@
         <div class="col-sm-3 col-md-2 sidebar" id="leftSide" >
             <script>
                 var isSelf;
-                var userName="${sessionScope.user.name}";
-                var destName="${requestScope.destUser.name}";
+                var userName="${sessionScope.user.username}";
+                var destName="${requestScope.destUser.username}";
                 if(userName==destName && userName!=""){
                     isSelf=true;
                 }else {
@@ -158,7 +156,7 @@
             <h2 class="sub-header line">ta的收藏：</h2>
             <br>
             <div class="row placeholders" id="collections">
-                <script>showOpenItems();</script>
+                <script>tryi('${requestScope.destUser.username}');</script>
             </div>
 
         </div>
