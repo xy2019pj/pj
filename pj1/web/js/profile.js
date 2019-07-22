@@ -33,6 +33,8 @@ function showOpenItems() {
             //获取后台传递过来的字符串并转换为json
             var responseJson=JSON.parse(xmlHttp.responseText);
             var out="";
+            // JSONArray jsonArray = JSONArray.fromObject(responseJson);
+            // Object[] strs = jsonArray.toArray();
             for (item in responseJson) {
                 out+=creatForm(item.name,item.src,item.intro);
             }
@@ -40,6 +42,10 @@ function showOpenItems() {
         }
     };
     xmlHttp.send(null);
+}
+
+function  tryi() {
+
 }
 
 function creatForm(name,src,intro){

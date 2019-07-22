@@ -35,7 +35,6 @@
 
     <!-- 自定义的js -->
     <script src="./js/all.js"></script>
-    <script src="./js/center.js"></script>
     <script src="./js/profile.js"></script>
     <!-- 导航栏用户个人中心 -->
     <script>
@@ -89,16 +88,6 @@
                     <li>
                         <a href="show?category=其他">其他</a>
                     </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                        <a href="#">考虑是否拓展朝代分类方式</a>
-                    </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                        <a href="#">考虑是否拓展其他分类方式</a>
-                    </li>
                 </ul>
             </li>
         </ul>
@@ -118,10 +107,10 @@
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >
     <h1 style="color: #000000;" id="userNameShow">
-        ${sessionScope.destUser.username}
+        ${requestScope.destUser.username}
     </h1>
     <p style="color: #000000;" id="userSignNS">
-        ${sessionScope.destUser.Intro}
+        ${requestScope.destUser.intro}
     </p>
 </div>
 <!--正文-->
@@ -131,8 +120,8 @@
         <div class="col-sm-3 col-md-2 sidebar" id="leftSide" >
             <script>
                 var isSelf;
-                var userName="${sessionScope.user.name}";
-                var destName="${sessionScope.destUser.name}";
+                var userName="${sessionScope.user.username}";
+                var destName="${requestScope.destUser.username}";
                 if(userName==destName && userName!=""){
                     isSelf=true;
                 }else {
@@ -152,14 +141,14 @@
                 ta的邮箱：
             </b>
             <p style="color: #0f0f0f">
-                ${sessionScope.destUser.email}
+                ${requestScope.destUser.email}
             </p>
             <br>
             <b>
                 ta的个性签名：
             </b>
             <p style="color: #0f0f0f">
-                ${sessionScope.destUser.Intro}
+                ${requestScope.destUser.intro}
             </p>
             <br>
             <br>
@@ -168,7 +157,9 @@
             <h2 class="sub-header line">ta的收藏：</h2>
             <br>
             <div class="row placeholders" id="collections">
-                <script>showOpenItems();</script>
+                <script>showOpenItems();
+
+                </script>
             </div>
 
         </div>
