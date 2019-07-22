@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class Dao4Item {
     private static final int HOTNUM=3;
+    private static final int RECENTNUM=6;
     private static DAO dao=new DAO();
 
 
@@ -17,6 +18,14 @@ public class Dao4Item {
             hotItems.add(allItems.get(i));
         }
         return hotItems;
+    }
+    public static ArrayList<Item> getRecentItems(){
+        String sql="select * from item_info order by pushTime DESC;";
+        ArrayList<Item> allItems=(ArrayList<Item>) dao.getForList(Item.class,sql);
+        ArrayList<Item> rencentItems=new ArrayList<>();
+        for(int i=0;i<RECENTNUM;i++)
+            rencentItems.add(allItems.get(i));
+        return rencentItems;
     }
 
     public static ArrayList<Item> getItemsByCategory(String category){
@@ -33,9 +42,11 @@ public class Dao4Item {
         return items;
     }
 
-    public static ArrayList<Item> getItemsBySearch(String content){
-        // to do
-        return null;
+    public static ArrayList<Item> getItemsBySearch(String category,String content){
+        String sql="select * from item_info where category=? and name like ?";
+        ArrayList<Item> items=(ArrayList<Item>) dao.getForList(Item.class,sql,
+                category,"%"+content+"%");
+        return items;
     }
 
     public static Item getItemByName(String name){

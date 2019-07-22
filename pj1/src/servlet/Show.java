@@ -17,16 +17,13 @@ public class Show extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         String category = req.getParameter("category");
+        String search=req.getParameter("search");
         ArrayList<Item> items =null;
-        /*搜索时传参*/
-        if(category.startsWith("search=")) {
-            String content=category.substring(category.indexOf('=')+1);
-            items=Dao4Item.getItemsBySearch(content);
-        }
-        /*根据类别传参*/
-        else{
-            items=Dao4Item.getItemsByCategory(category);
-        }
+        if(category==null)
+            category="全部";
+        items=Dao4Item.getItemsByCategory(category);
+        if(search!=null)
+            items=Dao4Item.getItemsBySearch(category,search);
         req.setAttribute("items", items);
         req.getRequestDispatcher("show.jsp").forward(req, res);
     }

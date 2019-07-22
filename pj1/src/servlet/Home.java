@@ -18,8 +18,10 @@ public class Home extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse res)throws ServletException,IOException{
         System.out.println("jiuzhou!");
         /*热门展品*/
-        ArrayList<Item> hotItem= Dao4Item.getHotItems();
-        req.setAttribute("items",hotItem);
+        ArrayList<Item> hotItems= Dao4Item.getHotItems();
+        req.setAttribute("hotItems",hotItems);
+        ArrayList<Item> recentItems=Dao4Item.getRecentItems();
+        req.setAttribute("recentItems",recentItems);
         /*转发到首页页面*/
         req.getRequestDispatcher("home.jsp").forward(req,res);
     }

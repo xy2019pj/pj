@@ -23,8 +23,7 @@ public class Login extends HttpServlet {
         //获取用户信息
         String username = req.getParameter("username");
         String password = req.getParameter("password");
-        char auth=req.getParameter("auth").charAt(0);
-        User user=new User(username,auth,password,null,null);
+        User user=new User(username,'n',password,null,null);
         //登录
         status = user.login();
         if (status == 0) {//登陆成功
@@ -32,7 +31,7 @@ public class Login extends HttpServlet {
             req.getRequestDispatcher("").forward(req,res);
         } else {//登陆失败
             req.setAttribute("status", status);
-            req.getRequestDispatcher("/jiuzhou/login").forward(req, res);
+            req.getRequestDispatcher("login").forward(req, res);
         }
     }
 }
