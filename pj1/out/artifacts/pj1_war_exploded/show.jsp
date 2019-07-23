@@ -30,9 +30,26 @@
     <script src="./styles/jquery-3.4.1.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="./js/bootstrap.min.js"></script>
-
     <script src="./js/show.js"></script>
 
+    <!-- 自定义的js -->
+    <script src="./js/all.js"></script>
+    <script src="./js/center.js"></script>
+    <!-- 导航栏用户个人中心 -->
+    <script>
+        var user='${sessionScope.user.username}';
+        var userAuth;
+        if(user!=""){
+            userAuth='${sessionScope.user.auth}';
+        }else {
+            user=null;
+            userAuth=null;
+        }
+    </script>
+    <script src="js/showTry.js"></script>
+<script>
+
+</script>
 </head>
 <body>
 <!--导航条-->
@@ -43,177 +60,75 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-        </button> <a class="navbar-brand" href="">博物馆logo</a>
+        </button> <a class="navbar-brand" >博物馆logo</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="home">首页</a>
-            </li>
-            <li>
-                <a href="show?category=全部">所有展品</a>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
-                <!--下拉展品分类菜单-->
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="show?category=工艺">工艺</a>
-                    </li>
-                    <li>
-                        <a href="show?category=金石">金石</a>
-                    </li>
-                    <li>
-                        <a href="show?category=书画">书画</a>
-                    </li>
-                    <li>
-                        <a href="show?category=陶瓷">陶瓷</a>
-                    </li>
-                    <li>
-                        <a href="show?category=其他">其他</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav" id="location">
+            <script>
+                var categoryS="<%=request.getParameter("category")%>";
+                console.log("categoryS="+categoryS);
+                if(categoryS=="null"||categoryS==""){
+                    nowLocation(2);
+                }else {
+                    nowLocation(3);
+                }
+            </script>
         </ul>
         <!--搜索-->
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search" action="show">
             <div class="form-group">
                 <input class="form-control" type="text" name="search"/>
             </div> <button class="btn btn-default" type="submit">搜索</button>
         </form>
         <!--右侧用户操作-->
-        <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="profile" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="login">登录</a>
-                    </li>
-                    <li>
-                        <a href="register">注册</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav navbar-right" id="userManage">
+            <script>myFunction(user,userAuth)</script>
         </ul>
     </div>
-
 </nav>
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) ; margin-bottom:0" >
     <h1 style="color: #000000;">
-        所有展品/某某类展品
+        <%
+            if(request.getParameter("category")!=null){
+        %>
+        <%=request.getParameter("category")+"类展品"%>
+        <%
+        }else {
+        %>
+        <%="所有展品"%>
+        <%
+        }
+        %>
     </h1>
 </div>
 <!--搜索表单-->
 <div class="container ">
     <div class="row clearfix">
-        <div class="col-md-12 column"  style="text-align:center">
-            <form class="navbar-form" role="search">
+        <div class="col-md-12 column"  style="text-align:center" >
+            <form class="navbar-form" role="search"  id="searchForm">
                 <div class="form-group">
-                    <input class="form-control" type="text" />
-                </div> <button class="btn btn-default" type="submit">搜索</button>
+                    <input class="form-control" type="text" id="inputS" />
+                </div> <button class="btn btn-default" type="button" onclick="f()">搜索</button>
             </form>
         </div>
     </div>
 </div>
-<!--分页待解决-->
+<!--分页-->
 <div class="container writeColorText bottomThings clearfix">
-    <div class="row clearfix">
-        <!--第一件-->
-        <div class="col-md-4 column">
-            <div class="imgcontrol">
-                <img src="images/1.jpg" align="center">
-            </div>
-            <h2>
-                第一件最新展品
-            </h2>
-            <p>
-                第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。
-            </p>
-            <p>
-                <a class="btn mycolor" href="#" >点击详情 »</a>
-            </p>
-        </div>
-        <!--第二件-->
-        <div class="col-md-4 column">
-            <div class="imgcontrol">
-                <img src="images/2.jpg" align="center">
-            </div>
-            <h2>
-                第二件最新展品
-            </h2>
-            <p>
-                第二件最新展品的各种详情。第二件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。
-            </p>
-            <p>
-                <a class="btn mycolor" href="#">点击详情 »</a>
-            </p>
-        </div>
-        <!--第三件-->
-        <div class="col-md-4 column">
-            <div class="imgcontrol">
-                <img src="images/3.jpg" align="center">
-            </div>
-            <h2>
-                第三件最新展品
-            </h2>
-            <p>
-                第三件最新展品的各种详情。第二件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。
-            </p>
-            <p>
-                <a class="btn mycolor" href="#">点击详情 »</a>
-            </p>
-        </div>
-    </div>
-    <br><br>
-    <!--第二行-->
-    <div class="row clearfix">
-        <!--第一件-->
-        <div class="col-md-4 column">
-            <div class="imgcontrol">
-                <img src="images/1.jpg" align="center">
-            </div>
-            <h2>
-                第一件最新展品
-            </h2>
-            <p>
-                第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。
-            </p>
-            <p>
-                <a class="btn mycolor" href="#" >点击详情 »</a>
-            </p>
-        </div>
-        <!--第二件-->
-        <div class="col-md-4 column">
-            <div class="imgcontrol">
-                <img src="images/2.jpg" align="center">
-            </div>
-            <h2>
-                第二件最新展品
-            </h2>
-            <p>
-                第二件最新展品的各种详情。第二件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。
-            </p>
-            <p>
-                <a class="btn mycolor" href="#">点击详情 »</a>
-            </p>
-        </div>
-        <!--第三件-->
-        <div class="col-md-4 column">
-            <div class="imgcontrol">
-                <img src="images/3.jpg" align="center">
-            </div>
-            <h2>
-                第三件最新展品
-            </h2>
-            <p>
-                第三件最新展品的各种详情。第二件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。第一件最新展品的各种详情。
-            </p>
-            <p>
-                <a class="btn mycolor" href="#">点击详情 »</a>
-            </p>
-        </div>
+    <div class="row clearfix" id="showGround">
+        <!--初始化第一页-->
+        <script>
+            var requestS="<%=request.getParameter("search")%>";
+            /*if(requestS=="null"||requestS==""){
+                f();
+            }else{
+                f2(requestS);
+            }*/
+            var categoryS="<%=request.getParameter("category")%>";
+            f3(requestS,categoryS);
+        </script>
     </div>
 </div>
 
@@ -221,18 +136,18 @@
 <div class="container " style="text-align:center" >
     <nav aria-label="Page navigation">
         <ul class="pagination">
-            <li>
-                <a href="#" aria-label="Previous">
+            <li id="preBtn">
+                <a onclick="preEvent()" aria-label="Previous" >
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-                <a href="#" aria-label="Next">
+            <li id="now0Btn"><a onclick="btnEvent(0)" >1</a></li>
+            <li id="now1Btn"><a onclick="btnEvent(1)" >2</a></li>
+            <li id="now2Btn"><a onclick="btnEvent(2)" >3</a></li>
+            <li id="now3Btn"><a onclick="btnEvent(3)" >4</a></li>
+            <li id="now4Btn"><a onclick="btnEvent(4)" >5</a></li>
+            <li id="nextBtn">
+                <a  onclick="nextEvent()" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
                 </a>
             </li>
@@ -243,14 +158,3 @@
 
 </body>
 </html>
-
-<!--
-
-ArrayList<Object> list=request
-int n=
-for()
-<script>
-for(var i=0 ; i<requestScope.items )
-var alldata = ${requestScope.items };
-</script>
--->

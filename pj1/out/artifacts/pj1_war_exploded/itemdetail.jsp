@@ -1,4 +1,4 @@
-<%--
+<%@ page import="entity.Item" %><%--
   Created by IntelliJ IDEA.
   User: hexi4
   Date: 2019/7/20
@@ -33,6 +33,24 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="./js/bootstrap.min.js"></script>
 
+    <!-- 自定义的js -->
+    <script src="./js/all.js"></script>
+    <!-- 导航栏用户个人中心 -->
+    <script>
+        var user='${sessionScope.user.username}';
+        var userAuth;
+        if(user!=""){
+            userAuth='${sessionScope.user.auth}';
+        }else {
+            user=null;
+            userAuth=null;
+        }
+    </script>
+
+    <%
+        Item item=(Item)request.getAttribute("item");
+        String fav=(String)request.getAttribute("fav");
+    %>
 </head>
 <body>
 <!--导航条-->
@@ -43,79 +61,32 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-        </button> <a class="navbar-brand" href="#">博物馆logo</a>
+        </button> <a class="navbar-brand" >博物馆logo</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="#">首页</a>
-            </li>
-            <li>
-                <a href="#">所有展品</a>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
-                <!--下拉展品分类菜单-->
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#">工艺</a>
-                    </li>
-                    <li>
-                        <a href="#">金石</a>
-                    </li>
-                    <li>
-                        <a href="#">书画</a>
-                    </li>
-                    <li>
-                        <a href="#">陶瓷</a>
-                    </li>
-                    <li>
-                        <a href="#">其他</a>
-                    </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                        <a href="#">考虑是否拓展朝代分类方式</a>
-                    </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                        <a href="#">考虑是否拓展其他分类方式</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav" id="location">
+            <script>nowLocation(0)</script>
         </ul>
         <!--搜索-->
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search" action="show">
             <div class="form-group">
-                <input class="form-control" type="text" />
+                <input class="form-control" type="text" name="search"/>
             </div> <button class="btn btn-default" type="submit">搜索</button>
         </form>
         <!--右侧用户操作-->
-        <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#">登录</a>
-                    </li>
-                    <li>
-                        <a href="#">注册</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav navbar-right" id="userManage">
+            <script>myFunction(user,userAuth)</script>
         </ul>
     </div>
-
 </nav>
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >
     <h1 style="color: #000000;">
-        展品名称
+        <%=item.getName()%>
     </h1>
     <p style="color: #000000;">
-        展品简介
+        <%=item.getIntro()%>
     </p>
 </div>
 <!--展品详情-->
@@ -123,7 +94,7 @@
     <!--图片-->
     <div class="row clearfix " style="text-align:center">
         <div class="col-md-12 column">
-            <img alt="图片" src="images/1.jpg" />
+            <img alt="图片" src="<%=item.getPicture()%>" />
         </div>
     </div>
     <!--收藏按钮-->
@@ -140,28 +111,13 @@
         <div class="col-md-12 column">
             <dl>
                 <dt>
-                    展品名称
+                    <%=item.getName()%>
                 </dt>
                 <dd>
-                    展品的简介
+                    <%=item.getIntro()%>
                 </dd>
-                <br>
                 <dt>
-                    馆藏地点：
-                </dt>
-                <dd>
-                    某某地方某某地址。。。。。。。
-                </dd>
-                <br>
-                <dt>
-                    出土年份/作品完成时间：
-                </dt>
-                <dd>
-                    公元前20年某某
-                </dd>
-                <br>
-                <dt>
-                    热度：12
+                    热度<%=item.getClickNum()%>
                 </dt>
             </dl>
         </div>
