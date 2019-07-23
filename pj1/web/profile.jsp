@@ -43,7 +43,7 @@
             user=null;
             userAuth=null;
         }
-        f();
+        f("${requestScope.destUser.username}");
     </script>
 
 </head>

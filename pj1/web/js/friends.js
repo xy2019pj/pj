@@ -4,25 +4,22 @@ function f() {
         url: "friend",
         type: "post",
         success: function (res) {
-            console.log("success");//
-            var s=res.toString();//
-            if(s==""||s==null){
+            var form = "您暂时无好友";
+            var friends=JSON.parse(res);
+            if(friends==null||friends.length==0){
                 console.log("好友列表为空");//
-            }else{
-                console.log("s:"+s);//
-                friends =JSON.parse(res)[0];
-                friendsRequests = JSON.parse(res)[1];
-
-                respond.setAttribute("friends",friends);
-
-                friend(0);
+            }else {
+                form="";
+                console.log(friends[0].username);
+                for (var i = 0; i < friends.length; i++)
+                    form += "<li><a href=\"" +
+                        "profile?destUser="+
+                        friends[i].username +
+                        "\" class=\"active\">"+
+                        friends[i].username+
+                        "</a></li>\n";
             }
-
-
-            form="";
-            // for(var j=0;j<friendsRequests.length;j++)
-            // form+="<li><a href=\"profile?destUser="+friends[i].username+"\"  class=\"active\">好友1</a></li>\n";
-            // document.getElementById("friends").innerHTML=form;
+            document.getElementById("friends").innerHTML=form;
         },
         error:function () {
             window.alert("????");

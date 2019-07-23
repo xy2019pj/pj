@@ -1,14 +1,19 @@
 package dao;
 
+import entity.User;
+
 import java.util.ArrayList;
 
 public class Dao4Friend {
     private static DAO dao=new DAO();
 
-    public static ArrayList<String> getFriendsByName(String username){
-        String sql="select friendname from friend_pair where username=?,available=1;";
+    public static ArrayList<User> getFriendsByName(String username){
+        String sql="select friendname from friend_pair where username=? and available=1;";
         ArrayList<String> friends=(ArrayList<String>) dao.getForValue(sql,username);
-        return friends;
+        ArrayList<User> friendUser=new ArrayList<>();
+        for(int i=0;i<friends.size();i++)
+            friendUser.add(Dao4User.getUserByName(friends.get(i)));
+        return friendUser;
     }
     public static void addFriendByName(String username,String friName){
         String sql="insert into friend_pair(username,friendname,available) values(?,?,1);";
@@ -21,9 +26,9 @@ public class Dao4Friend {
     }
 
     public static void changeFriendsByName(String username,String friName){
-        ArrayList<String> friends=getFriendsByName(username);
+        ArrayList<User> friends=getFriendsByName(username);
         for(int i=0;i<friends.size();i++)
-            if(friends.get(i).equals(friName)) {
+            if(friends.get(i).getUsername().equals(friName)) {
                 deleteFriendByName(username, friName);
                 return;
             }

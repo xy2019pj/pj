@@ -56,7 +56,7 @@
         var recentItems=new Array();
         $.ajax({
             url: "home",
-            type: "GET",
+            type: "POST",
             success: function (res) {
                 hotItems =JSON.parse(res)[0];
                 recentItems = JSON.parse(res)[1];

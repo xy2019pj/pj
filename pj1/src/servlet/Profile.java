@@ -19,7 +19,7 @@ public class Profile extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user=(User)req.getSession().getAttribute("user");
-        String destUser=(String)req.getAttribute("destUser");
+        String destUser=req.getParameter("destUser");
         User dUser;
         if(user!=null) {
             if (destUser == null) dUser = user;
@@ -33,7 +33,7 @@ public class Profile extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user=(User)req.getSession().getAttribute("user");
-        User destUser=(User)req.getAttribute("destUser");
+        User destUser=Dao4User.getUserByName(req.getParameter("destUser"));
         if(destUser==null) {
             destUser = user;
             req.setAttribute("destUser",destUser);
