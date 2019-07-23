@@ -92,7 +92,7 @@
         <div class="col-md-12 column mybody">
             <br>
             <h3 style="text-align: center">注册新用户</h3>
-            <form class="form-horizontal " role="form" action="register">
+            <form class="form-horizontal " role="form" action="register" method="post">
                 <br>
                 <div class="form-group">
                     <label class="col-sm-2 control-label" for="inputUserName">用户名</label>

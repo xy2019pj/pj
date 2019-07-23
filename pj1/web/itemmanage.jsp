@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="entity.Item" %><%--
   Created by IntelliJ IDEA.
   User: hexi4
   Date: 2019/7/20
@@ -107,86 +108,32 @@
         </div>
 
         <!--右侧-->
+        <%
+            ArrayList<Item> items=(ArrayList<Item>)request.getAttribute("items");
+        %>
         <div class="col-sm-9 right">
             <br><br>
             <!--第一行-->
-            <div class="row placeholders">
-                <!--藏品1-->
-                <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
-                    <!--按钮-->
-                    <div class="row clearfix" >
-                        <div class="col-md-12 column addText" style="text-align:right">
-                            <a class="glyphicon glyphicon-pencil addForm" href="#" title="点击修改"> </a>
-                            <a class="glyphicon glyphicon-remove addForm" href="#" title="点击删除"> </a>
+            <%for(int i=0;i<items.size();i+=4){%>
+                <div class="row placeholders">
+                    <%for(int j=0;j<items.size()-i&&j<4;j++){%>
+                        <!--藏品1-->
+                        <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
+                            <!--按钮-->
+                            <div class="row clearfix" >
+                                <div class="col-md-12 column addText" style="text-align:right">
+                                    <a class="glyphicon glyphicon-pencil addForm" href="#" title="点击修改"> </a>
+                                    <a class="glyphicon glyphicon-remove addForm" href="#" title="点击删除"> </a>
+                                </div>
+                            </div>
+                            <a href="itemdetail?itemName=<%=items.get(i+j).getName()%>"><img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="<%=items.get(i+j).getPicture()%>"></a>
+                            <h4><%=items.get(i+j).getName()%></h4>
+                            <span class="text-muted"><%=items.get(i+j).getIntro()%></span>
                         </div>
-                    </div>
-                    <a href="#"><img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="images/1.jpg"></a>
-                    <h4>展品名称</h4>
-                    <span class="text-muted">展品简介</span>
+                    <%}%>
                 </div>
-                <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
-                    <!--按钮-->
-                    <div class="row clearfix" >
-                        <div class="col-md-12 column addText" style="text-align:right">
-                            <a class="glyphicon glyphicon-pencil addForm" href="#" title="点击修改"> </a>
-                            <a class="glyphicon glyphicon-remove addForm" href="#" title="点击删除"> </a>
-                        </div>
-                    </div>
-                    <a href="#"><img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="images/1.jpg"></a>
-                    <h4>展品名称</h4>
-                    <span class="text-muted">展品简介</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
-                    <!--按钮-->
-                    <div class="row clearfix" >
-                        <div class="col-md-12 column addText" style="text-align:right">
-                            <a class="glyphicon glyphicon-pencil addForm" href="#" title="点击修改"> </a>
-                            <a class="glyphicon glyphicon-remove addForm" href="#" title="点击删除"> </a>
-                        </div>
-                    </div>
-                    <a href="#"><img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="images/1.jpg"></a>
-                    <h4>展品名称</h4>
-                    <span class="text-muted">展品简介</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
-                    <!--按钮-->
-                    <div class="row clearfix" >
-                        <div class="col-md-12 column addText" style="text-align:right">
-                            <a class="glyphicon glyphicon-pencil addForm" href="#" title="点击修改"> </a>
-                            <a class="glyphicon glyphicon-remove addForm" href="#" title="点击删除"> </a>
-                        </div>
-                    </div>
-                    <a href="#"><img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="images/1.jpg"></a>
-                    <h4>展品名称</h4>
-                    <span class="text-muted">展品简介</span>
-                </div>
-            </div>
-            <br> <br>
-            <!--第二行-->
-            <div class="row placeholders">
-                <!--藏品1-->
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-            </div>
-
+                <br> <br>
+            <%}%>
 
         </div>
 

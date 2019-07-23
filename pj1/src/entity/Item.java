@@ -10,10 +10,25 @@ public class Item {
     private Timestamp pushTime=null;
     private int clickNum=0;
     private String intro=null;
+    private String place=null;
+    private String time=null;
+    private String video=null;
 
     public Item() { }
 
-    public Item(String name, String category, String picture, Timestamp pushTime,int clickNum) {
+    public Item(String name, String category, String picture, Timestamp pushTime, int clickNum,String intro,  String place, String time,String video) {
+        this.setName(name);
+        this.setCategory(category);
+        this.setPicture(picture);
+        this.setPushTime(pushTime);
+        this.clickNum=clickNum;
+        this.place = place;
+        this.time = time;
+        this.video=video;
+        this.setIntro(intro);
+    }
+
+    public Item(String name, String category, String picture, Timestamp pushTime, int clickNum) {
         this.setName(name);
         this.setCategory(category);
         this.setPicture(picture);
@@ -78,5 +93,17 @@ public class Item {
 
     public void setIntro(String intro) {
         this.intro = intro;
+    }
+    public String getPlace() { return place; }
+    public void setPlace(String place) { this.place = place; }
+    public String getTime() { return time; }
+    public void setTime(String time) { this.time = time; }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
     }
 }

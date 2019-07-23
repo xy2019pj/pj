@@ -63,15 +63,18 @@ public class Dao4Item {
     public static int addItem(Item item){
         if(getItemByName(item.getName())!=null)
             return 1;
-        String sql="insert into item_info(name,category,clickNum,picture,pushTime,intro)" +
-                "values(?,?,?,?,?,?)";
+        String sql="insert into item_info(name,category,clickNum,picture,pushTime,intro,time,place,video)" +
+                "values(?,?,?,?,?,?,?,?,?)";
         dao.update(sql,
                 item.getName(),
                 item.getCategory(),
                 item.getClickNum(),
                 item.getPicture(),
                 item.getPushTime(),
-                item.getIntro()
+                item.getIntro(),
+                item.getTime(),
+                item.getPlace(),
+                item.getVideo()
         );
         return 0;
     }

@@ -9,13 +9,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 
 @WebServlet("/friendrequest")
 public class FriendRequest extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if(req.getSession().getAttribute("user")!=null)
-        req.getRequestDispatcher("friendrequest.jsp").forward(req,resp);
+        User user=(User)req.getSession().getAttribute("user");
+        if(user!=null) {
+            ArrayList<String> friendRequest=Dao4Friend.getRequestByName(user.getUsername());
+            req.setAttribute("friendRequest",friendRequest);
+            req.getRequestDispatcher("friendrequest.jsp").forward(req, resp);
+        }
         else
             resp.sendRedirect("login.jsp");
     }

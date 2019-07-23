@@ -3,6 +3,7 @@ package dao;
 import entity.Item;
 import entity.User;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 
 public class Dao4User {
@@ -38,13 +39,16 @@ public class Dao4User {
     public static int addUser(User user){
         if(getActuserByUser(user)!=null)
             return 1;
-        String sql="insert into user_account(username,auth,password,email)" +
-                "values(?,?,?,?)";
+        String sql="insert into user_account(username,auth,password,email,recent_login_time)" +
+                "values(?,?,?,?,?)";
+        Timestamp currentTime = new Timestamp(new java.util.Date().getTime());
         dao.update(sql,
                 user.getUsername(),
-                user.getAuth(),
+                String.valueOf(user.getAuth()),
                 user.getPassword(),
-                user.getEmail());
+                user.getEmail(),
+                currentTime
+        );
         return 0;
     }
 
@@ -62,7 +66,7 @@ public class Dao4User {
         String sql = "update user_account " +
                 "set auth=?" +
                 " where username=?,auth=?";
-        dao.update(sql,newAuth,user.getUsername(),auth);
+        dao.update(sql,String.valueOf(newAuth),user.getUsername(),auth);
     }
 
     public static void changeUserByName(String oldname,User newUser){

@@ -116,28 +116,28 @@
                         </div>
                         <!--表单-->
                         <div class="col-md-6 column">
-                            <form class="form-horizontal" role="form">
+                            <form class="form-horizontal" role="form" action="useradd" method="post">
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="inputUserName">用户名</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="inputUserName" type="text" />
+                                        <input class="form-control" id="inputUserName" type="text" name="username" />
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="inputPassword">密码</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="inputPassword" type="password" />
+                                        <input class="form-control" id="inputPassword" type="password" name="password"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="inputEmail3">邮箱</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="inputEmail3" type="email" />
+                                        <input class="form-control" id="inputEmail3" type="email" name="email"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="checkbox" style="text-align: center">
-                                        <label><input type="checkbox" />赋予新用户管理员权限</label>
+                                        <label><input type="checkbox" name="admin" value="true"/>赋予新用户管理员权限</label>
                                         <br>
                                     </div>
                                 </div>

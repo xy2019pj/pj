@@ -26,9 +26,18 @@ public class UserAdd extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user=(User)req.getSession().getAttribute("user");
         if(user!=null&&user.getAuth()=='a'){
-            User userAdd=(User)req.getAttribute("user");
-            int status=userAdd.add();
+            String username=req.getParameter("username");
+            String password=req.getParameter("password");
+            String email=req.getParameter("email");
+            String admin=req.getParameter("admin");
+            char auth;
+            if(admin!=null&&admin.equals("true"))
+                auth='a';
+            else auth='n';
+            User newUser=new User(username,auth,password,email,null);
+            int status=newUser.add();
             req.setAttribute("status",status);
+            req.getRequestDispatcher("usermanage.jsp").forward(req,resp);
         }
         else resp.sendRedirect("login.jsp");
     }

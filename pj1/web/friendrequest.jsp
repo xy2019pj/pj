@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: hexi4
   Date: 2019/7/20
@@ -47,7 +47,9 @@
             userAuth=null;
         }
     </script>
-
+    <%
+        ArrayList<String> friendRequest=(ArrayList<String>) request.getAttribute("friendRequest");
+    %>
 </head>
 <body>
 
@@ -105,27 +107,39 @@
 
         </div>
 
+
+
         <!--右侧-->
+
         <div class="col-sm-9 right">
             <br>
+            <% if(friendRequest.size()==0){%>
+            <div class="outline">
+                <br>
+                暂无消息
+            </div>
+            <%}%>
+
+            <%for(int i=0;i<friendRequest.size();i++){%>
             <div class="outline">
                 <br>
                 <div class="row clearfix " >
                     <b class="col-md-12 column col-sm-offset-1">
-                        某某
+                        <%=friendRequest.get(i)%>
                     </b>
                     <div class="col-md-12 column col-sm-offset-1">
                         请求添加您为好友
                     </div>
                     <!--按钮-->
                     <div class="col-md-12 column addText" style="text-align:right">
-                        <a class="glyphicon glyphicon-ok addForm" href="#" title="同意"> </a>
-                        <a class="glyphicon glyphicon-remove addForm" href="#" title="拒绝"> </a>
+                        <a class="glyphicon glyphicon-ok addForm" href="friendconfirm?confirm=true" title="同意"> </a>
+                        <a class="glyphicon glyphicon-remove addForm" href="friendconfirm?confirm=false" title="拒绝"> </a>
                     </div>
                 </div>
-
             </div>
             <br>
+            <%}%>
+
             <!--收藏夹-->
             <!--搜索表单-->
             <div class="container ">
