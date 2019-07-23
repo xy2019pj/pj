@@ -14,6 +14,11 @@ public class Dao4User {
         User actUser=dao.get(User.class,sql,username);
         return actUser;
     }
+    public static User getUserByName(String username){
+        String sql="select * from user_account where username=?";
+        User actUser=dao.get(User.class,sql,username);
+        return actUser;
+    }
 
     public static ArrayList<User> getUserBySearch(String search){
         String sql="select * from user_account where username like ?";

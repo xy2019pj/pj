@@ -2,6 +2,7 @@ package servlet;
 
 import dao.Dao4Item;
 import entity.Item;
+import net.sf.json.JSONArray;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,6 +17,11 @@ public class Show extends HttpServlet {
     public static int flag = 0;
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        req.getRequestDispatcher("show.jsp").forward(req,res);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String category = req.getParameter("category");
         String search=req.getParameter("search");
         ArrayList<Item> items =null;
@@ -24,7 +30,6 @@ public class Show extends HttpServlet {
         items=Dao4Item.getItemsByCategory(category);
         if(search!=null)
             items=Dao4Item.getItemsBySearch(category,search);
-        req.setAttribute("items", items);
-        req.getRequestDispatcher("show.jsp").forward(req, res);
+        resp.getWriter().write(JSONArray.fromObject(items).toString());
     }
 }

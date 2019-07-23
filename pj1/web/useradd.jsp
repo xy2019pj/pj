@@ -56,20 +56,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-        </button> <a class="navbar-brand" href="home">博物馆logo</a>
+        </button> <a class="navbar-brand" >博物馆logo</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li >
-                <a href="home" >首页</a>
+            <li class="active">
+                <a href="home">首页</a>
             </li>
             <li>
-                <a href="show?category=全部">所有展品</a>
+                <a href="show?category=全部"  >所有展品</a>
             </li>
-            <!--下拉展品分类菜单-->
             <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
+                <a class="dropdown-toggle" href="" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
+                <!--下拉展品分类菜单-->
                 <ul class="dropdown-menu">
                     <li>
                         <a href="show?category=工艺">工艺</a>
@@ -86,67 +86,20 @@
                     <li>
                         <a href="show?category=其他">其他</a>
                     </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                        <a href="#">考虑是否拓展朝代分类方式</a>
-                    </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                        <a href="#">考虑是否拓展其他分类方式</a>
-                    </li>
                 </ul>
             </li>
         </ul>
         <!--搜索-->
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search" action="show">
             <div class="form-group">
-                <input class="form-control" type="text" />
-            </div> <button class="btn btn-default" type="submit" onclick="">搜索</button>
+                <input class="form-control" type="text" name="search"/>
+            </div> <button class="btn btn-default" type="submit">搜索</button>
         </form>
         <!--右侧用户操作-->
-        <ul class="nav navbar-nav navbar-right">
-            <!--管理栏-->
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">管理中心<strong class="caret"></strong></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#">人员管理</a>
-                    </li>
-                    <li>
-                        <a href="#">创建用户</a>
-                    </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                        <a href="#">作品管理</a>
-                    </li>
-                    <li>
-                        <a href="#">上传作品</a>
-                    </li>
-                </ul>
-            </li>
-            <!--用户栏-->
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#">个人首页</a>
-                    </li>
-                    <li>
-                        <a href="#">收藏夹</a>
-                    </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                        <a href="#">退出登录</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav navbar-right" id="userManage">
+            <script>myFunction(user,userAuth)</script>
         </ul>
     </div>
-
 </nav>
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >

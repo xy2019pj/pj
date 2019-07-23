@@ -29,8 +29,7 @@ public class Login extends HttpServlet {
         if (status == 0) {//登陆成功
             User actUser= Dao4User.getActuserByUser(user);
             req.getSession().setAttribute("user", actUser);
-            res.getWriter().append("登录成功！");
-            res.sendRedirect("home");
+            res.sendRedirect("home.jsp");
         }
         else if(status==1)
             res.getWriter().append("用户名不存在。");

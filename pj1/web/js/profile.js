@@ -75,9 +75,10 @@ function  tryi(visitName) {
 
 function creatForm(name,src,intro){
     var form=" <div class=\"col-xs-6 col-sm-3 placeholder\" style=\"text-align:center\">\n" +
-        "                    <a href=\"" +
-        src +
-        "\"><img width=\"200\" height=\"200\" class=\"img-responsive\" alt=\"Generic placeholder thumbnail\" src=\"images/1.jpg\"></a>\n" +
+        "                    <a href=\"itemdetail?itemName=" +name+
+        "\"><img width=\"200\" height=\"200\" class=\"img-responsive\" alt=\"Generic placeholder thumbnail\" src=\""+
+        src+
+        "\"></a>\n" +
         "                    <h4>" +
         name +
         "</h4>\n" +
