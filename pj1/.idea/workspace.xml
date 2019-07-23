@@ -89,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/showTry.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="122" column="33" lean-forward="true" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
+            <state relative-caret-position="228">
+              <caret line="123" column="34" lean-forward="true" selection-start-line="123" selection-start-column="34" selection-end-line="123" selection-end-column="34" />
               <folding>
                 <element signature="n#!!block;n#f2#0" />
               </folding>
@@ -438,7 +438,7 @@
       <workItem from="1563784906132" duration="49000" />
       <workItem from="1563791348733" duration="17009000" />
       <workItem from="1563841255753" duration="47096000" />
-      <workItem from="1563891675822" duration="3820000" />
+      <workItem from="1563891675822" duration="3967000" />
     </task>
     <task id="LOCAL-00001" summary="增加了很多servlet">
       <created>1563626348064</created>
@@ -601,11 +601,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563891506362</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="hex my&#10;&#10;Merge branch 'master' of https://github.com/xy2019pj/pj&#10;&#10;# Conflicts:&#10;#&#9;pj1/src/servlet/GetFav.java&#10;#&#9;pj1/web/js/profile.js">
+      <created>1563897375538</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1563897375538</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141333000" />
+    <option name="totallyTimeSpent" value="141480000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -629,7 +636,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.73592496" visible="true" weight="0.35977337" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.73592496" weight="0.35977337" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.57908845" weight="0.398017" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -682,7 +689,8 @@
     <MESSAGE value="hex 11:36 导航栏和侧边栏格式修改完毕&#10;&#10;Merge branch 'master' of https://github.com/xy2019pj/pj&#10;&#10;# Conflicts:&#10;#&#9;pj1/src/servlet/GetFav.java&#10;#&#9;pj1/web/js/profile.js" />
     <MESSAGE value="hex 14:33&#10;&#10;Merge branch 'master' of https://github.com/xy2019pj/pj&#10;&#10;# Conflicts:&#10;#&#9;pj1/src/servlet/GetFav.java&#10;#&#9;pj1/web/js/profile.js" />
     <MESSAGE value="hex 分页完成&#10;&#10;Merge branch 'master' of https://github.com/xy2019pj/pj&#10;&#10;# Conflicts:&#10;#&#9;pj1/src/servlet/GetFav.java&#10;#&#9;pj1/web/js/profile.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="hex 分页完成&#10;&#10;Merge branch 'master' of https://github.com/xy2019pj/pj&#10;&#10;# Conflicts:&#10;#&#9;pj1/src/servlet/GetFav.java&#10;#&#9;pj1/web/js/profile.js" />
+    <MESSAGE value="hex my&#10;&#10;Merge branch 'master' of https://github.com/xy2019pj/pj&#10;&#10;# Conflicts:&#10;#&#9;pj1/src/servlet/GetFav.java&#10;#&#9;pj1/web/js/profile.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="hex my&#10;&#10;Merge branch 'master' of https://github.com/xy2019pj/pj&#10;&#10;# Conflicts:&#10;#&#9;pj1/src/servlet/GetFav.java&#10;#&#9;pj1/web/js/profile.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1277,8 +1285,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/showTry.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="122" column="33" lean-forward="true" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
+        <state relative-caret-position="228">
+          <caret line="123" column="34" lean-forward="true" selection-start-line="123" selection-start-column="34" selection-end-line="123" selection-end-column="34" />
           <folding>
             <element signature="n#!!block;n#f2#0" />
           </folding>
