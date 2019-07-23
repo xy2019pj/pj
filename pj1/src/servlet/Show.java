@@ -26,6 +26,7 @@ public class Show extends HttpServlet {
         String search=req.getParameter("search");
         ArrayList<Item> items =null;
         if(category==null)
+
             category="全部";
         items=Dao4Item.getItemsByCategory(category);
         if(search!=null)

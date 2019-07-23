@@ -36,6 +36,7 @@
     <!-- 自定义的js -->
     <script src="./js/all.js"></script>
     <script src="./js/center.js"></script>
+    <script src="./js/favorite.js"></script>
     <!-- 导航栏用户个人中心 -->
     <script>
         var user='${sessionScope.user.username}';
@@ -47,11 +48,10 @@
             userAuth=null;
         }
     </script>
-
 </head>
 <body>
 
-<!--导航栏-->
+<!--导航条-->
 <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation"  style="margin-bottom:0">
     <div class="navbar-header" >
         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
@@ -63,55 +63,29 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li >
-                <a href="home">首页</a>
-            </li>
-            <li>
-                <a href="show?category=全部"  >所有展品</a>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
-                <!--下拉展品分类菜单-->
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="show?category=工艺">工艺</a>
-                    </li>
-                    <li>
-                        <a href="show?category=金石">金石</a>
-                    </li>
-                    <li>
-                        <a href="show?category=书画">书画</a>
-                    </li>
-                    <li>
-                        <a href="show?category=陶瓷">陶瓷</a>
-                    </li>
-                    <li>
-                        <a href="show?category=其他">其他</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav" id="location">
+            <script>nowLocation(0)</script>
         </ul>
         <!--搜索-->
-        <form class="navbar-form navbar-left" role="search" name="fname" action="show" onsubmit="return searchI()">
+        <form class="navbar-form navbar-left" role="search" action="show">
             <div class="form-group">
-                <input class="form-control" type="text" name="search" />
-            </div> <button class="btn btn-default" type="submit" >搜索</button>
+                <input class="form-control" type="text" name="search"/>
+            </div> <button class="btn btn-default" type="submit">搜索</button>
         </form>
         <!--右侧用户操作-->
         <ul class="nav navbar-nav navbar-right" id="userManage">
             <script>myFunction(user,userAuth)</script>
         </ul>
     </div>
-
 </nav>
+
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >
     <h1 style="color: #000000;" id="userNameShow">
-        ${requestScope.destUser.username}
+        ${sessionScope.user.username}
     </h1>
     <p style="color: #000000;" id="userSignNS">
-        ${requestScope.destUser.intro}
+        ${sessionScope.user.intro}
     </p>
 </div>
 <!--正文-->
@@ -127,7 +101,7 @@
                 }else {
                     isAdmin = true;
                 }
-                leftControl(isAdmin);
+                leftControl(isAdmin,3);
             </script>
 
         </div>
@@ -137,89 +111,11 @@
             <br><br>
             <!--收藏夹-->
             <!--第一行-->
-            <div class="row placeholders">
-                <!--藏品1-->
-                <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
-                    <!--按钮-->
-                    <div class="row clearfix" >
-                        <div class="col-md-12 column addText" style="text-align:right">
-                            <a class="glyphicon glyphicon-eye-close addForm" href="#" title="点击公开"> </a>
-                            <a class="glyphicon glyphicon-remove addForm" href="#" title="取消收藏"> </a>
-                        </div>
-                    </div>
-                    <a href="#"><img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="images/1.jpg"></a>
-                    <h4>展品名称</h4>
-                    <span class="text-muted">展品简介</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
-                    <!--按钮-->
-                    <div class="row clearfix" >
-                        <div class="col-md-12 column addText" style="text-align:right">
-                            <a class="glyphicon glyphicon-eye-close addForm" href="#" title="点击公开"> </a>
-                            <a class="glyphicon glyphicon-remove addForm" href="#" title="取消收藏"> </a>
-                        </div>
-                    </div>
-                    <a href="#"><img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="images/1.jpg"></a>
-                    <h4>展品名称</h4>
-                    <span class="text-muted">展品简介</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
-                    <!--按钮-->
-                    <div class="row clearfix" >
-                        <div class="col-md-12 column addText" style="text-align:right">
-                            <a class="glyphicon glyphicon-eye-close addForm" href="#" title="点击公开"> </a>
-                            <a class="glyphicon glyphicon-remove addForm" href="#" title="取消收藏"> </a>
-                        </div>
-                    </div>
-                    <a href="#"><img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="images/1.jpg"></a>
-                    <h4>展品名称</h4>
-                    <span class="text-muted">展品简介</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
-                    <!--按钮-->
-                    <div class="row clearfix" >
-                        <div class="col-md-12 column addText" style="text-align:right">
-                            <a class="glyphicon glyphicon-eye-close addForm" href="#" title="点击公开"> </a>
-                            <a class="glyphicon glyphicon-remove addForm" href="#" title="取消收藏"> </a>
-                        </div>
-                    </div>
-                    <a href="#"><img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="images/1.jpg"></a>
-                    <h4>展品名称</h4>
-                    <span class="text-muted">展品简介</span>
-                </div>
-            </div>
-            <br> <br>
-            <!--第二行-->
-            <div class="row placeholders">
-                <!--藏品1-->
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-            </div>
-
-
+            <div class="row placeholders" id="fav">
+                <script>collection();</script>
         </div>
-
-
     </div>
 </div>
-
+</div>
 </body>
 </html>

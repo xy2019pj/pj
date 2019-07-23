@@ -35,9 +35,14 @@
 
     <!-- 自定义的js -->
     <script src="./js/home.js"></script>
+    <script src="./js/all.js"></script>
 
-    <!-- 导航栏用户个人中心 -->
+    <%
+        ArrayList<Item> hotItems=(ArrayList<Item>)request.getAttribute("hotItems");
+        ArrayList<Item> recentItems=(ArrayList<Item>)request.getAttribute("recentItems");
+    %>
     <script>
+        <!-- 导航栏用户个人中心 -->
         var user='${sessionScope.user.username}';
         var userAuth;
         if(user!=""){
@@ -46,40 +51,27 @@
             user=null;
             userAuth=null;
         }
-    </script>
-    <!-- 热门展品 -->
-    <script>
+        <!-- ajax请求热门、最新商品数据-->
         var hotItems=new Array();
-        for(var i =0;i<3;i++){
-            hotItems[i]={name:"${requestScope.hotItems[i].name}", src:"${requestScope.hotItems[i].picture}", intro:"${requestScope.hotItems[i].intro}"};
-        }
-
-        var s="${requestScope.hotItems[i].name}";
-        //测试占位用，实际删除
-        // hotItems[0]={name:"热门展品1", src:"images/1.jpg", intro:"展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
-        // hotItems[1]={name:"热门展品2", src:"images/2.jpg", intro:"展品介绍2展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
-        // hotItems[2]={name:"热门展品3", src:"images/3.jpg", intro:"展品介绍3展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
-    </script>
-
-    <!-- 最新展品 -->
-    <script>
-
-
         var recentItems=new Array();
-        for(var i =0;i<6;i++){
-            recentItems[i]={name:"${requestScope.recentItems[i].name}", src:"${requestScope.recentItems[i].picture}", intro:"${requestScope.recentItems[i].intro}"};
-        }
-        //测试占位用，实际删除
-        // recentItems[0]={name:"最新展品1", src:"images/1.jpg", intro:"展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
-        // recentItems[1]={name:"最新展品2", src:"images/2.jpg", intro:"展品介绍2展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
-        // recentItems[2]={name:"最新展品3", src:"images/3.jpg", intro:"展品介绍3展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
-        // recentItems[3]={name:"最新展品4", src:"images/1.jpg", intro:"展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
-        // recentItems[4]={name:"最新展品5", src:"images/2.jpg", intro:"展品介绍2展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
-        // recentItems[5]={name:"最新展品6", src:"images/3.jpg", intro:"展品介绍3展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1展品介绍1"};
+        $.ajax({
+            url: "home",
+            type: "POST",
+            success: function (res) {
+                hotItems =JSON.parse(res)[0];
+                recentItems = JSON.parse(res)[1];
+                hotItem(hotItems);
+                newItem(1,recentItems);
+                newItem(2,recentItems);
+            },
+            error:function () {
+                window.alert("????");
+            }
+        });
     </script>
-
 </head>
 <body>
+
 <!--导航条-->
 <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation"  style="margin-bottom:0">
     <div class="navbar-header" >
@@ -92,49 +84,13 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="home">首页</a>
-            </li>
-            <li>
-                <a href="show?category=全部"  >所有展品</a>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
-                <!--下拉展品分类菜单-->
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="show?category=工艺">工艺</a>
-                    </li>
-                    <li>
-                        <a href="show?category=金石">金石</a>
-                    </li>
-                    <li>
-                        <a href="show?category=书画">书画</a>
-                    </li>
-                    <li>
-                        <a href="show?category=陶瓷">陶瓷</a>
-                    </li>
-                    <li>
-                        <a href="show?category=其他">其他</a>
-                    </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                        <a href="#">考虑是否拓展朝代分类方式</a>
-                    </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                        <a href="#">考虑是否拓展其他分类方式</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav" id="location">
+            <script>nowLocation(1)</script>
         </ul>
         <!--搜索-->
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search" action="show">
             <div class="form-group">
-                <input class="form-control" type="text" />
+                <input class="form-control" type="text" name="search"/>
             </div> <button class="btn btn-default" type="submit">搜索</button>
         </form>
         <!--右侧用户操作-->
@@ -142,8 +98,8 @@
             <script>myFunction(user,userAuth)</script>
         </ul>
     </div>
-
 </nav>
+
 <!--博物馆大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >
     <h1 style="color: #000000;">
@@ -154,23 +110,9 @@
     </p>
 </div>
 <!--幻灯片 热门作品-->
-<div class="row clearfix">
-    <div class="col-md-12 column">
-        <div class="carousel slide" id="carousel-368079">
-            <ol class="carousel-indicators">
-                <li class="active" data-target="#carousel-368079" data-slide-to="0">
-                </li>
-                <li data-target="#carousel-368079" data-slide-to="1">
-                </li>
-                <li data-target="#carousel-368079" data-slide-to="2">
-                </li>
-            </ol>
-            <div class="carousel-inner" id="hotItems">
-                <script>hotItem(hotItems);</script>
-            </div> <a class="left carousel-control" href="#carousel-368079" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-368079" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-        </div>
-    </div>
+<div id="hotItems">
 </div>
+
 <!--最新展品-->
 <div class="container writeColorText bottomThings clearfix">
     <h1>
@@ -179,12 +121,10 @@
     </h1>
     <!--第一行-->
     <div class="row clearfix" id="newItems1">
-        <script>newItem(1,recentItems);</script>
     </div>
     <br><br>
     <!--第二行-->
     <div class="row clearfix" id="newItems2">
-        <script>newItem(2,recentItems);</script>
     </div>
 
 </div>
