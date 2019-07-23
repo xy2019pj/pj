@@ -49,14 +49,14 @@
         }
     </script>
 
-    <!--测试用 实际删 -->
+    <!--测试用
     <%
         User user=new User();
         user.setUsername("testUser");
         session.setAttribute("user",user);
 
     %>
-
+    实际删 -->
 </head>
 <body>
 

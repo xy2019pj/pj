@@ -35,6 +35,7 @@
 
     <!-- 自定义的js -->
     <script src="./js/home.js"></script>
+    <script src="./js/all.js"></script>
 
     <script>
         <!-- 导航栏用户个人中心 -->
@@ -79,34 +80,8 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="home">首页</a>
-            </li>
-            <li>
-                <a href="show?category=全部"  >所有展品</a>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
-                <!--下拉展品分类菜单-->
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="show?category=工艺">工艺</a>
-                    </li>
-                    <li>
-                        <a href="show?category=金石">金石</a>
-                    </li>
-                    <li>
-                        <a href="show?category=书画">书画</a>
-                    </li>
-                    <li>
-                        <a href="show?category=陶瓷">陶瓷</a>
-                    </li>
-                    <li>
-                        <a href="show?category=其他">其他</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav" id="location">
+            <script>nowLocation(1)</script>
         </ul>
         <!--搜索-->
         <form class="navbar-form navbar-left" role="search" action="show">
