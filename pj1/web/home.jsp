@@ -37,6 +37,10 @@
     <script src="./js/home.js"></script>
     <script src="./js/all.js"></script>
 
+    <%
+        ArrayList<Item> hotItems=(ArrayList<Item>)request.getAttribute("hotItems");
+        ArrayList<Item> recentItems=(ArrayList<Item>)request.getAttribute("recentItems");
+    %>
     <script>
         <!-- 导航栏用户个人中心 -->
         var user='${sessionScope.user.username}';
@@ -106,24 +110,9 @@
     </p>
 </div>
 <!--幻灯片 热门作品-->
-<div class="row clearfix" id="hotItems">
-    <div class="col-md-12 column" >
-        <div class="carousel slide" id="carousel-368079">
-            <ol class="carousel-indicators" >
-                <li class="active" data-target="#carousel-368079" data-slide-to="0">
-                </li>
-                <li data-target="#carousel-368079" data-slide-to="1">
-                </li>
-                <li data-target="#carousel-368079" data-slide-to="2">
-                </li>
-            </ol>
-            <div class="carousel-inner" >
-            </div>
-            <a class="left carousel-control" href="#carousel-368079" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-            <a class="right carousel-control" href="#carousel-368079" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div>
-    </div>
+<div id="hotItems">
 </div>
+
 <!--最新展品-->
 <div class="container writeColorText bottomThings clearfix">
     <h1>

@@ -2,22 +2,55 @@
 
 function hotItem(items) {
     var form="";
-    for(var i=0;i<3;i++){
-        form+="<div class=\"item \" >\n" +
-            "                    <a href=\"itemdetail?itemName=" +items[i].name+
-            "\"><img alt=\"图片无法显示\" src=\"" +
+    form+="<div class=\"row clearfix\">\n" +
+        "    <div class=\"col-md-12 column\">\n" +
+        "        <div class=\"carousel slide\" id=\"carousel-368079\">\n" +
+        "            <ol class=\"carousel-indicators\">\n" +
+        "                <li class=\"active\" data-target=\"#carousel-368079\" data-slide-to=\"0\">\n" +
+        "                </li>\n" +
+        "                <li data-target=\"#carousel-368079\" data-slide-to=\"1\">\n" +
+        "                </li>\n" +
+        "                <li data-target=\"#carousel-368079\" data-slide-to=\"2\">\n" +
+        "                </li>\n" +
+        "            </ol>\n" +
+        "            <div class=\"carousel-inner\">";
+    form+="                <div class=\"item active \">\n" +
+        "                    <a href=\"" +
+        "itemdetail?itemName="+items[0].name +
+        "\"><img alt=\"图片无法显示\"  src=\"" +
+        items[0].picture +
+        "\" align=\"center\" /></a>\n" +
+        "                    <div class=\"carousel-caption\">\n" +
+        "                        <h4>\n" +
+        items[0].name +
+        "                        </h4>\n" +
+        "                        <p>\n" +
+        items[0].intro +
+        "                        </p>\n" +
+        "                    </div>\n" +
+        "                </div>";
+    for(var i=1;i<3;i++){
+        form+=
+            "                <div class=\"item\">\n" +
+            "                    <a href=\"" +
+            "itemdetail?itemName="+items[i].name +
+            "\"><img alt=\"图片无法显示\"  src=\"" +
             items[i].picture +
             "\" align=\"center\" /></a>\n" +
             "                    <div class=\"carousel-caption\">\n" +
             "                        <h4>\n" +
-            items[i].name+"\n" +
+            items[i].name +
             "                        </h4>\n" +
             "                        <p>\n" +
-            items[i].intro+
+            items[i].intro +
             "                        </p>\n" +
             "                    </div>\n" +
             "                </div>";
     }
+    form+="</div> <a class=\"left carousel-control\" href=\"#carousel-368079\" data-slide=\"prev\"><span class=\"glyphicon glyphicon-chevron-left\"></span></a> <a class=\"right carousel-control\" href=\"#carousel-368079\" data-slide=\"next\"><span class=\"glyphicon glyphicon-chevron-right\"></span></a>\n" +
+        "        </div>\n" +
+        "    </div>\n" +
+        "</div>";
     document.getElementById("hotItems").innerHTML=form;
 }
 
