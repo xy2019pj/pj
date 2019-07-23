@@ -16,7 +16,8 @@ public class UserAdd extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user=(User)req.getSession().getAttribute("user");
         if(user!=null&&user.getAuth()=='a'){
-            req.getRequestDispatcher("useradd.jsp");
+//            req.getRequestDispatcher("useradd.jsp");
+            resp.sendRedirect("useradd.jsp");
         }
         else resp.sendRedirect("login.jsp");
     }

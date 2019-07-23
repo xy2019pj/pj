@@ -102,7 +102,7 @@
                 }else {
                     isAdmin = true;
                 }
-                leftControl(isAdmin,6);
+                leftControl(isAdmin,2);
             </script>
 
         </div>

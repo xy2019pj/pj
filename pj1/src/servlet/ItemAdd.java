@@ -16,7 +16,8 @@ public class ItemAdd extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user=(User)req.getSession().getAttribute("user");
         if(user!=null&&user.getAuth()=='a'){
-            req.getRequestDispatcher("itemadd.jsp");
+//            req.getRequestDispatcher("itemadd.jsp");
+            resp.sendRedirect("itemadd.jsp");
         }
         else resp.sendRedirect("login.jsp");
     }

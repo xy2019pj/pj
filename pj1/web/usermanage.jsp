@@ -1,4 +1,5 @@
-<%--
+<%@ page import="entity.User" %>
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: hexi4
   Date: 2019/7/20
@@ -112,11 +113,17 @@
             <br>
             <!--表格-->
             <div class="table-responsive">
-                <table class="table table-striped">
+                <table class="table table-striped" id="table">
+                    <script>
+                        <%
+                        ArrayList<User> allUsers=(ArrayList<User>)request.getAttribute("users") ;
+                        %>
+                    var userNum=<%=allUsers.size()%>;
+
+                    </script>
                     <thead>
                     <!--表头-->
                     <tr>
-                        <th>用户ID</th>
                         <th>用户名</th>
                         <th>邮箱</th>
                         <th>最近登录</th>
@@ -126,6 +133,7 @@
                     </tr>
                     </thead>
                     <!--表内容-->
+
                     <tbody>
                     <tr>
                         <td>1,001</td>
@@ -276,6 +284,7 @@
 
 
         </div>
+
 
 
     </div>

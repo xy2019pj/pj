@@ -18,7 +18,7 @@ public class Friend extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(req.getSession().getAttribute("user")!=null)
-        req.getRequestDispatcher("friend.jsp").forward(req,resp);
+        req.getRequestDispatcher("friends.jsp").forward(req,resp);
         else resp.sendRedirect("login.jsp");
     }
 

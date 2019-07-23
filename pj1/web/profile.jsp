@@ -98,7 +98,15 @@
                 }else {
                     isSelf = false;
                 }
-                leftControl(isSelf);
+
+                var isAdmin;
+                var s='${sessionScope.user.auth}';
+                if(s == 'n' || s==""){
+                    isAdmin=false;
+                }else {
+                    isAdmin = true;
+                }
+                leftControl(isSelf,isAdmin);
             </script>
 
 
