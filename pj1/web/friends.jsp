@@ -1,4 +1,4 @@
-<%--
+<%@ page import="entity.User" %><%--
   Created by IntelliJ IDEA.
   User: hexi4
   Date: 2019/7/20
@@ -32,27 +32,31 @@
     <script src="./styles/jquery-3.4.1.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="./js/bootstrap.min.js"></script>
-<script>
-    $.ajax({
-        url: "friend",
-        type: "get",
-        success: function (res) {
-            friends =JSON.parse(res)[0];
-            friendsRequests = JSON.parse(res)[1];
-            var form="";
-            for(var i=0;i<friends.length;i++)
-                form+="<li><a href=\"profile?destUser="+friends[i].username+"\"  class=\"active\">好友1</a></li>\n";
-            document.getElementById("friends").innerHTML=form;
-            form="";
-            // for(var j=0;j<friendsRequests.length;j++)
-                // form+="<li><a href=\"profile?destUser="+friends[i].username+"\"  class=\"active\">好友1</a></li>\n";
-            // document.getElementById("friends").innerHTML=form;
-        },
-        error:function () {
-            window.alert("????");
+
+    <!-- 自定义的js -->
+    <script src="./js/all.js"></script>
+    <script src="./js/center.js"></script>
+    <script src="./js/friends.js"></script>
+    <!-- 导航栏用户个人中心 -->
+    <script>
+        var user='${sessionScope.user.username}';
+        var userAuth;
+        if(user!=""){
+            userAuth='${sessionScope.user.auth}';
+        }else {
+            user=null;
+            userAuth=null;
         }
-    });
-</script>
+    </script>
+
+    <!--测试用 实际删 -->
+    <%
+        User user=new User();
+        user.setUsername("testUser");
+        session.setAttribute("user",user);
+
+    %>
+
 </head>
 <body>
 
@@ -68,34 +72,8 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="home">首页</a>
-            </li>
-            <li>
-                <a href="show?category=全部"  >所有展品</a>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
-                <!--下拉展品分类菜单-->
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="show?category=工艺">工艺</a>
-                    </li>
-                    <li>
-                        <a href="show?category=金石">金石</a>
-                    </li>
-                    <li>
-                        <a href="show?category=书画">书画</a>
-                    </li>
-                    <li>
-                        <a href="show?category=陶瓷">陶瓷</a>
-                    </li>
-                    <li>
-                        <a href="show?category=其他">其他</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav" id="location">
+            <script>nowLocation(0)</script>
         </ul>
         <!--搜索-->
         <form class="navbar-form navbar-left" role="search" action="show">
@@ -109,38 +87,31 @@
         </ul>
     </div>
 </nav>
+
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >
-    <h1 style="color: #000000;">
-        用户名
+    <h1 style="color: #000000;" id="userNameShow">
+        ${sessionScope.user.username}
     </h1>
-    <p style="color: #000000;">
-        个人简介签名
+    <p style="color: #000000;" id="userSignNS">
+        ${sessionScope.user.intro}
     </p>
-    <!--添加好友按钮
-    <div class="row clearfix" style="text-align:center">
-        <div class="col-md-12 column addText">
-            添加好友 <a class="glyphicon glyphicon-user addForm" href="#" title="点击添加"> </a>
-        </div>
-    </div>
-    -->
 </div>
 <!--正文-->
 <div class="container">
     <div class="row ">
         <!--左侧-->
-        <div class="col-sm-3 col-md-2 sidebar">
-
-            <ul class="nav nav-sidebar ">
-                <li class="notActive"><a href="#">个人首页</a></li>
-                <li class="notActive"><a href="#">修改信息</a></li>
-                <li class="notActive"><a href="#">收藏夹</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li><a href="#" class="active">好友列表</a></li>
-                <li class="notActive"><a href="">添加好友</a></li>
-            </ul>
-
+        <div class="col-sm-3 col-md-2 sidebar" id="leftSide">
+            <script>
+                var isAdmin;
+                var s='${sessionScope.user.auth}';
+                if(s == 'n' || s==""){
+                    isAdmin=false;
+                }else {
+                    isAdmin = true;
+                }
+                leftControl(isAdmin,4);
+            </script>
 
         </div>
 
@@ -153,6 +124,7 @@
                     <!--左侧列表-->
                     <div class="col-sm-2 col-md-2 sidebar" >
                         <ul class="nav nav-sidebar " id="friends">
+                            <script>f();</script>
                         </ul>
 
                     </div>
@@ -162,19 +134,21 @@
                         <br>
                         <!--按钮-->
                         <div class="row clearfix" >
-                            <div class="col-md-12 column addText" style="text-align:center">
-                                <a class="glyphicon glyphicon-home addForm" href="#" title="访问好友主页"> </a>
-                                <a class="glyphicon glyphicon-remove addForm" href="#" title="删除好友"> </a>
-                            </div>
-                        </div>
-                        私信待开发……
-                    </div>
-                </div>
+                            <div class="col-md-12 column addText" style="text-align:center" id="friendGo">
+                                <!--
+                               <a class="glyphicon glyphicon-home addForm" href="#" title="访问好友主页"> </a>
+                               <a class="glyphicon glyphicon-remove addForm" href="#" title="删除好友"> </a>
+                               -->
+                           </div>
+                       </div>
+                       私信待开发……
+                   </div>
+               </div>
 
 
-            </div>
-        </div>
-    </div>
+           </div>
+       </div>
+   </div>
 </div>
 </body>
 </html>

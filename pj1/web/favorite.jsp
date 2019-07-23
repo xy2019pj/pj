@@ -36,6 +36,7 @@
     <!-- 自定义的js -->
     <script src="./js/all.js"></script>
     <script src="./js/center.js"></script>
+    <script src="./js/favorite.js"></script>
     <!-- 导航栏用户个人中心 -->
     <script>
         var user='${sessionScope.user.username}';
@@ -46,42 +47,6 @@
             user=null;
             userAuth=null;
         }
-    </script>
-    <!--通过ajax获取收藏列表-->
-    <script>
-        $.ajax({
-            url: "favorite",
-            type: "POST",
-            success: function (res) {
-                favItems =JSON.parse(res);
-                var form="";
-                for(var i=0;i<favItems.length;i+=4){
-                    for(var j=0;j<favItems.length-i&&j<4;j++)
-                        form+=" <div class=\"col-xs-6 col-sm-3 placeholder\" style=\"text-align:center\">"+
-                            "<div class=\"row clearfix\" >"+
-                            "<div class=\"col-md-12 column addText\" style=\"text-align:right\">"+
-                            "<a class=\"glyphicon glyphicon-eye-close addForm\" href=\"#\" title=\"点击公开\"> </a>"+
-                            "<a class=\"glyphicon glyphicon-remove addForm\" href=\"#\" title=\"取消收藏\"> </a>"+
-                            "</div>"+
-                            "</div>"+
-                            "<a href=\"#\"><img width=\"200\" height=\"200\" class=\"img-responsive\" alt=\"Generic placeholder thumbnail\" src=\"" +
-                            favItems[i+j].picture +
-                            "\"></a>"+
-                            "<h4>"+
-                            favItems[i+j].name+
-                            "</h4>"+
-                            "<span class=\"text-muted\">+" +
-                            favItems[i+j].intro+
-                            "</span>"+
-                            "</div>";
-                    form+="<br> <br>";
-                }
-                document.getElementById("fav").innerHTML=form;
-            },
-            error:function () {
-                window.alert("????");
-            }
-        });
     </script>
 </head>
 <body>
@@ -98,34 +63,8 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="home">首页</a>
-            </li>
-            <li>
-                <a href="show?category=全部"  >所有展品</a>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
-                <!--下拉展品分类菜单-->
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="show?category=工艺">工艺</a>
-                    </li>
-                    <li>
-                        <a href="show?category=金石">金石</a>
-                    </li>
-                    <li>
-                        <a href="show?category=书画">书画</a>
-                    </li>
-                    <li>
-                        <a href="show?category=陶瓷">陶瓷</a>
-                    </li>
-                    <li>
-                        <a href="show?category=其他">其他</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav" id="location">
+            <script>nowLocation(0)</script>
         </ul>
         <!--搜索-->
         <form class="navbar-form navbar-left" role="search" action="show">
@@ -143,10 +82,10 @@
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >
     <h1 style="color: #000000;" id="userNameShow">
-        ${requestScope.destUser.username}
+        ${sessionScope.user.username}
     </h1>
     <p style="color: #000000;" id="userSignNS">
-        ${requestScope.destUser.intro}
+        ${sessionScope.user.intro}
     </p>
 </div>
 <!--正文-->
@@ -162,7 +101,7 @@
                 }else {
                     isAdmin = true;
                 }
-                leftControl(isAdmin);
+                leftControl(isAdmin,3);
             </script>
 
         </div>
@@ -173,6 +112,7 @@
             <!--收藏夹-->
             <!--第一行-->
             <div class="row placeholders" id="fav">
+                <script>collection();</script>
         </div>
     </div>
 </div>

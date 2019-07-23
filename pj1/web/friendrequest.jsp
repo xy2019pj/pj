@@ -33,6 +33,21 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="./js/bootstrap.min.js"></script>
 
+    <!-- 自定义的js -->
+    <script src="./js/all.js"></script>
+    <script src="./js/center.js"></script>
+    <!-- 导航栏用户个人中心 -->
+    <script>
+        var user='${sessionScope.user.username}';
+        var userAuth;
+        if(user!=""){
+            userAuth='${sessionScope.user.auth}';
+        }else {
+            user=null;
+            userAuth=null;
+        }
+    </script>
+
 </head>
 <body>
 
@@ -48,34 +63,8 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="home">首页</a>
-            </li>
-            <li>
-                <a href="show?category=全部"  >所有展品</a>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
-                <!--下拉展品分类菜单-->
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="show?category=工艺">工艺</a>
-                    </li>
-                    <li>
-                        <a href="show?category=金石">金石</a>
-                    </li>
-                    <li>
-                        <a href="show?category=书画">书画</a>
-                    </li>
-                    <li>
-                        <a href="show?category=陶瓷">陶瓷</a>
-                    </li>
-                    <li>
-                        <a href="show?category=其他">其他</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav" id="location">
+            <script>nowLocation(0)</script>
         </ul>
         <!--搜索-->
         <form class="navbar-form navbar-left" role="search" action="show">
@@ -91,36 +80,28 @@
 </nav>
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >
-    <h1 style="color: #000000;">
-        用户名
+    <h1 style="color: #000000;" id="userNameShow">
+        ${sessionScope.user.username}
     </h1>
-    <p style="color: #000000;">
-        个人简介签名
+    <p style="color: #000000;" id="userSignNS">
+        ${sessionScope.user.intro}
     </p>
-    <!--添加好友按钮
-    <div class="row clearfix" style="text-align:center">
-        <div class="col-md-12 column addText">
-            添加好友 <a class="glyphicon glyphicon-user addForm" href="#" title="点击添加"> </a>
-        </div>
-    </div>
-    -->
 </div>
 <!--正文-->
 <div class="container">
     <div class="row ">
         <!--左侧-->
-        <div class="col-sm-3 col-md-2 sidebar">
-
-            <ul class="nav nav-sidebar ">
-                <li class="notActive"><a href="#">个人首页</a></li>
-                <li class="notActive"><a href="#">修改信息</a></li>
-                <li class="notActive"><a href="#">收藏夹</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li class="notActive"><a href="">好友列表</a></li>
-                <li><a href="#" class="active">添加好友</a></li>
-            </ul>
-
+        <div class="col-sm-3 col-md-2 sidebar" id="leftSide">
+            <script>
+                var isAdmin;
+                var s='${sessionScope.user.auth}';
+                if(s == 'n' || s==""){
+                    isAdmin=false;
+                }else {
+                    isAdmin = true;
+                }
+                leftControl(isAdmin,5);
+            </script>
 
         </div>
 
