@@ -2,18 +2,18 @@ function leftControl(isSelf) {
     var form='';
     if(isSelf==true){
         form="<ul class=\"nav nav-sidebar \">\n" +
-            "                <li><a href=\"#\" class=\"active\">个人首页</a></li>\n" +
+            "                <li><a href=\"profile\" class=\"active\">个人首页</a></li>\n" +
             "                <li class=\"notActive\"><a href=\"#\">修改信息</a></li>\n" +
-            "                <li class=\"notActive\"><a href=\"#\">收藏夹</a></li>\n" +
+            "                <li class=\"notActive\"><a href=\"favorite\">收藏夹</a></li>\n" +
             "            </ul>\n" +
             "            <ul class=\"nav nav-sidebar\">\n" +
-            "                <li class=\"notActive\"><a href=\"\">好友列表</a></li>\n" +
-            "                <li class=\"notActive\"><a href=\"\">添加好友</a></li>\n" +
+            "                <li class=\"notActive\"><a href=\"friend\">好友列表</a></li>\n" +
+            "                <li class=\"notActive\"><a href=\"friendrequest\">添加好友</a></li>\n" +
             "            </ul>";
 
     }else {
         form="<ul class=\"nav nav-sidebar \">\n" +
-            "                <li><a href=\"#\" class=\"active\">个人首页</a></li>\n" +
+            "                <li><a href=\"profile\" class=\"active\">个人首页</a></li>\n" +
             "            </ul>"
     }
     document.getElementById("leftSide").innerHTML=form;
