@@ -47,13 +47,14 @@ function showOpenItems() {
 }
 
 function  tryi(visitName) {
+    sessionStorage.setItem("user","notnull")
 
     $.ajax({
-        url:"fetfav",    //请求的url地址
+        url:"getfav",    //请求的url地址
         dataType:"json",   //返回格式为json
         async:true,//请求是否异步，默认为异步，这也是ajax重要特性
         // data:{"destUser":visitName},    //参数值
-        data:{"destUser":visitName},    //参数值
+        data:{"destUser":"yy"},    //参数值
         type:"GET",   //请求方式
         success:function(req){
             //alert(req[0].name);
@@ -65,6 +66,7 @@ function  tryi(visitName) {
         },
         error:function(){
             //请求出错处理
+
             alert("请求出错，visitname："+visitName);
         }
     });

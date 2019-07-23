@@ -1,6 +1,7 @@
 package servlet;
 
 import dao.Dao4Fav;
+import dao.Dao4User;
 import entity.Item;
 import entity.User;
 import net.sf.json.JSONArray;
@@ -19,13 +20,13 @@ public class GetFav extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user=(User)req.getSession().getAttribute("user");
-        User destUser=(User)req.getAttribute("destUser");
+        String destUser=(String)req.getParameter("destUser");
+//        User destUser=(User)req.getAttribute("destUser");
         if(destUser==null) {
-            destUser = user;
-            req.setAttribute("destUser",destUser);
+            req.setAttribute("destUser",user);
         }
         if (user!=null) {
-            ArrayList<Item> favItems = Dao4Fav.getFavByName(destUser.getUsername());
+            ArrayList<Item> favItems = Dao4Fav.getFavByName(destUser);
             String favArray = (JSONArray.fromObject(favItems)).toString();
             resp.setCharacterEncoding("utf8");
             resp.getWriter().write(favArray);

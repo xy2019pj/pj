@@ -6,43 +6,44 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b433dbb-1c0e-4cbb-9123-e779ed05129a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/servlet/UserAdd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-collections-3.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/ezmorph-1.0.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/json-lib-2.4-jdk15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/profile.js" afterDir="false" />
+    <list default="true" id="4b433dbb-1c0e-4cbb-9123-e779ed05129a" name="Default Changelist" comment="hex 23:04 profile换一种ajax">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/Dao4Fav.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/Dao4Fav.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/Dao4Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/Dao4Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/Dao4User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/dao/Dao4User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/entity/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/entity/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/entity/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/servlet/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/servlet/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/servlet/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/classes/servlet/Register.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/adduser.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pj1/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/dao/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pj1/dao/Dao4Fav.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/dao/Dao4Fav.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pj1/dao/Dao4Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/dao/Dao4Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pj1/dao/Dao4User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/dao/Dao4User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pj1/entity/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/entity/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pj1/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/annotations-api.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/annotations-api.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/catalina-ant.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/catalina-ant.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/catalina-ha.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/catalina-ha.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/catalina-storeconfig.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/catalina-storeconfig.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/catalina-tribes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/catalina-tribes.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/catalina.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/catalina.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/el-api.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/el-api.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/jasper-el.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/jasper-el.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/jasper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/jasper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/jaspic-api.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/jaspic-api.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/jsp-api.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/jsp-api.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/servlet-api.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/servlet-api.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-api.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-api.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-coyote.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-coyote.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-dbcp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-dbcp.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-cs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-cs.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-de.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-de.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-es.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-es.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-fr.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-fr.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-ja.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-ja.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-ko.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-ko.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-pt-BR.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-pt-BR.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-ru.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-ru.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-zh-CN.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-i18n-zh-CN.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-jdbc.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-jdbc.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-jni.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-jni.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-util-scan.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-util-scan.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-util.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-util.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-websocket.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/tomcat-websocket.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/websocket-api.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pj1_war_exploded/WEB-INF/lib/websocket-api.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/pj1/servlet/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/servlet/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pj1/servlet/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pj1/servlet/Register.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/Dao4Fav.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/Dao4Fav.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/Dao4Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/Dao4Friend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/adduser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/useradd.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/center.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/center.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pj1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pj1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/GetFav.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/GetFav.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/profile.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,107 +71,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/home.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="48" selection-end-column="13" />
-              <folding>
-                <element signature="n#script#5;n#head#0;n#html#0;n#!!top" />
-                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-399">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/center.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/home.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
-              <folding>
-                <element signature="n#!!block;n#myFunction#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/Show.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/all.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/useradd.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="160" column="17" selection-start-line="158" selection-start-column="8" selection-end-line="160" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/profile.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="136" column="32" lean-forward="true" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
-              <folding>
-                <element signature="e#726#858#0#HTML" />
-                <element signature="n#script#4;n#head#0;n#html#0;n#!!top" />
-                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#li#2;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/profile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="35" column="40" lean-forward="true" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+            <state relative-caret-position="141">
+              <caret line="57" column="28" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
               <folding>
-                <element signature="n#!!block;n#f#0" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlet/GetFav.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlet/Login.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/profile.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-475">
+              <caret line="121" column="43" selection-start-line="121" selection-start-column="43" selection-end-line="121" selection-end-column="43" />
+              <folding>
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -194,13 +135,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/css/mycover.css" />
-        <option value="$PROJECT_DIR$/web/normaluserhome.jsp" />
         <option value="$PROJECT_DIR$/web/adminuserhome.jsp" />
         <option value="$PROJECT_DIR$/web/show.jsp" />
         <option value="$PROJECT_DIR$/web/itemdetail.jsp" />
         <option value="$PROJECT_DIR$/web/profilechange.jsp" />
-        <option value="$PROJECT_DIR$/web/favorite.jsp" />
         <option value="$PROJECT_DIR$/web/friends.jsp" />
         <option value="$PROJECT_DIR$/web/friendrequest.jsp" />
         <option value="$PROJECT_DIR$/web/itemmanage.jsp" />
@@ -240,11 +178,14 @@
         <option value="$PROJECT_DIR$/web/js/ajaxTry.js" />
         <option value="$PROJECT_DIR$/web/usermanage.jsp" />
         <option value="$PROJECT_DIR$/web/adduser.jsp" />
-        <option value="$PROJECT_DIR$/web/js/all.js" />
         <option value="$PROJECT_DIR$/web/useradd.jsp" />
+        <option value="$PROJECT_DIR$/web/js/all.js" />
+        <option value="$PROJECT_DIR$/web/js/center2.js" />
         <option value="$PROJECT_DIR$/web/js/center.js" />
-        <option value="$PROJECT_DIR$/web/js/profile.js" />
+        <option value="$PROJECT_DIR$/web/favorite.jsp" />
         <option value="$PROJECT_DIR$/web/profile.jsp" />
+        <option value="$PROJECT_DIR$/src/servlet/GetFav.java" />
+        <option value="$PROJECT_DIR$/web/js/profile.js" />
       </list>
     </option>
   </component>
@@ -284,6 +225,12 @@
               <item name="pj1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pj1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pj1" type="b2602c69:ProjectViewProjectNode" />
@@ -330,7 +277,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../tomcat/apache-tomcat-9.0.22/lib" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -340,7 +287,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20441176" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -476,7 +423,7 @@
       <workItem from="1563587001847" duration="8988000" />
       <workItem from="1563690517505" duration="8168000" />
       <workItem from="1563784906132" duration="49000" />
-      <workItem from="1563791348733" duration="7931000" />
+      <workItem from="1563791348733" duration="17009000" />
     </task>
     <task id="LOCAL-00001" summary="增加了很多servlet">
       <created>1563626348064</created>
@@ -548,11 +495,46 @@
       <option name="project" value="LOCAL" />
       <updated>1563792766620</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="hex 20:43 profile初始完成版本">
+      <created>1563799445845</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1563799445845</updated>
+    </task>
+    <task id="LOCAL-00012" summary="hex 20:43 profile完成版本2">
+      <created>1563800490420</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1563800490420</updated>
+    </task>
+    <task id="LOCAL-00013" summary="hex 20:43 profile完成版本3">
+      <created>1563801931000</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1563801931000</updated>
+    </task>
+    <task id="LOCAL-00014" summary="hex 20:43 profile完成版本4+favorite0.5">
+      <created>1563806922640</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1563806922640</updated>
+    </task>
+    <task id="LOCAL-00015" summary="hex 23:16 profile换一种ajax">
+      <created>1563808678455</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1563808678455</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81339000" />
+    <option name="totallyTimeSpent" value="90417000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -567,7 +549,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19772118" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19772118" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -577,19 +559,19 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7466488" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" weight="0.3991323" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.74530834" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49798927" weight="0.398017" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.3286334" />
       <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49946696" weight="0.3286334" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49932975" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.2533512" side_tool="true" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5020107" side_tool="true" visible="true" weight="0.398017" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49865952" weight="0.2549575" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49865952" weight="0.06657224" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49798927" weight="0.06657224" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.32968238" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24945295" />
@@ -616,24 +598,56 @@
     <MESSAGE value="hex15:10" />
     <MESSAGE value="hex16:30" />
     <MESSAGE value="hex 18；52" />
-    <option name="LAST_COMMIT_MESSAGE" value="hex 18；52" />
+    <MESSAGE value="hex 20:43 profile初始完成版本" />
+    <MESSAGE value="hex 20:43 profile完成版本2" />
+    <MESSAGE value="hex 20:43 profile完成版本3" />
+    <MESSAGE value="hex 20:43 profile完成版本4+favorite0.5" />
+    <MESSAGE value="hex 22:54" />
+    <MESSAGE value="hex 23:04 profile换一种ajax" />
+    <MESSAGE value="hex 23:16 profile换一种ajax" />
+    <option name="LAST_COMMIT_MESSAGE" value="hex 23:16 profile换一种ajax" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/GetFav.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/GetFav.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/GetFav.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/GetFav.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/web/js/profile.js</url>
+          <line>66</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="5356" selection-start-line="5" selection-start-column="5356" selection-end-line="5" selection-end-column="5356" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp" />
     <entry file="file://$PROJECT_DIR$/src/dao/Dao4User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -671,9 +685,6 @@
     <entry file="file://$PROJECT_DIR$/web/show.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/favorite.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/Friend.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="512">
@@ -708,16 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -875,13 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/itemadd.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -892,24 +886,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/adminuserhome.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="166" column="28" lean-forward="true" selection-start-line="166" selection-start-column="28" selection-end-line="166" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/usermanage.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
           <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/Show.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -957,48 +937,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/center.js">
+    <entry file="file://$PROJECT_DIR$/src/servlet/Show.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="247">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/all.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="48" selection-end-column="13" />
+        <state relative-caret-position="76">
+          <caret line="83" column="52" lean-forward="true" selection-start-line="83" selection-start-column="52" selection-end-line="83" selection-end-column="52" />
           <folding>
-            <element signature="n#script#5;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-146">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/profile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="35" column="40" lean-forward="true" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-          <folding>
-            <element signature="n#!!block;n#f#0" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#myFunction#0" />
           </folding>
         </state>
       </provider>
@@ -1014,19 +965,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/profile.jsp">
+    <entry file="file://$PROJECT_DIR$/web/js/center2.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/adminuserhome.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="136" column="32" lean-forward="true" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
+        <state relative-caret-position="310">
+          <caret line="150" column="25" selection-start-line="150" selection-start-column="25" selection-end-line="150" selection-end-column="25" />
           <folding>
-            <element signature="e#726#858#0#HTML" />
-            <element signature="n#script#4;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/itemadd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="134" column="12" selection-start-line="134" selection-start-column="12" selection-end-line="150" selection-end-column="17" />
+          <folding>
             <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#li#2;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="82" selection-start-line="82" selection-end-line="154" selection-end-column="6" />
+          <folding>
+            <element signature="n#script#5;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/favorite.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="126" column="23" lean-forward="true" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/center.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-355">
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-475">
+          <caret line="121" column="43" selection-start-line="121" selection-start-column="43" selection-end-line="121" selection-end-column="43" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/GetFav.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="57" column="28" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1089,6 +1129,7 @@
             <option name="proportions">
               <list>
                 <option value="0.20441176" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
