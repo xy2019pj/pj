@@ -27,12 +27,9 @@ public class Friend extends HttpServlet {
         User user=(User)req.getSession().getAttribute("user");
         if (user!=null) {
             String username = user.getUsername();
-            ArrayList<String> friends = Dao4Friend.getFriendsByName(username);
-            ArrayList<String> friendRequests = Dao4Friend.getRequestByName(username);
-            JSONArray json=new JSONArray();
+            ArrayList<User> friends = Dao4Friend.getFriendsByName(username);
             resp.setCharacterEncoding("utf8");
-            json.element(JSONArray.fromObject(friends));
-            json.element(JSONArray.fromObject(friendRequests));
+            resp.getWriter().write(JSONArray.fromObject(friends).toString());
         }
         else resp.sendRedirect("login.jsp");
     }

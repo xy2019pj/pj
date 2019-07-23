@@ -48,12 +48,6 @@
     </script>
 
     <%
-        //test用
-        Item tItem=new Item();
-        tItem.setName("testItem");
-        request.setAttribute("item",tItem);
-        //
-
         Item item=(Item)request.getAttribute("item");
         String fav=(String)request.getAttribute("fav");
     %>

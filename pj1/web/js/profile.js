@@ -1,6 +1,6 @@
-function f() {
+function f(destUser) {
     $.ajax({
-        url:"profile",    //请求的url地址
+        url:"profile?destUser="+destUser,    //请求的url地址
         dataType:"json",   //返回格式为json
         async:true,//请求是否异步，默认为异步，这也是ajax重要特性
         type:"POST",   //请求方式
@@ -29,7 +29,7 @@ function leftControl(isSelf,isAdmin) {
 
     }else {
         form="<ul class=\"nav nav-sidebar \">\n" +
-            "                <li><a href=\"#\" class=\"active\">个人首页</a></li>\n" +
+            "                <li><a href=\"\" class=\"active\">个人首页</a></li>\n" +
             "            </ul>"
     }
     document.getElementById("leftSide").innerHTML=form;

@@ -1,11 +1,11 @@
 package entity;
 
 import dao.Dao4User;
+
+import java.beans.JavaBean;
 import java.io.IOException;
-import java.sql.Date;
-import java.sql.Time;
 import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
+
 
 public class User {
     private char auth='n';
@@ -82,7 +82,7 @@ public class User {
     }
 
     public void setIntro(String intro) {
-        this.intro = intro;
+        if(intro!=null)this.intro = intro;
     }
 
     public Timestamp getRecent_login_time() {
@@ -90,6 +90,7 @@ public class User {
     }
 
     public void setRecent_login_time(Timestamp recent_login_time) {
-        this.recent_login_time = recent_login_time;
+        if(recent_login_time!=null)
+            this.recent_login_time = recent_login_time;
     }
 }
