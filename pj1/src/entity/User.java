@@ -2,7 +2,7 @@ package entity;
 
 import dao.Dao4User;
 
-import java.beans.JavaBean;
+
 import java.io.IOException;
 import java.sql.Timestamp;
 
