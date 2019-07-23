@@ -34,15 +34,19 @@
     <script src="./js/bootstrap.min.js"></script>
 
     <!-- 自定义的js -->
+    <script src="./js/all.js"></script>
     <script src="./js/center.js"></script>
 
     <!-- 导航栏用户个人中心 -->
     <script>
-        var user='${sessionScope.user.name}';
-        var userInfo='${sessionScope.user.intro}';
-        //测试用，实际删除
-        user="user";
-        userInfo="unserinfo";
+        var user='${sessionScope.user.username}';
+        var userAuth;
+        if(user!=""){
+            userAuth='${sessionScope.user.auth}';
+        }else {
+            user=null;
+            userAuth=null;
+        }
     </script>
 
 </head>
@@ -60,34 +64,8 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="home">首页</a>
-            </li>
-            <li>
-                <a href="show?category=全部"  >所有展品</a>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
-                <!--下拉展品分类菜单-->
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="show?category=工艺">工艺</a>
-                    </li>
-                    <li>
-                        <a href="show?category=金石">金石</a>
-                    </li>
-                    <li>
-                        <a href="show?category=书画">书画</a>
-                    </li>
-                    <li>
-                        <a href="show?category=陶瓷">陶瓷</a>
-                    </li>
-                    <li>
-                        <a href="show?category=其他">其他</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav" id="location">
+            <script>nowLocation(0)</script>
         </ul>
         <!--搜索-->
         <form class="navbar-form navbar-left" role="search" action="show">
@@ -104,41 +82,27 @@
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >
     <h1 style="color: #000000;" id="userNameShow">
-        <script>
-            name(user);
-        </script>
+        ${sessionScope.user.username}
     </h1>
     <p style="color: #000000;" id="userSignNS">
-        <script>
-            nameInfo(userInfo);
-        </script>
+        ${sessionScope.user.intro}
     </p>
 </div>
 <!--正文-->
 <div class="container">
     <div class="row ">
         <!--左侧-->
-        <div class="col-sm-3 col-md-2 sidebar">
-
-            <ul class="nav nav-sidebar ">
-                <li class="notActive"><a href="#">个人首页</a></li>
-                <li class="notActive"><a href="#">修改信息</a></li>
-                <li class="notActive"><a href="#">收藏夹</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li class="notActive"><a href="">好友列表</a></li>
-                <li class="notActive"><a href="">添加好友</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li class="notActive"><a href="">人员管理</a></li>
-                <li><a href="#" class="active">创建用户</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li class="notActive"><a href="">作品管理</a></li>
-                <li class="notActive"><a href="">上传作品</a></li>
-            </ul>
-
-
+        <div class="col-sm-3 col-md-2 sidebar" id="leftSide">
+            <script>
+                var isAdmin;
+                var s='${sessionScope.user.auth}';
+                if(s == 'n' || s==""){
+                    isAdmin=false;
+                }else {
+                    isAdmin = true;
+                }
+                leftControl(isAdmin,7);
+            </script>
 
         </div>
 

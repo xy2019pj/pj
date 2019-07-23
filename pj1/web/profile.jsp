@@ -10,8 +10,6 @@
 <html lang="en">
 <head>
     <title>个人主页</title>
-、
-
     <!-- Bootstrap -->
     <link href="./js/bootstrap.min.js" rel="stylesheet">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -62,47 +60,20 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li >
-                <a href="home">首页</a>
-            </li>
-            <li>
-                <a href="show?category=全部"  >所有展品</a>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
-                <!--下拉展品分类菜单-->
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="show?category=工艺">工艺</a>
-                    </li>
-                    <li>
-                        <a href="show?category=金石">金石</a>
-                    </li>
-                    <li>
-                        <a href="show?category=书画">书画</a>
-                    </li>
-                    <li>
-                        <a href="show?category=陶瓷">陶瓷</a>
-                    </li>
-                    <li>
-                        <a href="show?category=其他">其他</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav" id="location">
+            <script>nowLocation(0);</script>
         </ul>
         <!--搜索-->
-        <form class="navbar-form navbar-left" role="search" name="fname" action="show" onsubmit="return searchI()">
+        <form class="navbar-form navbar-left" role="search" action="show">
             <div class="form-group">
-                <input class="form-control" type="text" name="search" />
-            </div> <button class="btn btn-default" type="submit" >搜索</button>
+                <input class="form-control" type="text" name="search"/>
+            </div> <button class="btn btn-default" type="submit">搜索</button>
         </form>
         <!--右侧用户操作-->
         <ul class="nav navbar-nav navbar-right" id="userManage">
             <script>myFunction(user,userAuth)</script>
         </ul>
     </div>
-
 </nav>
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >

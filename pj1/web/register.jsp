@@ -33,6 +33,21 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="./js/bootstrap.min.js"></script>
 
+    <!-- 自定义的js -->
+    <script src="./js/all.js"></script>
+    <script src="./js/center.js"></script>
+    <!-- 导航栏用户个人中心 -->
+    <script>
+        var user='${sessionScope.user.username}';
+        var userAuth;
+        if(user!=""){
+            userAuth='${sessionScope.user.auth}';
+        }else {
+            user=null;
+            userAuth=null;
+        }
+    </script>
+
 </head>
 <body>
 <!--导航条-->
@@ -47,34 +62,8 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="home">首页</a>
-            </li>
-            <li>
-                <a href="show?category=全部"  >所有展品</a>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="" data-toggle="dropdown">展品分类<strong class="caret"></strong></a>
-                <!--下拉展品分类菜单-->
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="show?category=工艺">工艺</a>
-                    </li>
-                    <li>
-                        <a href="show?category=金石">金石</a>
-                    </li>
-                    <li>
-                        <a href="show?category=书画">书画</a>
-                    </li>
-                    <li>
-                        <a href="show?category=陶瓷">陶瓷</a>
-                    </li>
-                    <li>
-                        <a href="show?category=其他">其他</a>
-                    </li>
-                </ul>
-            </li>
+        <ul class="nav navbar-nav" id="location">
+            <script>nowLocation(0)</script>
         </ul>
         <!--搜索-->
         <form class="navbar-form navbar-left" role="search" action="show">
