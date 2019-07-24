@@ -37,8 +37,16 @@ public class UserAdd extends HttpServlet {
             User newUser=new User(username,auth,password,email,null);
             int status=newUser.add();
             req.setAttribute("status",status);
-            req.getRequestDispatcher("usermanage.jsp").forward(req,resp);
+            if(status==0){
+                resp.getWriter().write("1");
+            }else {
+                resp.getWriter().write("2");
+            }
+//            req.getRequestDispatcher("usermanage.jsp").forward(req,resp);
+        }else {
+            resp.getWriter().write("2");
         }
-        else resp.sendRedirect("login.jsp");
+
+//        else resp.sendRedirect("login.jsp");
     }
 }

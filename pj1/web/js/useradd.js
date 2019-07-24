@@ -30,9 +30,9 @@ function checkName() {
                 }
             });
         }else {
-        document.getElementById("nametxtHint").innerHTML = "用户名长度需要4~15位";
-        console.log("<checkName false");
-        return false;
+            document.getElementById("nametxtHint").innerHTML = "用户名长度需要4~15位";
+            console.log("<checkName false");
+            return false;
         }
     }
     console.log("<checkName");
@@ -104,45 +104,13 @@ function checkEmail(){
     return false;
 }
 
-function checkNumb() {
-    console.log(">into checkNumb");
-    var checkNumb=document.forms["myForm"]["numb"].value;
-    console.log("checkNumb:"+checkNumb);
-    if(checkNumb!=code){
-        document.getElementById("checkNumbtxtHint").innerHTML="请输入正确的验证码";
-            console.log("<checkNumb false");
-            return false;
-    }else {
-        document.getElementById("checkNumbtxtHint").innerHTML=" ";
-        console.log("<checkNumb true");
-        return true;
-    }
-}
-
-function creatCheckNumb() {
-    code = "";
-    var codeLength = 4; //验证码的长度
-    ////所有候选组成验证码的字符
-    var codeChars = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
-    //循环组成验证码的字符串
-    for (var i = 0; i < codeLength; i++)
-    {
-        //获取随机验证码下标
-        var charNum = Math.floor(Math.random() * 9);
-        //组合成指定字符验证码
-        code += codeChars[charNum];
-    }
-    document.getElementById("showCheckNumb").innerHTML=code;
-    return code;
-}
-
 function isfilled() {
     console.log(">into isfilled()");
     var name=document.forms["myForm"]["username"].value;
     var password=document.forms["myForm"]["password"].value;
     var password2=document.forms["myForm"]["password2"].value;
     var email=document.forms["myForm"]["email"].value;
-    var checkNumb=document.forms["myForm"]["numb"].value;
+
     var flag=0;
 
     if (name==null || name==""){
@@ -173,14 +141,8 @@ function isfilled() {
         flag++;
     }
 
-    if (checkNumb==null || checkNumb==""){
-        document.getElementById("checkNumbtxtHint").innerHTML="请输入验证码";
-    }else {
-        document.getElementById("checkNumbtxtHint").innerHTML="";
-        flag++;
-    }
 
-    if(flag==5){
+    if(flag==4){
         console.log("flag="+flag);
         console.log("<isfilled true");
         return true;
@@ -200,31 +162,31 @@ function checkName2() {
         return false;
     }
     var result=false;
-        $.ajax({
-            url:"register?mode=checkName&username="+name+"&password=password&email=email",    //请求的url地址
-            async:false,//请求是否异步，默认为异步，这也是ajax重要特性
-            type:"POST",   //请求方式
-            data:"text",
-            success:function(req){
-                console.log("checkName success! req:\n"+req);
-                if(req=="2"){
-                    console.log("可以使用");
-                    document.getElementById("nametxtHint").innerHTML="";
-                    console.log("<checkName true");
-                    result= true;
-                }else {
-                    console.log("用户名已存在");
-                    document.getElementById("nametxtHint").innerHTML="用户名已存在";
-                    console.log("<checkName false");
-                    result= false;
-                }
-            },
-            error:function(){
-                console.log("checkName error fail!");
+    $.ajax({
+        url:"register?mode=checkName&username="+name+"&password=password&email=email",    //请求的url地址
+        async:false,//请求是否异步，默认为异步，这也是ajax重要特性
+        type:"POST",   //请求方式
+        data:"text",
+        success:function(req){
+            console.log("checkName success! req:\n"+req);
+            if(req=="2"){
+                console.log("可以使用");
+                document.getElementById("nametxtHint").innerHTML="";
+                console.log("<checkName true");
+                result= true;
+            }else {
+                console.log("用户名已存在");
+                document.getElementById("nametxtHint").innerHTML="用户名已存在";
                 console.log("<checkName false");
                 result= false;
             }
-        });
+        },
+        error:function(){
+            console.log("checkName error fail!");
+            console.log("<checkName false");
+            result= false;
+        }
+    });
     console.log("<checkName");
     return result;
 }
@@ -237,23 +199,25 @@ function isSignSuc() {
     console.log("password="+passwordPre);
     console.log("passwordmd5="+password);
     var email=document.forms["myForm"]["email"].value;
+    var isAdmin=document.getElementsByName("admin")[0].checked;
+    console.log("isAdmin="+isAdmin);
     var result=false;
-    if(isfilled()&&checkName2() &&checkEmail()&&checkPassword()&&checkPassword2()&&checkNumb()){
+    if(isfilled()&&checkName2() &&checkEmail()&&checkPassword()&&checkPassword2()){
         console.log("intoAJAX");
         $.ajax({
-            url:"register?mode=signUp&username="+name+"&password="+password+"&email="+email,    //请求的url地址
+            url:"useradd?mode=signUp&username="+name+"&password="+password+"&email="+email+"&admin="+isAdmin,    //请求的url地址
             async:false,//请求是否异步，默认为异步，这也是ajax重要特性
             type:"POST",   //请求方式
             data:"text",
             success:function(req){
                 console.log("login success! req:\n"+req);
                 if(req=="1"){
-                    document.getElementById("txtHint").innerHTML="注册成功！";
-                    console.log("isLoginSuc()-beforeUrl="+beforeUrl);
-                    window.location.href=beforeUrl;
+                    document.getElementById("txtHint").style="color: #419641";
+                    document.getElementById("txtHint").innerHTML="添加成功！";
                     result=true;
                 }else {
                     console.log("login fail!");
+                    document.getElementById("txtHint").style="color: #c12e2a";
                     document.getElementById("txtHint").innerHTML="错误";
                     result=false;
                 }
