@@ -122,7 +122,7 @@
                             <!--按钮-->
                             <div class="row clearfix" >
                                 <div class="col-md-12 column addText" style="text-align:right">
-                                    <a class="glyphicon glyphicon-pencil addForm" href="#" title="点击修改"> </a>
+                                    <a class="glyphicon glyphicon-pencil addForm" href="itemchange?item=<%=items.get(i+j).getName()%>" title="点击修改"> </a>
                                     <a class="glyphicon glyphicon-remove addForm" href="#" title="点击删除"> </a>
                                 </div>
                             </div>

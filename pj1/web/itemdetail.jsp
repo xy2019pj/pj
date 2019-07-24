@@ -137,5 +137,11 @@
     </div>
 </div>
 
+<script>
+    var url=window.location.href;
+    sessionStorage.setItem("loginBeforeUrl",url);
+    console.log(sessionStorage.getItem("loginBeforeUrl"));
+</script>
+
 </body>
 </html>

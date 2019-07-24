@@ -1,4 +1,4 @@
-<%--
+<%@ page import="entity.Item" %><%--
   Created by IntelliJ IDEA.
   User: hexi4
   Date: 2019/7/20
@@ -113,16 +113,16 @@
 
             <form role="form">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">展品名称</label><input class="form-control" id="exampleInputEmail1" type="text" />
+                    <label for="inputName">展品名称</label><input class="form-control" id="inputName" type="text"  value="<%=((Item)request.getAttribute("item")).getName()%>"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">展品简介</label><input class="form-control" id="exampleInputPassword1" type="text" />
+                    <label for="inputIntro">展品简介</label><input class="form-control" id="inputIntro" type="text"  value="<%=((Item)request.getAttribute("item")).getIntro()%>"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">馆藏地点</label><input class="form-control" id="exampleInputPassword2" type="text" />
+                    <label for="inputPlace">馆藏地点</label><input class="form-control" id="inputPlace" type="text" value="<%=((Item)request.getAttribute("item")).getPlace()%>"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">出土年份或作品完成时间</label><input class="form-control" id="exampleInputPassword3" type="text" />
+                    <label for="inputTime">出土年份或作品完成时间</label><input class="form-control" id="inputTime" type="text" value="<%=((Item)request.getAttribute("item")).getTime()%>"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputFile">更改图片</label><input id="exampleInputFile" type="file" />

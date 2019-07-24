@@ -140,3 +140,8 @@ function nowLocation(numb) {
     document.getElementById("location").innerHTML=form;
 
 }
+
+//记录当前页面 S
+function remNowUrlS() {
+   var form="window.location.pathname"
+}
