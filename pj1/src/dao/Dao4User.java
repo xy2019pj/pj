@@ -1,6 +1,5 @@
 package dao;
 
-import entity.Item;
 import entity.User;
 
 import java.sql.Timestamp;
@@ -56,17 +55,16 @@ public class Dao4User {
         String sql="delete from user_account where username=?";
         dao.update(sql,username);
     }
-    public static void changeAuthByName(User user) {
+    public static void changeAuthByName(String username) {
+        User user=getUserByName(username);
         char auth=user.getAuth();
         char newAuth=0;
         if(auth=='a')
             newAuth='n';
         if(auth=='n')
             newAuth='a';
-        String sql = "update user_account " +
-                "set auth=?" +
-                " where username=?,auth=?";
-        dao.update(sql,String.valueOf(newAuth),user.getUsername(),auth);
+        String sql = "update user_account set auth=? where username=?";
+        dao.update(sql,String.valueOf(newAuth),username);
     }
 
     public static void changeUserByName(String oldname,User newUser){

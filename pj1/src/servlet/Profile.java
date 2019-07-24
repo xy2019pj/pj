@@ -38,7 +38,7 @@ public class Profile extends HttpServlet {
             destUser = user;
             req.setAttribute("destUser",destUser);
         }
-        ArrayList<Item> favItems = Dao4Fav.getFavByName(destUser.getUsername());
+        ArrayList<Item> favItems = Dao4Fav.getOpenFavByName(destUser.getUsername());
         ArrayList<Item> subItems=new ArrayList<>();
         for(int i=0;i<favItems.size()&&i<5;i++)
             subItems.add(favItems.get(i));

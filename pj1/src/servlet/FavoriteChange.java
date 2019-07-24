@@ -4,19 +4,23 @@ import dao.Dao4Fav;
 import entity.User;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+@WebServlet("/favoriteopen")
 public class FavoriteChange extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (req.getSession().getAttribute("user")!=null) {
             String username = ((User) req.getSession().getAttribute("user")).getUsername();
-            String itemName = req.getParameter("itemName");
-            Dao4Fav.changeFavByName(username,itemName);
-            req.getRequestDispatcher("favorite.jsp").forward(req, resp);
+            String itemChangeName = req.getParameter("itemChangeName");
+            if(itemChangeName!=null)Dao4Fav.changeFavByName(username,itemChangeName);
+            String itemOpenName = req.getParameter("itemOpenName");
+            if(itemOpenName!=null)Dao4Fav.openFavByName(username,itemOpenName);
+            resp.sendRedirect("favorite.jsp");
         }
         else resp.sendRedirect("login.jsp");
     }

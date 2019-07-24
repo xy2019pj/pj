@@ -195,7 +195,6 @@ public class DAO {
 	 * @return
 	 */
 	List<String> getForValue(String sql,Object ...objects) {
-		//1.得到结果集：结果集只有一行，且只有一列
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		ResultSet resultSet = null;

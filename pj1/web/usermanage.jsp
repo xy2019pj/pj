@@ -137,13 +137,14 @@
                         <td><%=allUsers.get(i).getRecent_login_time()%></td>
                         <td><%=allUsers.get(i).getAuth()%></td>
                         <td>
+                            <form action="usermanage" method="post">
                             <!--按钮-->
                             <div class="row clearfix">
                                 <div class="col-md-12 column addText">
                                     <%if(allUsers.get(i).getAuth()=='n'){%>
-                                    <a class="glyphicon glyphicon-arrow-up addForm" href="#" title="升级为管理员"> </a>
+                                    <button class="glyphicon glyphicon-arrow-up addForm" type="submit" name="changeAuth" value="<%=allUsers.get(i).getUsername()%>" title="升级为管理员"> </button>
                                     <%}else{%>
-                                    <a class="glyphicon glyphicon-arrow-down addForm" href="#" title="降级为普通用户"> </a>
+                                    <button class="glyphicon glyphicon-arrow-down addForm" type="submit" name="changeAuth" value="<%=allUsers.get(i).getUsername()%>" title="降级为普通用户"> </button>
                                     <%}%>
                                 </div>
                             </div>
@@ -151,22 +152,17 @@
                         <td><!--按钮-->
                             <div class="row clearfix" >
                                 <div class="col-md-12 column addText">
-                                    <a class="glyphicon glyphicon-remove addForm" href="#" title="删除用户"> </a>
+                                    <button class="glyphicon glyphicon-remove addForm" type="submit" name="deleteUser" value="<%=allUsers.get(i).getUsername()%>" title="删除用户"> </button>
                                 </div>
                             </div>
                         </td>
-
+                        </form>
                     </tr>
                     <%}%>
                     </tbody>
                 </table>
             </div>
-
-
         </div>
-
-
-
     </div>
 </div>
 
