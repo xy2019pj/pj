@@ -110,7 +110,7 @@
         <div class="col-sm-9 right" >
             <br><br>
 
-            <form role="form" action="itemadd" method="post" enctype="multipart/form-data">
+            <form role="form" action="itemadd" method="post" enctype="multipart/form-data" >
                 <div class="form-group">
                     <label for="exampleInputEmail1">展品名称</label><input class="form-control" id="exampleInputEmail1" type="text" name="name"/>
                 </div>

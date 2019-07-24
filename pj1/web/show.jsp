@@ -137,7 +137,7 @@
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
-            <li id="now0Btn"><a onclick="btnEvent(0)" >1</a></li>
+            <li id="now0Btn"><a onclick="btnEvent(0)" style="background-color: #0c3347;color: #e2e2e2">1</a></li>
             <li id="now1Btn"><a onclick="btnEvent(1)" >2</a></li>
             <li id="now2Btn"><a onclick="btnEvent(2)" >3</a></li>
             <li id="now3Btn"><a onclick="btnEvent(3)" >4</a></li>
@@ -148,6 +148,11 @@
                 </a>
             </li>
         </ul>
+        <div class="row" style="color: #e2e2e2">
+        <label style="text-align: center" >共</label>
+        <label style="text-align: center" id="allpage">?</label>
+        <label style="text-align: center" >页</label>
+        </div>
     </nav>
 </div>
 

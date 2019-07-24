@@ -99,6 +99,7 @@ function f3(requestS,categoryS) {
             console.log("items.length:"+items.length);//
             console.log("pagen:"+pagen);//
             console.log("nowN="+nowN);//
+            document.getElementById("allpage").innerHTML=""+pagen;
             document.getElementById("showGround").innerHTML=form;
         },
         error:function () {
@@ -185,6 +186,7 @@ function changeBtn() {
     console.log("into changeBtn,nowN="+nowN);
     var forms=new Array();
     var pageNs=new Array();
+    var nowPI;
 
     if(nowN>1 && nowN<pagen-1){
         pageNs[0]=nowN-2;
@@ -192,14 +194,17 @@ function changeBtn() {
         pageNs[2]=nowN;
         pageNs[3]=nowN+1;
         pageNs[4]=nowN+2;
+        nowPI=2;
     }else{
         if(nowN<=1){
+            nowPI=nowN;
             pageNs[0]=0;
             pageNs[1]=1;
             pageNs[2]=2;
             pageNs[3]=3;
             pageNs[4]=4;
         }else {
+            nowPI=4-pagen+nowN;
             pageNs[0]=pagen-4;
             pageNs[1]=pagen-3;
             pageNs[2]=pagen-2;
@@ -213,6 +218,21 @@ function changeBtn() {
         var t=pageNs[i]+1;
         forms[i]="<a onclick=\"btnEvent(" + pageNs[i] + ")\" >" + t + "</a>";
         console.log(forms[i]);
+    }
+
+    console.log("nowPI="+nowPI+";总页数="+pagen);//
+    var t=pageNs[0];
+    var m=t+1;
+    switch (nowPI) {
+        case 0:forms[0]="<a onclick=\"btnEvent(" +t+")\" style=\"background-color: #0c3347;color: #e2e2e2\">" +m+ "</a>"
+        break;
+        case 1:t++; m++;forms[1]="<a onclick=\"btnEvent(" +t+")\" style=\"background-color: #0c3347;color: #e2e2e2\">" +m+ "</a>"
+        break;
+        case 2:t++; m++;forms[2]="<a onclick=\"btnEvent(" +t+")\" style=\"background-color: #0c3347;color: #e2e2e2\">" +m+ "</a>"
+        break;
+        case 3:t++; m++;forms[3]="<a onclick=\"btnEvent(" +t+")\" style=\"background-color: #0c3347;color: #e2e2e2\">" +m+ "</a>"
+        break;
+        case 4:t++; m++;forms[4]="<a onclick=\"btnEvent(" +t+")\" style=\"background-color: #0c3347;color: #e2e2e2\">" +m+ "</a>"
     }
 
     document.getElementById("now0Btn").innerHTML=forms[0];
