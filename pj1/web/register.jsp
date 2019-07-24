@@ -36,8 +36,12 @@
     <!-- 自定义的js -->
     <script src="./js/all.js"></script>
     <script src="./js/center.js"></script>
+    <script src="./js/register.js"></script>
     <!-- 导航栏用户个人中心 -->
     <script>
+        beforeUrl=sessionStorage.getItem("loginBeforeUrl");
+        console.log("login-beforeUrl:"+beforeUrl);
+
         var user='${sessionScope.user.username}';
         var userAuth;
         if(user!=""){
@@ -92,29 +96,73 @@
         <div class="col-md-12 column mybody">
             <br>
             <h3 style="text-align: center">注册新用户</h3>
-            <form class="form-horizontal " role="form" action="register" method="post">
+            <form class="form-horizontal " role="form" method="get" name="myForm"  onsubmit="return false;">
                 <br>
                 <div class="form-group">
+                    <div class="col-sm-2">
+                    </div>
                     <label class="col-sm-2 control-label" for="inputUserName">用户名</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" id="inputUserName" type="text" name="username"/>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="inputUserName" type="text" name="username" onkeyup="checkName()"  onclick="checkName()"/>
+                    </div>
+                    <div class="col-sm-3" >
+                        <p style="color: #c12e2a"><span id="nametxtHint" class="col-sm-offset-4 col-sm-10"></span></p>
                     </div>
                 </div>
                 <div class="form-group">
+                    <div class="col-sm-2">
+                    </div>
                     <label class="col-sm-2 control-label" for="inputPassword">密码</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" id="inputPassword" type="password" name="password"/>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="inputPassword" type="password" name="password" onkeyup="checkPassword()" onclick="checkPassword()"/>
+                    </div>
+                    <div class="col-sm-3" >
+                        <p style="color: #c12e2a"><span id="passwordtxtHint" class="col-sm-offset-4 col-sm-10"></span></p>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label" for="inputEmail3">邮箱</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" id="inputEmail3" type="email" name="email"/>
+                    <div class="col-sm-2">
+                    </div>
+                    <label class="col-sm-2 control-label" for="inputPassword">确认密码</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="inputPassword2" type="password" name="password2" onkeyup="checkPassword2()" onclick="checkPassword2()"/>
+                    </div>
+                    <div class="col-sm-3" >
+                        <p style="color: #c12e2a"><span id="passwordtxtHint2" class="col-sm-offset-4 col-sm-10"></span></p>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="col-sm-2">
+                    </div>
+                    <label class="col-sm-2 control-label" for="inputEmail">邮箱</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="inputEmail" type="email" name="email" onkeyup="checkEmail()" onclick="checkEmail()"/>
+                    </div>
+                    <div class="col-sm-3" >
+                        <p style="color: #c12e2a"><span id="emailtxtHint" class="col-sm-offset-4 col-sm-10"></span></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-2">
+                    </div>
+                    <label class="col-sm-2 control-label" for="inputCheckNumb">验证码</label>
+                    <div class="col-sm-2">
+                        <input class="form-control" id="inputCheckNumb" type="text" name="numb" onkeyup="checkNumb()"  onclick="checkNumb()"/>
+                    </div>
+                    <div class="col-sm-1">
+                        <h4 id="showCheckNumb" style="color: #2aabd2"></h4>
+                        <script>code=creatCheckNumb();</script>
+                    </div>
+                    <div class="col-sm-3" >
+                        <p style="color: #c12e2a"><span id="checkNumbtxtHint" class="col-sm-offset-4 col-sm-10"></span></p>
+                    </div>
+                </div>
+
+                <p><span id="txtHint" class="col-sm-offset-4 col-sm-10"></span></p>
                 <div class="form-group" style="text-align: center">
                     <div class="col-sm-offset-1 col-sm-10">
-                        <button class="btn btn-default" type="submit">注册</button>
+                        <button class="btn btn-default" onclick="creatCheckNumb()">更改验证码</button>
+                        <button class="btn btn-default" type="button" href='${sessionStorage.getItem("loginBeforeUrl")}' onclick="return isSignSuc()">注册</button>
                     </div>
                 </div>
             </form>
