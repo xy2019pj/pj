@@ -20,7 +20,7 @@ public class ItemChange extends HttpServlet {
             String itemName=req.getParameter("item");
             Item item= Dao4Item.getItemByName(itemName);
             req.setAttribute("item",item);
-            req.getRequestDispatcher("itemchange,jsp").forward(req,resp);
+            req.getRequestDispatcher("itemchange.jsp").forward(req,resp);
         }
         else
             resp.sendRedirect("login.jsp");

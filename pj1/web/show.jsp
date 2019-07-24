@@ -68,7 +68,7 @@
             <script>
                 var categoryS="<%=request.getParameter("category")%>";
                 console.log("categoryS="+categoryS);
-                if(categoryS=="null"||categoryS==""){
+                if(categoryS=="null"||categoryS==""||categoryS=="全部"){
                     nowLocation(2);
                 }else {
                     nowLocation(3);
@@ -91,7 +91,7 @@
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) ; margin-bottom:0" >
     <h1 style="color: #000000;">
         <%
-            if(request.getParameter("category")!=null){
+            if(request.getParameter("category")!=null&&(!request.getParameter("category").equals("全部"))){
         %>
         <%=request.getParameter("category")+"类展品"%>
         <%
@@ -155,6 +155,11 @@
     </nav>
 </div>
 
+<script>
+    var url=window.location.href;
+    sessionStorage.setItem("loginBeforeUrl",url);
+    console.log(sessionStorage.getItem("loginBeforeUrl"));
+</script>
 
 </body>
 </html>

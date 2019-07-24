@@ -15,10 +15,17 @@ public class ProfileChange extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User oldUser=(User)req.getSession().getAttribute("user");
         if (oldUser!=null) {
-            User newUser = (User) req.getAttribute("user");
-            Dao4User.changeUserByName(oldUser.getUsername(), newUser);
-            req.getSession().setAttribute("user", newUser);
-            resp.sendRedirect("profile");
+            String password=req.getParameter("password");
+            if(Dao4User.getPwdByUser(oldUser).equals(password)) {
+                String username=req.getParameter("username");
+                String email=req.getParameter("email");
+                String intro=req.getParameter("intro");
+                User newUser=new User(username,oldUser.getAuth(),password,email,null);
+                newUser.setIntro(intro);
+                Dao4User.changeUserByName(oldUser.getUsername(), newUser);
+                req.getSession().setAttribute("user", newUser);
+                resp.sendRedirect("profile");
+            }
         }
         else resp.sendRedirect("login.jsp");
 

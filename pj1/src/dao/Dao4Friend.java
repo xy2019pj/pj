@@ -18,10 +18,12 @@ public class Dao4Friend {
     public static void addFriendByName(String username,String friName){
         String sql="insert into friend_pair(username,friendname,available) values(?,?,1);";
         dao.update(sql,username, friName);
+        String sql1="insert into friend_pair(friendname,username,available) values(?,?,1);";
+        dao.update(sql1,username, friName);
     }
 
     public static void deleteFriendByName(String username,String friName){
-        String sql="delete from friend_pair where username=?,friendname=?;";
+        String sql="delete from friend_pair where username=? and friendname=?;";
         dao.update(sql,username, friName);
     }
 
@@ -36,7 +38,7 @@ public class Dao4Friend {
     }
 
     public static ArrayList<String> getRequestByName(String username){
-        String sql="select username from friend_pair where friendname=?,available=0;";
+        String sql="select username from friend_pair where friendname=? and available=0;";
         ArrayList<String> requests=(ArrayList<String>) dao.getForValue(sql,username);
         return requests;
     }
