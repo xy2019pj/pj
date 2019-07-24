@@ -36,9 +36,11 @@
     <!-- 自定义的js -->
     <script src="./js/all.js"></script>
     <script src="./js/center.js"></script>
+    <script src="./js/useradd.js"></script>
 
     <!-- 导航栏用户个人中心 -->
     <script>
+
         var user='${sessionScope.user.username}';
         var userAuth;
         if(user!=""){
@@ -48,6 +50,8 @@
             userAuth=null;
         }
     </script>
+
+
 
 </head>
 <body>
@@ -112,44 +116,64 @@
             <div class="row clearfix">
                 <div class="col-md-12 column">
                     <div class="row clearfix">
-                        <div class="col-md-3 column">
+                        <div class="col-md-1 column">
                         </div>
                         <!--表单-->
-                        <div class="col-md-6 column">
-                            <form class="form-horizontal" role="form" action="useradd" method="post">
+                        <div class="col-md-11 column">
+                            <form class="form-horizontal" role="form" action="useradd" method="post" name="myForm" onsubmit="return false;">
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="inputUserName">用户名</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="inputUserName" type="text" name="username" />
+                                    <div class="col-sm-4">
+                                        <input class="form-control" id="inputUserName" type="text" name="username" onkeyup="checkName()"  onclick="checkName()"/>
+                                    </div>
+                                    <div class="col-sm-4" >
+                                        <p style="color: #c12e2a"><span id="nametxtHint" class="col-sm-offset-4 col-sm-10"></span></p>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="inputPassword">密码</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="inputPassword" type="password" name="password"/>
+                                    <div class="col-sm-4">
+                                        <input class="form-control" id="inputPassword" type="password" name="password" onkeyup="checkPassword()" onclick="checkPassword()"/>
+                                    </div>
+                                    <div class="col-sm-4" >
+                                        <p style="color: #c12e2a"><span id="passwordtxtHint" class="col-sm-offset-4 col-sm-10"></span></p>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="inputEmail3">邮箱</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="inputEmail3" type="email" name="email"/>
+                                    <label class="col-sm-2 control-label" for="inputPassword">确认密码</label>
+                                    <div class="col-sm-4">
+                                        <input class="form-control" id="inputPassword2" type="password" name="password2" onkeyup="checkPassword2()" onclick="checkPassword2()"/>
+                                    </div>
+                                    <div class="col-sm-4" >
+                                        <p style="color: #c12e2a"><span id="passwordtxtHint2" class="col-sm-offset-4 col-sm-10"></span></p>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="checkbox" style="text-align: center">
-                                        <label><input type="checkbox" name="admin" value="true"/>赋予新用户管理员权限</label>
+                                    <label class="col-sm-2 control-label" for="inputEmail">邮箱</label>
+                                    <div class="col-sm-4">
+                                        <input class="form-control" id="inputEmail" type="email" name="email" onkeyup="checkEmail()" onclick="checkEmail()"/>
+                                    </div>
+                                    <div class="col-sm-4" >
+                                        <p style="color: #c12e2a"><span id="emailtxtHint" class="col-sm-offset-4 col-sm-10"></span></p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox col-sm-offset-1 col-sm-4" >
+                                        <label><input type="checkbox" name="admin" checked />赋予新用户管理员权限</label>
                                         <br>
                                     </div>
                                 </div>
-                                <div class="form-group" style="text-align: center">
-                                    <div class="col-sm-offset-1 col-sm-10">
-                                        <button class="btn btn-default" type="submit">创建用户</button>
+                                <div class="form-group" >
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button class="btn btn-default" type="submit" onclick="return isSignSuc()">创建用户</button>
                                     </div>
                                 </div>
+                                <br>
+                                <p><span id="txtHint" class="col-sm-offset-2 col-sm-10" style="color: #419641"></span></p>
+                                <br>
                             </form>
                         </div>
-                        <div class="col-md-3 column">
-                        </div>
+
                     </div>
                 </div>
             </div>

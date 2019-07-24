@@ -24,10 +24,13 @@ public class ProfileChange extends HttpServlet {
                 newUser.setIntro(intro);
                 Dao4User.changeUserByName(oldUser.getUsername(), newUser);
                 req.getSession().setAttribute("user", newUser);
-                resp.sendRedirect("profile");
+//                resp.sendRedirect("profile");
+                resp.getWriter().write("1");
             }
+        }else{
+            resp.getWriter().write("2");
         }
-        else resp.sendRedirect("login.jsp");
+//        else resp.sendRedirect("login.jsp");
 
     }
 }

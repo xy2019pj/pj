@@ -150,6 +150,7 @@
                                     <%}%>
                                 </div>
                             </div>
+                            </form>
                         </td>
                         <td><!--按钮-->
                             <div class="row clearfix" >
