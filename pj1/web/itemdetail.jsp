@@ -1,4 +1,5 @@
-<%@ page import="entity.Item" %><%--
+<%@ page import="entity.Item" %>
+<%@ page import="entity.User" %><%--
   Created by IntelliJ IDEA.
   User: hexi4
   Date: 2019/7/20
@@ -101,7 +102,19 @@
     <br>
     <div class="row clearfix" style="text-align:center">
         <div class="col-md-12 column">
-            <a class="glyphicon glyphicon-star-empty collectForm" href="#" title="收藏\取消收藏"> </a>
+            <a class="glyphicon glyphicon-star-empty collectForm" href="favoriteopen?itemChangeName=<%=item.getName()%>" title="收藏\取消收藏"> </a>
+            <%
+                User user=(User)session.getAttribute("user");
+                char userAuth=user.getAuth();
+                System.out.println("user.getAuth()="+user.getAuth());
+                if(userAuth=='a'){
+                    System.out.println("manager:item.getName()="+item.getName());
+            %>
+            <%="<a class=\"glyphicon glyphicon-pencil collectForm\" href=\"itemchange?item="+item.getName()+"\"title=\"管理作品\"> </a>"%>
+            <%
+                }
+            %>
+
         </div>
     </div>
 
@@ -116,6 +129,17 @@
                 <dd>
                     <%=item.getIntro()%>
                 </dd>
+                <br>
+                馆藏地点：
+                <dd>
+                    <%=item.getPlace()%>
+                </dd>
+                <br>
+                出土时间/作品完成时间：
+                <dd>
+                    <%=item.getTime()%>
+                </dd>
+
                 <dt>
                     热度<%=item.getClickNum()%>
                 </dt>

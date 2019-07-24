@@ -34,7 +34,7 @@ function collection() {
                         "<div class=\"col-md-12 column addText\" style=\"text-align:right\">" +
                         "<form action=\"favoriteopen\" method=\"post\" ><button class=\"glyphicon glyphicon-eye-open addForm\" type=\"submit\" name=\"itemOpenName\" value=\""+
                         favItems[i + j].name+
-                        "\" title=\"更改权限\"> </button></from>"+
+                        "\" title=\"更改权限\"> </button></form>"+
                         "<button class=\"glyphicon glyphicon-remove addForm\"  type=\"submit\"  name=\"itemChangeName\" value=\"" +
                         favItems[i + j].name+
                         "\" title=\"取消收藏\"> </button>"+
@@ -46,9 +46,18 @@ function collection() {
                         "<h4>" +
                         favItems[i + j].name +
                         "</h4>" +
-                        "<span class=\"text-muted\">+" +
-                        favItems[i + j].intro +
-                        "</span>" +
+                        "<h6>馆藏地点:<br>" +
+                        favItems[i + j].place +
+                        "</h6>\n" +
+                        "                <h6>收藏时间:<br>" +
+                        // favItems[i + j].collegetime +
+                        "</h6>\n" +
+                        "                <h6>热度:" +
+                        favItems[i + j].clickNum +
+                        "</h6>" +
+                        // "<span class=\"text-muted\">+" +
+                        // favItems[i + j].intro +s
+                        // "</span>" +
                         "</div>";
                 }
                 form+="<br> <br>";

@@ -13,6 +13,7 @@ public class EncodeFilter implements Filter {
             throws java.io.IOException, ServletException {
         System.out.println("filter");
         request.setCharacterEncoding("utf8");
+        response.setCharacterEncoding("utf8");
         // 把请求传回过滤链
         chain.doFilter(request,response);
     }
