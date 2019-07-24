@@ -39,7 +39,6 @@
     <!-- 导航栏用户个人中心 -->
     <script>
 
-
         beforeUrl=sessionStorage.getItem("loginBeforeUrl");
         console.log("login-beforeUrl:"+beforeUrl);
 
