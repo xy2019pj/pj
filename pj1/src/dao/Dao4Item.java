@@ -43,9 +43,17 @@ public class Dao4Item {
     }
 
     public static ArrayList<Item> getItemsBySearch(String category,String content){
-        String sql="select * from item_info where category=? and name like ?";
-        ArrayList<Item> items=(ArrayList<Item>) dao.getForList(Item.class,sql,
-                category,"%"+content+"%");
+        String sql;
+        ArrayList<Item> items;
+        if(category.equals("全部")) {
+            sql = "select * from item_info where name like ? order by clickNum DESC";
+            items=(ArrayList<Item>) dao.getForList(Item.class, sql, "%" + content + "%");
+        }
+        else {
+            sql = "select * from item_info where category=? and name like ? order by clickNum DESC";
+            items = (ArrayList<Item>) dao.getForList(Item.class, sql,
+                    category, "%" + content + "%");
+        }
         return items;
     }
 

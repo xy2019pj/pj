@@ -107,7 +107,27 @@ function f3(requestS,categoryS) {
     });
     return false;
 }
-
+function getItems(category,search) {
+    $.ajax({
+        url:'show',
+        type:'post',
+        data:{category:category,search:search},
+        success: function (res) {
+            items=JSON.parse(res);
+            if(items.length%9!=0){
+                pagen=parseInt(items.length/9);//0-9
+            }else {
+                pagen=items.length/9-1;
+            }
+            nowN=0;//按钮变量0开始 0-p1
+            var form=creatPage(nowN);
+            document.getElementById('showGround').innerHTML=form;
+        },
+        error:function () {
+            window.alert('????');
+        }
+    })
+}
 function creatPage(nowN) {
     var form;
     for(var i=0;(i<9) && ((nowN*9+i)<items.length);i++){

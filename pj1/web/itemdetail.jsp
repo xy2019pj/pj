@@ -125,12 +125,7 @@
         <div class="row clearfix topSpace" style="text-align:center" >
             <div class="col-md-12 column">
                 <video width="1120" height="630" controls autoplay>
-                    <source src="movie.ogg" type="video/ogg">
                     <source src="<%=item.getVideo()%>" type="video/mp4">
-                    <source src="movie.webm" type="video/webm">
-                    <object data="movie.mp4" width="1120" height="630">
-                        <embed width="1120" height="630" src="movie.swf">
-                    </object>
                 </video>
             </div>
         </div>

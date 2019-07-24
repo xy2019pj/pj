@@ -35,6 +35,7 @@
     <!-- 自定义的js -->
     <script src="./js/all.js"></script>
     <script src="./js/center.js"></script>
+    <script src="./js/showTry.js"></script>
     <!-- 导航栏用户个人中心 -->
     <script>
         var user='${sessionScope.user.username}';
@@ -46,7 +47,6 @@
             userAuth=null;
         }
     </script>
-    <script src="js/showTry.js"></script>
 <script>
 
 </script>
@@ -66,20 +66,24 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav" id="location">
             <script>
-                var categoryS="<%=request.getParameter("category")%>";
-                console.log("categoryS="+categoryS);
-                if(categoryS=="null"||categoryS==""||categoryS=="全部"){
+                var category="<%=request.getParameter("category")%>";
+                console.log("category="+category);
+                if(category=="null"||category==""||category=="全部"){
                     nowLocation(2);
                 }else {
                     nowLocation(3);
                 }
+                getItems(category,null);
             </script>
         </ul>
         <!--搜索-->
-        <form class="navbar-form navbar-left" role="search" action="show">
+        <form class="navbar-form navbar-left" role="search" id="searchForm1" name="searchForm1" onclick="return false">
             <div class="form-group">
-                <input class="form-control" type="text" name="search"/>
-            </div> <button class="btn btn-default" type="submit">搜索</button>
+                <input class="form-control" type="text" id="search1" name="search1"/>
+            </div> <button class="btn btn-default" type="button" onclick="
+                var category='<%=request.getParameter("category")%>';
+                getItems(category,document.forms['searchForm1']['search1'].value)
+        ">搜索</button>
         </form>
         <!--右侧用户操作-->
         <ul class="nav navbar-nav navbar-right" id="userManage">
@@ -99,7 +103,7 @@
         %>
         <%="所有展品"%>
         <%
-        }
+            }
         %>
     </h1>
 </div>
@@ -107,10 +111,13 @@
 <div class="container ">
     <div class="row clearfix">
         <div class="col-md-12 column"  style="text-align:center" >
-            <form class="navbar-form" role="search"  id="searchForm">
+            <form class="navbar-form" role="search"  name="searchForm2" id="searchForm2" onclick="return false">
                 <div class="form-group">
-                    <input class="form-control" type="text" id="inputS" />
-                </div> <button class="btn btn-default" type="button" onclick="f()">搜索</button>
+                    <input class="form-control" type="text" id="search2" name="search2"/>
+                </div> <button class="btn btn-default"  onclick="
+                    var category='<%=request.getParameter("category")%>';
+                    getItems(category,document.forms['searchForm2']['search2'].value)
+                    ">搜索</button>
             </form>
         </div>
     </div>
@@ -118,17 +125,6 @@
 <!--分页-->
 <div class="container writeColorText bottomThings clearfix">
     <div class="row clearfix" id="showGround">
-        <!--初始化第一页-->
-        <script>
-            var requestS="<%=request.getParameter("search")%>";
-            /*if(requestS=="null"||requestS==""){
-                f();
-            }else{
-                f2(requestS);
-            }*/
-            var categoryS="<%=request.getParameter("category")%>";
-            f3(requestS,categoryS);
-        </script>
     </div>
 </div>
 

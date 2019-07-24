@@ -29,12 +29,12 @@ public class UserManage extends HttpServlet {
         User user=(User)req.getSession().getAttribute("user");
         if(user!=null&&user.getAuth()=='a') {
             String deleteUser = req.getParameter("deleteUser");
-            User changeAuth = (User) req.getSession().getAttribute("changeAuth");
+            String changeAuth = req.getParameter("changeAuth");
             if (deleteUser != null)
                 Dao4User.deleteUser(deleteUser);
             if (changeAuth != null)
                 Dao4User.changeAuthByName(changeAuth);
-            req.getRequestDispatcher("usermanage.jsp");
+            resp.sendRedirect("usermanage");
         }
         else resp.sendRedirect("login.jsp");
     }

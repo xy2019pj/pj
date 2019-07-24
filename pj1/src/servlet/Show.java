@@ -14,9 +14,9 @@ import java.util.ArrayList;
 
 @WebServlet("/show")
 public class Show extends HttpServlet {
-    public static int flag = 0;
-
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        System.out.println("><<<<");
+        System.out.println(req.getParameter("category"));
         req.getRequestDispatcher("show.jsp").forward(req,res);
     }
 
@@ -25,11 +25,12 @@ public class Show extends HttpServlet {
         String category = req.getParameter("category");
         String search=req.getParameter("search");
         ArrayList<Item> items =null;
-        if(category==null)
+        if(category==null||category.equals("null"))
             category="全部";
         items=Dao4Item.getItemsByCategory(category);
-        if(search!=null)
+        if(search!=null&&!search.equals("null")&&!search.equals(""))
             items=Dao4Item.getItemsBySearch(category,search);
+        resp.setCharacterEncoding("utf8");
         resp.getWriter().write(JSONArray.fromObject(items).toString());
     }
 }

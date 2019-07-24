@@ -38,7 +38,7 @@ public class ItemAdd extends HttpServlet {
             Part video = req.getPart("video");
             String videoName="video\\"+name+".mp4";
             video.write("E:\\0.NULL\\FDU\\study\\卓越软件设计\\pj\\pj1\\web\\video\\"+name+".mp4");
-            Item newItem=new Item(name,"Others",picture,null,0,intro,place,time,videoName);
+            Item newItem=new Item(name,"其他",picture,null,0,intro,place,time,videoName);
             int status=newItem.add();
             req.setAttribute("status",status);
             req.getRequestDispatcher("itemadd.jsp").forward(req,resp);

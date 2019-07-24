@@ -58,7 +58,6 @@
             url: "home",
             type: "POST",
             success: function (res) {
-                console.log("success!");
                 hotItems =JSON.parse(res)[0];
                 recentItems = JSON.parse(res)[1];
                 hotItem(hotItems);
