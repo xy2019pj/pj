@@ -107,29 +107,29 @@
         </div>
 
         <!--右侧-->
-        <div class="col-sm-9 right">
+        <div class="col-sm-9 right" >
             <br><br>
 
-            <form role="form">
+            <form role="form" action="itemadd" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">展品名称</label><input class="form-control" id="exampleInputEmail1" type="text" />
+                    <label for="exampleInputEmail1">展品名称</label><input class="form-control" id="exampleInputEmail1" type="text" name="name"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">展品简介</label><input class="form-control" id="exampleInputPassword1" type="text" />
+                    <label for="exampleInputPassword1">展品简介</label><input class="form-control" id="exampleInputPassword1" type="text" name="intro"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">馆藏地点</label><input class="form-control" id="exampleInputPassword2" type="text" />
+                    <label for="exampleInputPassword1">馆藏地点</label><input class="form-control" id="exampleInputPassword2" type="text" name="place" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">出土年份或作品完成时间</label><input class="form-control" id="exampleInputPassword3" type="text" />
+                    <label for="exampleInputPassword1">出土年份或作品完成时间</label><input class="form-control" id="exampleInputPassword3" type="text" name="time"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputFile">上传图片</label><input id="exampleInputFile" type="file" />
+                    <label for="exampleInputFile">上传图片</label><input id="exampleInputFile" type="file" name="picture"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputFile">上传视频</label><input id="exampleInputFile2" type="file" />
+                    <label for="exampleInputFile">上传视频</label><input id="exampleInputFile2" type="file" name="video"/>
                 </div>
-                <button class="btn btn-default" type="submit">确认上传</button>
+                <button class="btn btn-default" type="submit" >确认上传</button>
             </form>
 
 

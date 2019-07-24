@@ -36,7 +36,12 @@
     <!-- 自定义的js -->
     <script src="./js/all.js"></script>
     <script src="./js/center.js"></script>
+    <script src="./js/profilechange.js"></script>
 
+    <script>
+        nowuserName='${sessionScope.user.username}';
+        console.log("nowuserName="+nowuserName);
+    </script>
     <!-- 导航栏用户个人中心 -->
     <script>
         var user='${sessionScope.user.username}';
@@ -113,48 +118,63 @@
             <div class="row clearfix">
                 <div class="col-md-12 column">
                     <div class="row clearfix">
-                        <div class="col-md-3 column">
+                        <div class="col-md-1 column">
                         </div>
                         <!--表单-->
-                        <div class="col-md-6 column">
-                            <form class="form-horizontal" role="form">
+                        <div class="col-md-11 column">
+                            <form class="form-horizontal" role="form" action="profilechange" method="post" name="myForm" onsubmit="return false;">
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="inputUserName">用户名</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="inputUserName" type="text" />
+                                    <div class="col-sm-4">
+                                        <input class="form-control" id="inputUserName" type="text" name="username" onkeyup="checkName()"  onclick="checkName()" value="${sessionScope.user.username}"/>
+                                    </div>
+                                    <div class="col-sm-4" >
+                                        <p style="color: #c12e2a"><span id="nametxtHint" class="col-sm-offset-4 col-sm-10"></span></p>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="inputEmail3">邮箱</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="inputEmail3" type="email" />
+                                    <label class="col-sm-2 control-label" for="inputEmail">邮箱</label>
+                                    <div class="col-sm-4">
+                                        <input class="form-control" id="inputEmail" type="email" name="email" onkeyup="checkEmail()" onclick="checkEmail()" value="${sessionScope.user.email}"/>
+                                    </div>
+                                    <div class="col-sm-4" >
+                                        <p style="color: #c12e2a"><span id="emailtxtHint" class="col-sm-offset-4 col-sm-10"></span></p>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="inputMessage">签名</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="inputMessage" type="text" />
+                                    <div class="col-sm-4">
+                                        <input class="form-control" id="inputMessage" type="text" name="intro" value="${sessionScope.user.intro}"/>
+                                    </div>
+                                    <div class="col-sm-4" >
+                                        <p style="color: #c12e2a"><span id="introtxtHint" class="col-sm-offset-4 col-sm-10"></span></p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputMessage"></label>
+                                    <div class="col-sm-4" >
+                                        <h5  style="text-align: center;color: #0f0f0f">请输入您的密码进行身份验证 </h5>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputPassword">密码</label>
+                                    <div class="col-sm-4">
+                                        <input class="form-control" id="inputPassword" type="password" name="password" />
+                                    </div>
+                                    <div class="col-sm-4" >
+                                        <p style="color: #c12e2a"><span id="passwordtxtHint" class="col-sm-offset-4 col-sm-10"></span></p>
+                                    </div>
+                                </div>
+                                <div class="form-group" >
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button class="btn btn-default" type="submit" onclick="return isChangeSuc()">确认更改</button>
                                     </div>
                                 </div>
                                 <br>
-                                <h5 style="text-align: center;color: #0f0f0f">
-                                    请输入您的密码进行身份验证
-                                    <br><br>
-                                </h5>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="inputPassword">密码</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="inputPassword" type="password" />
-                                    </div>
-                                </div>
-                                <div class="form-group" style="text-align: center">
-                                    <div class="col-sm-offset-2 col-sm-10">
-                                        <button class="btn btn-default" type="submit">确认更改</button>
-                                    </div>
-                                </div>
+                                <p><span id="txtHint" class="col-sm-offset-2 col-sm-10" style="color: #419641"></span></p>
+                                <br>
                             </form>
-                        </div>
-                        <div class="col-md-3 column">
                         </div>
                     </div>
                 </div>
