@@ -58,6 +58,7 @@
             url: "home",
             type: "POST",
             success: function (res) {
+                console.log("success!");
                 hotItems =JSON.parse(res)[0];
                 recentItems = JSON.parse(res)[1];
                 hotItem(hotItems);
@@ -128,6 +129,10 @@
     </div>
 
 </div>
-
+<script>
+    var url=window.location.href;
+    sessionStorage.setItem("loginBeforeUrl",url);
+    console.log(sessionStorage.getItem("loginBeforeUrl"));
+</script>
 </body>
 </html>

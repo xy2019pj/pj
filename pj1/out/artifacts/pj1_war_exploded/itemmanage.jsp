@@ -71,7 +71,7 @@
         <form class="navbar-form navbar-left" role="search" action="show">
             <div class="form-group">
                 <input class="form-control" type="text" name="search"/>
-            </div> <button class="btn btn-default" type="submit">搜索</button>
+            </div> <button class="btn btn-default" >搜索</button>
         </form>
         <!--右侧用户操作-->
         <ul class="nav navbar-nav navbar-right" id="userManage">
@@ -122,8 +122,10 @@
                             <!--按钮-->
                             <div class="row clearfix" >
                                 <div class="col-md-12 column addText" style="text-align:right">
-                                    <a class="glyphicon glyphicon-pencil addForm" href="#" title="点击修改"> </a>
-                                    <a class="glyphicon glyphicon-remove addForm" href="#" title="点击删除"> </a>
+                                    <form action="itemmanage" method="post">
+                                    <a class="glyphicon glyphicon-pencil addForm" href="itemchange?item=<%=items.get(i+j).getName()%>" title="点击修改"> </a>
+                                    <button class="glyphicon glyphicon-remove addForm" name="deleteItem" value="<%=items.get(i+j).getName()%>" type="submit" title="点击删除"> </button>
+                                    </form>
                                 </div>
                             </div>
                             <a href="itemdetail?itemName=<%=items.get(i+j).getName()%>"><img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="<%=items.get(i+j).getPicture()%>"></a>

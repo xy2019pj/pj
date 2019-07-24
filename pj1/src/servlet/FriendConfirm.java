@@ -16,7 +16,7 @@ public class FriendConfirm extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user=(User)req.getSession().getAttribute("user");
         if(user!=null) {
-            String friendName = req.getParameter("friendName");
+            String friendName = req.getParameter("friName");
             String confirm=req.getParameter("confirm");
             if(confirm.equals("true"))
                 Dao4Friend.addFriendByName(user.getUsername(),friendName);

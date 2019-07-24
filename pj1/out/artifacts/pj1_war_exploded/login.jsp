@@ -35,8 +35,13 @@
 
     <!-- 自定义的js -->
     <script src="./js/all.js"></script>
+    <script src="./js/login.js"></script>
     <!-- 导航栏用户个人中心 -->
     <script>
+
+        beforeUrl=sessionStorage.getItem("loginBeforeUrl");
+        console.log("login-beforeUrl:"+beforeUrl);
+
         var user='${sessionScope.user.username}';
         var userAuth;
         if(user!=""){
@@ -91,29 +96,43 @@
         <div class="col-md-12 column mybody">
             <br>
             <h3 style="text-align: center">用户登录</h3>
-            <form class="form-horizontal " role="form" action="login" method="post">
+            <form class="form-horizontal " role="form"  method="get" name="myForm"  onsubmit="return false;">
                 <br>
                 <div class="form-group">
+                    <div class="col-sm-2">
+                    </div>
                     <label class="col-sm-2 control-label" for="inputUserName">用户名</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" id="inputUserName" type="text" name="username" />
+                    <div class="col-sm-4">
+                        <input class="form-control" id="inputUserName" type="text" name="username" onkeyup="checkFilled()"/>
+                    </div>
+                    <div class="col-sm-3">
                     </div>
                 </div>
                 <div class="form-group">
+                    <div class="col-sm-2">
+                    </div>
                     <label class="col-sm-2 control-label" for="inputPassword">密码</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" id="inputPassword" type="password" name="password"/>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="inputPassword" type="password" name="password" onkeyup="checkFilled()"/>
+                    </div>
+                    <div class="col-sm-3">
                     </div>
                 </div>
+                <p><span id="txtHint" class="col-sm-offset-4 col-sm-10"></span></p>
                 <div class="form-group" style="text-align: center">
                     <div class="col-sm-offset-1 col-sm-10">
                         <br>
-                        <button class="btn btn-default" type="submit" >登录</button>
+                        <button class="btn btn-default" type="button" href='${sessionStorage.getItem("loginBeforeUrl")}' onclick="return isLoginSuc()">登录</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </div>
+<script>
+    beforeUrl=sessionStorage.getItem("loginBeforeUrl");
+    console.log("login-loginBeforeUrl:"+sessionStorage.getItem("loginBeforeUrl"));
+</script>
+
 </body>
 </html>

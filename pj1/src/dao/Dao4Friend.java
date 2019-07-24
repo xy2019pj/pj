@@ -8,7 +8,7 @@ public class Dao4Friend {
     private static DAO dao=new DAO();
 
     public static ArrayList<User> getFriendsByName(String username){
-        String sql="select friendname from friend_pair where username=? and available=1;";
+        String sql="select friendname from friend_pair where username=? and available='1';";
         ArrayList<String> friends=(ArrayList<String>) dao.getForValue(sql,username);
         ArrayList<User> friendUser=new ArrayList<>();
         for(int i=0;i<friends.size();i++)
@@ -16,10 +16,8 @@ public class Dao4Friend {
         return friendUser;
     }
     public static void addFriendByName(String username,String friName){
-        String sql="insert into friend_pair(username,friendname,available) values(?,?,1);";
-        dao.update(sql,username, friName);
-        String sql1="insert into friend_pair(friendname,username,available) values(?,?,1);";
-        dao.update(sql1,username, friName);
+        String sql="update friend_pair set available=? where username=? and friendname=?";
+        dao.update(sql,"1",username,friName);
     }
 
     public static void deleteFriendByName(String username,String friName){
@@ -38,13 +36,16 @@ public class Dao4Friend {
     }
 
     public static ArrayList<String> getRequestByName(String username){
-        String sql="select username from friend_pair where friendname=? and available=0;";
+        String sql="select username from friend_pair where friendname=? and available='0';";
         ArrayList<String> requests=(ArrayList<String>) dao.getForValue(sql,username);
         return requests;
     }
 
     public static void addRequestByName(String username,String friendname){
-        String sql="insert into friend_pair(username,friendname,available) values(?,?,0);";
+        ArrayList<String> friends=getRequestByName(username);
+        if(friends.contains(friendname))
+            return;
+        String sql="insert into friend_pair(username,friendname,available) values(?,?,'0');";
         dao.update(sql,username, friendname);
     }
 }

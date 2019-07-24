@@ -31,9 +31,11 @@ public class ItemChange extends HttpServlet {
         User user=(User)req.getSession().getAttribute("user");
         if(user!=null&&user.getAuth()=='a'){
             String oldName=req.getParameter("oldName");
-            Item newItem=(Item)req.getAttribute("item");
-            Dao4Item.changeItem(oldName,newItem);
-            req.getRequestDispatcher("itemchange").forward(req,resp);
+            if(oldName!=null) {
+                Item newItem = (Item) req.getAttribute("item");
+                Dao4Item.changeItem(oldName, newItem);
+            }
+            resp.sendRedirect("itemchange");
         }
         else
             resp.sendRedirect("login.jsp");

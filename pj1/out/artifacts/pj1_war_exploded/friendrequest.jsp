@@ -36,6 +36,7 @@
     <!-- 自定义的js -->
     <script src="./js/all.js"></script>
     <script src="./js/center.js"></script>
+    <script src="./js/friendrequest.js"></script>
     <!-- 导航栏用户个人中心 -->
     <script>
         var user='${sessionScope.user.username}';
@@ -104,13 +105,9 @@
                 }
                 leftControl(isAdmin,5);
             </script>
-
         </div>
 
-
-
         <!--右侧-->
-
         <div class="col-sm-9 right">
             <br>
             <% if(friendRequest.size()==0){%>
@@ -132,8 +129,8 @@
                     </div>
                     <!--按钮-->
                     <div class="col-md-12 column addText" style="text-align:right">
-                        <a class="glyphicon glyphicon-ok addForm" href="friendconfirm?confirm=true" title="同意"> </a>
-                        <a class="glyphicon glyphicon-remove addForm" href="friendconfirm?confirm=false" title="拒绝"> </a>
+                        <a class="glyphicon glyphicon-ok addForm" href="friendconfirm?confirm=true&friName=<%=friendRequest.get(i)%>" title="同意"> </a>
+                        <a class="glyphicon glyphicon-remove addForm" href="friendconfirm?confirm=false&friName=<%=friendRequest.get(i)%>" title="拒绝"> </a>
                     </div>
                 </div>
             </div>
@@ -144,142 +141,18 @@
             <!--搜索表单-->
             <div class="container ">
                 <div class="row clearfix col-sm-9" style="text-align:center">
-                    <form class="navbar-form" role="search">
+                    <form class="navbar-form" role="search" id="searchForm" name="searchForm" onsubmit="return false;">
                         <div class="form-group">
-                            <input class="form-control" type="text" />
-                        </div> <button class="btn btn-default" type="submit">搜索</button>
+                            <input class="form-control" type="text" id="search" name="search"/>
+                        </div> <button class="btn btn-default"  onclick="friendSearch();">搜索</button>
                     </form>
                 </div>
             </div>
 
             <br>
-            <!--分页待解决-->
-            <!--第一行-->
-            <div class="row placeholders">
-                <!--藏品1-->
-                <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
-                    <div class="col-xs-12 col-sm-12 placeholder outline">
-                        <!--按钮-->
-                        <div class="row clearfix" >
-                            <div class="col-md-12 column addText" style="text-align:right">
-                                <a class="glyphicon glyphicon-plus addForm" href="#" title="添加好友"> </a>
-                            </div>
-                        </div>
-                        <a href="#" >用户名称</a>
-                        <br><br>
-                        <span class="text-muted">用户简介</span>
-                        <br><br>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
-                    <div class="col-xs-12 col-sm-12 placeholder outline">
-                        <!--按钮-->
-                        <div class="row clearfix" >
-                            <div class="col-md-12 column addText" style="text-align:right">
-                                <span class="label label-default">已添加</span>
-                            </div>
-                        </div>
-                        <a href="#" >用户名称</a>
-                        <br><br>
-                        <span class="text-muted">用户简介</span>
-                        <br><br>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
-                    <div class="col-xs-12 col-sm-12 placeholder outline">
-                        <!--按钮-->
-                        <div class="row clearfix" >
-                            <div class="col-md-12 column addText" style="text-align:right">
-                                <a class="glyphicon glyphicon-plus addForm" href="#" title="添加好友"> </a>
-                            </div>
-                        </div>
-                        <a href="#" >用户名称</a>
-                        <br><br>
-                        <span class="text-muted">用户简介</span>
-                        <br><br>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
-                    <div class="col-xs-12 col-sm-12 placeholder outline">
-                        <!--按钮-->
-                        <div class="row clearfix" >
-                            <div class="col-md-12 column addText" style="text-align:right">
-                                <a class="glyphicon glyphicon-plus addForm" href="#" title="添加好友"> </a>
-                            </div>
-                        </div>
-                        <a href="#" >用户名称</a>
-                        <br><br>
-                        <span class="text-muted">用户简介</span>
-                        <br><br>
-                    </div>
-                </div>
-
-            </div>
-            <br> <br>
-            <!--第二行-->
-            <div class="row placeholders">
-                <!--藏品1-->
-                <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
-                    <div class="col-xs-12 col-sm-12 placeholder outline">
-                        <!--按钮-->
-                        <div class="row clearfix" >
-                            <div class="col-md-12 column addText" style="text-align:right">
-                                <a class="glyphicon glyphicon-plus addForm" href="#" title="添加好友"> </a>
-                            </div>
-                        </div>
-                        <a href="#" >用户名称</a>
-                        <br><br>
-                        <span class="text-muted">用户简介</span>
-                        <br><br>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
-                    <div class="col-xs-12 col-sm-12 placeholder outline">
-                        <!--按钮-->
-                        <div class="row clearfix" >
-                            <div class="col-md-12 column addText" style="text-align:right">
-                                <a class="glyphicon glyphicon-plus addForm" href="#" title="添加好友"> </a>
-                            </div>
-                        </div>
-                        <a href="#" >用户名称</a>
-                        <br><br>
-                        <span class="text-muted">用户简介</span>
-                        <br><br>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
-                    <div class="col-xs-12 col-sm-12 placeholder outline">
-                        <!--按钮-->
-                        <div class="row clearfix" >
-                            <div class="col-md-12 column addText" style="text-align:right">
-                                <a class="glyphicon glyphicon-plus addForm" href="#" title="添加好友"> </a>
-                            </div>
-                        </div>
-                        <a href="#" >用户名称</a>
-                        <br><br>
-                        <span class="text-muted">用户简介</span>
-                        <br><br>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
-                    <div class="col-xs-12 col-sm-12 placeholder outline">
-                        <!--按钮-->
-                        <div class="row clearfix" >
-                            <div class="col-md-12 column addText" style="text-align:right">
-                                <a class="glyphicon glyphicon-plus addForm" href="#" title="添加好友"> </a>
-                            </div>
-                        </div>
-                        <a href="#" >用户名称</a>
-                        <br><br>
-                        <span class="text-muted">用户简介</span>
-                        <br><br>
-                    </div>
-                </div>
-
-            </div>
-            <br> <br>
-
+            <div id="searchuser"></div>
         </div>
+
 
 
     </div>

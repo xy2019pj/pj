@@ -92,9 +92,7 @@ public class Dao4Item {
     }
 
     public static void changeItem(String oldname,Item item){
-        String sql="update item_info " +
-                "set name=?,category=?,picture=?,intro=?" +
-                " where username=?";
+        String sql="update item_info set name=?,category=?,picture=?,intro=? where username=?";
         dao.update(sql,
                 item.getName(),
                 item.getCategory(),

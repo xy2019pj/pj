@@ -8,6 +8,7 @@ import java.sql.Timestamp;
 
 
 public class User {
+    private int id;
     private char auth='n';
     private String username=null;
     private String password=null;
@@ -92,5 +93,12 @@ public class User {
     public void setRecent_login_time(Timestamp recent_login_time) {
         if(recent_login_time!=null)
             this.recent_login_time = recent_login_time;
+    }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
