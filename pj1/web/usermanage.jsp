@@ -120,6 +120,7 @@
                     <thead>
                     <!--表头-->
                     <tr>
+                        <th>ID</th>
                         <th>用户名</th>
                         <th>邮箱</th>
                         <th>最近登录</th>
@@ -132,6 +133,7 @@
                     <tbody>
                     <%for(int i=0;i<allUsers.size();i++){%>
                     <tr>
+                        <td><%=allUsers.get(i).getId()%></td>
                         <td><%=allUsers.get(i).getUsername()%></td>
                         <td><%=allUsers.get(i).getEmail()%></td>
                         <td><%=allUsers.get(i).getRecent_login_time()%></td>
