@@ -34,10 +34,10 @@ public class ItemAdd extends HttpServlet {
             String time=req.getParameter("time");
             Part photo = req.getPart("picture");
             String picture="picture\\Others\\"+name+".jpg";
-            photo.write("E:\\0.NULL\\FDU\\study\\卓越软件设计\\pj\\pj1\\web\\picture\\Others\\"+name+".jpg");
+            photo.write("D:\\1_学习\\1卓越软件开发基础\\pj\\picture\\Others\\"+name+".jpg");
             Part video = req.getPart("video");
             String videoName="video\\"+name+".mp4";
-            video.write("E:\\0.NULL\\FDU\\study\\卓越软件设计\\pj\\pj1\\web\\video\\"+name+".mp4");
+            video.write("D:\\1_学习\\1卓越软件开发基础\\pj\\video\\"+name+".mp4");
             Item newItem=new Item(name,"其他",picture,null,0,intro,place,time,videoName);
             int status=newItem.add();
             req.setAttribute("status",status);

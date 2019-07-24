@@ -32,7 +32,7 @@ public class ItemManage extends HttpServlet {
         if(user!=null&&user.getAuth()=='a') {
             if (deleteItem != null)
                 Dao4Item.deleteItem(deleteItem);
-            req.getRequestDispatcher("itemmanage.jsp").forward(req,resp);
+            resp.sendRedirect("itemmanage");
         }
         else resp.sendRedirect("login.jsp");
     }

@@ -36,6 +36,7 @@
     <!-- 自定义的js -->
     <script src="./js/all.js"></script>
     <script src="./js/center.js"></script>
+    <script src="./js/itemchange.js"></script>
     <!-- 导航栏用户个人中心 -->
     <script>
         var user='${sessionScope.user.username}';
@@ -111,27 +112,62 @@
         <div class="col-sm-9 right">
             <br><br>
 
-            <form role="form">
+            <%
+                String name=request.getParameter("item");
+                 request.setAttribute("oldName",name);
+                 Item item=(Item)request.getAttribute("item");
+            %>
+            <script>console.log("item="+"<%=request.getParameter("item")%>")</script>
+            <!--
+            <form role="form" action="itemchange" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="inputName">展品名称</label><input class="form-control" id="inputName" type="text"  value="<%=((Item)request.getAttribute("item")).getName()%>"/>
+                    <label for="exampleInputEmail1">展品名称</label><input class="form-control" id="exampleInputEmail1" type="text" name="name" value="<%=((Item)request.getAttribute("item")).getName()%>"/>
                 </div>
                 <div class="form-group">
-                    <label for="inputIntro">展品简介</label><input class="form-control" id="inputIntro" type="text"  value="<%=((Item)request.getAttribute("item")).getIntro()%>"/>
+                    <label for="exampleInputPassword1">展品简介</label><input class="form-control" id="exampleInputPassword1" type="text" name="intro" value="<%=((Item)request.getAttribute("item")).getIntro()%>"/>
                 </div>
                 <div class="form-group">
-                    <label for="inputPlace">馆藏地点</label><input class="form-control" id="inputPlace" type="text" value="<%=((Item)request.getAttribute("item")).getPlace()%>"/>
+                    <label for="exampleInputPassword1">馆藏地点</label><input class="form-control" id="exampleInputPassword2" type="text" name="place" value="<%=((Item)request.getAttribute("item")).getPlace()%>"/>
                 </div>
                 <div class="form-group">
-                    <label for="inputTime">出土年份或作品完成时间</label><input class="form-control" id="inputTime" type="text" value="<%=((Item)request.getAttribute("item")).getTime()%>"/>
+                    <label for="exampleInputPassword1">出土年份或作品完成时间</label><input class="form-control" id="exampleInputPassword3" type="text" name="time" value="<%=((Item)request.getAttribute("item")).getTime()%>"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputFile">更改图片</label><input id="exampleInputFile" type="file" />
+                    <label for="exampleInputFile">上传图片</label><input id="exampleInputFile" type="file" name="picture"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputFile">更改视频</label><input id="exampleInputFile2" type="file" />
+                    <label for="exampleInputFile">上传视频</label><input id="exampleInputFile2" type="file" name="video"/>
                 </div>
-                <button class="btn btn-default" type="submit">确认更改</button>
+                <div class="form-group">
+                    <input  name="oldName" value="<%=request.getParameter("item")%>"></input>
+                </div>
+                <button class="btn btn-default" type="submit" >确认上传</button>
             </form>
+-->
+
+            <form role="form" action="itemchange" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">展品名称</label><input class="form-control" id="exampleInputEmail1" type="text" name="name" value="<%=item.getName()%>"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">展品简介</label><input class="form-control" id="exampleInputPassword1" type="text" name="intro" value="<%=item.getIntro()%>"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">馆藏地点</label><input class="form-control" id="exampleInputPassword2" type="text" name="place" value="<%=item.getPlace()%>"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">出土年份或作品完成时间</label><input class="form-control" id="exampleInputPassword3" type="text" name="time" value="<%=item.getTime()%>"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">上传图片</label><input id="exampleInputFile" type="file" name="picture"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">上传视频</label><input id="exampleInputFile2" type="file" name="video"/>
+                </div>
+                <input type="hidden" name="oldName" value="<%=request.getParameter("item")%>"></input>
+                <button class="btn btn-default" type="submit" >确认上传</button>
+            </form>
+            </div>
 
 
         </div>

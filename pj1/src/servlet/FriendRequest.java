@@ -32,7 +32,7 @@ public class FriendRequest extends HttpServlet {
             String friendName = req.getParameter("friendName");
             String username = user.getUsername();
             Dao4Friend.addRequestByName(username, friendName);
-            req.getRequestDispatcher("friendrequest.jsp").forward(req, resp);
+            resp.sendRedirect("friendrequest");
         }
         else resp.sendRedirect("login.jsp");
     }
