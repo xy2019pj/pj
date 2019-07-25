@@ -17,9 +17,9 @@ function friendSearch() {
                         "                        <!--按钮-->\n" +
                         "                        <div class=\"row clearfix\" >\n" +
                         "                            <div class=\"col-md-12 column addText\" style=\"text-align:right\">\n" +
-                        "<form action='friendrequest' method='post'><button class=\"glyphicon glyphicon-plus addForm\" type='submit' name='friendName' value='"
+                        "<form action='friendrequest' method='post' onsubmit='window.alert(\"请求发送成功！\");'><button class=\"glyphicon glyphicon-plus addForm\" type='submit' name='friendName' value='"
                         + users[i+j].username+
-                        "' title=\"添加好友\"> </button></form>"+
+                        "' title=\"添加好友\" > </button></form>"+
                         "                            </div>\n" +
                         "                        </div>\n" +
                         "                        <a href=\"profile?destUser="+
@@ -45,4 +45,5 @@ function friendSearch() {
             window.alert("error");
         }
     });
+
 }

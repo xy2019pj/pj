@@ -110,7 +110,7 @@
         <div class="col-sm-9 right" >
             <br><br>
 
-            <form role="form" action="itemadd" method="post" enctype="multipart/form-data">
+            <form role="form" action="itemadd" method="post" enctype="multipart/form-data" onsubmit='window.alert("展品添加成功！");' >
                 <div class="form-group">
                     <label for="exampleInputEmail1">展品名称</label><input class="form-control" id="exampleInputEmail1" type="text" name="name"/>
                 </div>
@@ -130,6 +130,9 @@
                     <label for="exampleInputFile">上传视频</label><input id="exampleInputFile2" type="file" name="video"/>
                 </div>
                 <button class="btn btn-default" type="submit" >确认上传</button>
+                <br>
+                <p><span id="txtHint" class="col-sm-offset-2 col-sm-10" style="color: #419641"></span></p>
+                <br>
             </form>
 
 

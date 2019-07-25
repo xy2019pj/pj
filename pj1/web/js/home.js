@@ -13,13 +13,13 @@ function hotItem(items) {
         "                <li data-target=\"#carousel-368079\" data-slide-to=\"2\">\n" +
         "                </li>\n" +
         "            </ol>\n" +
-        "            <div class=\"carousel-inner\">";
+        "            <div class=\"carousel-inner\" >";
     form+="                <div class=\"item active \">\n" +
         "                    <a href=\"" +
         "itemdetail?itemName="+items[0].name +
-        "\"><img alt=\"图片无法显示\"  src=\"" +
+        "\"><img class=\"center-block\" alt=\"图片无法显示\"  src=\"" +
         items[0].picture +
-        "\" align=\"center\" /></a>\n" +
+        "\"  /></a>\n" +
         "                    <div class=\"carousel-caption\">\n" +
         "                        <h4>\n" +
         items[0].name +
@@ -34,9 +34,9 @@ function hotItem(items) {
             "                <div class=\"item\">\n" +
             "                    <a href=\"" +
             "itemdetail?itemName="+items[i].name +
-            "\"><img alt=\"图片无法显示\"  src=\"" +
+            "\"><img class=\"center-block\" alt=\"图片无法显示\"  src=\"" +
             items[i].picture +
-            "\" align=\"center\" /></a>\n" +
+            "\"  /></a>\n" +
             "                    <div class=\"carousel-caption\">\n" +
             "                        <h4>\n" +
             items[i].name +

@@ -32,11 +32,11 @@ public class Dao4Item {
         String sql=null;
         ArrayList<Item> items=null;
         if(category.equals("全部")) {
-            sql = "select * from item_info;";
+            sql = "select * from item_info order by clickNum DESC;";
             items=(ArrayList<Item>) dao.getForList(Item.class,sql);
         }
         else{
-            sql="select * from item_info where category=?";
+            sql="select * from item_info where category=? order by clickNum DESC";
             items=(ArrayList<Item>)dao.getForList(Item.class,sql,category);
         }
         return items;
@@ -46,13 +46,13 @@ public class Dao4Item {
         String sql;
         ArrayList<Item> items;
         if(category.equals("全部")) {
-            sql = "select * from item_info where name like ? order by clickNum DESC";
-            items=(ArrayList<Item>) dao.getForList(Item.class, sql, "%" + content + "%");
+            sql = "select * from item_info where name like ? or intro like ? or place like ? order by clickNum DESC";
+            items=(ArrayList<Item>) dao.getForList(Item.class, sql, "%" + content + "%","%" + content + "%","%" + content + "%");
         }
         else {
-            sql = "select * from item_info where category=? and name like ? order by clickNum DESC";
+            sql = "select * from item_info where category=? and name like ? or category=? and intro like ? or category=? and place like ? order by clickNum DESC";
             items = (ArrayList<Item>) dao.getForList(Item.class, sql,
-                    category, "%" + content + "%");
+                    category, "%" + content + "%",category, "%" + content + "%",category, "%" + content + "%");
         }
         return items;
     }
