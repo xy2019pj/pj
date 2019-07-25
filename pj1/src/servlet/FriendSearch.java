@@ -18,6 +18,7 @@ public class FriendSearch extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String search=req.getParameter("search");
         ArrayList<User> users= Dao4User.getUserBySearch(search);
+        resp.setCharacterEncoding("utf8");
         resp.getWriter().write(JSONArray.fromObject(users).toString());
     }
 }

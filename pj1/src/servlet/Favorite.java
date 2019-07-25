@@ -25,8 +25,12 @@ public class Favorite extends HttpServlet {
         if (req.getSession().getAttribute("user")!=null) {
             String username = ((User) req.getSession().getAttribute("user")).getUsername();
             ArrayList<Item> items = Dao4Fav.getFavByName(username);
+            ArrayList<String> times=Dao4Fav.getTimeByName(username);
+            JSONArray json=new JSONArray();
+            json.element(JSONArray.fromObject(items));
+            json.element(JSONArray.fromObject(times));
             res.setCharacterEncoding("utf8");
-            res.getWriter().write(JSONArray.fromObject(items).toString());
+            res.getWriter().write(json.toString());
         }
         else res.sendRedirect("login.jsp");
     }

@@ -2,13 +2,14 @@ package dao;
 
 import entity.Item;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 
 public class Dao4Fav {
     private static DAO dao=new DAO();
 
     public static ArrayList<Item> getFavByName(String username){
-        String sql="select itemname from fav_pair where username=?";
+        String sql="select itemname from fav_pair where username=? order by time DESC";
         ArrayList<String> favItemNames=(ArrayList<String>) dao.getForValue(sql,username);
         ArrayList<Item> favItems=new ArrayList<>();
         for(int i=0;i<favItemNames.size();i++){
@@ -16,6 +17,12 @@ public class Dao4Fav {
             favItems.add(item);
         }
         return favItems;
+    }
+
+    public static ArrayList<String> getTimeByName(String username){
+        String sql="select time from fav_pair where username=? order by time DESC";
+        ArrayList<String> time=(ArrayList<String>) dao.getForValue(sql,username);
+        return time;
     }
 
     public static ArrayList<Item> getOpenFavByName(String username){
@@ -30,8 +37,9 @@ public class Dao4Fav {
     }
 
     public static void addFavByName(String username,String itemname){
-        String sql="insert into fav_pair(username,itemname) values(?,?);";
-        dao.update(sql,username, itemname);
+        Timestamp currentTime = new Timestamp(new java.util.Date().getTime());
+        String sql="insert into fav_pair(username,itemname,open,time) values(?,?,'0',?);";
+        dao.update(sql,username, itemname,currentTime);
     }
 
     public static void deleteFavByName(String username,String itemname){

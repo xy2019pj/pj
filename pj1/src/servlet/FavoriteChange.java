@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/favoriteopen")
+@WebServlet("/favoritechange")
 public class FavoriteChange extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -33,7 +33,7 @@ public class FavoriteChange extends HttpServlet {
             if(itemChangeName!=null)Dao4Fav.changeFavByName(username,itemChangeName);
             String itemOpenName = req.getParameter("itemOpenName");
             if(itemOpenName!=null)Dao4Fav.openFavByName(username,itemOpenName);
-            resp.sendRedirect("favorite.jsp");
+            resp.sendRedirect("profile");
         }
         else resp.sendRedirect("login.jsp");
     }

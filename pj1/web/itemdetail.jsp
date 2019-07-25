@@ -102,17 +102,18 @@
     <br>
     <div class="row clearfix" style="text-align:center">
         <div class="col-md-12 column">
-            <a class="glyphicon glyphicon-star-empty collectForm" href="favoriteopen?itemChangeName=<%=item.getName()%>" title="收藏\取消收藏"> </a>
+            <a class="glyphicon glyphicon-star-empty collectForm" href="favoritechange?itemChangeName=<%=item.getName()%>" title="收藏\取消收藏"> </a>
             <%
                 User user=(User)session.getAttribute("user");
-                char userAuth=user.getAuth();
-                System.out.println("user.getAuth()="+user.getAuth());
-                if(userAuth=='a'){
-                    System.out.println("manager:item.getName()="+item.getName());
+                if(user!=null){
+                    char userAuth=user.getAuth();
+                    System.out.println("user.getAuth()="+user.getAuth());
+                    if(userAuth=='a'){
+                        System.out.println("manager:item.getName()="+item.getName());
             %>
             <%="<a class=\"glyphicon glyphicon-pencil collectForm\" href=\"itemchange?item="+item.getName()+"\"title=\"管理作品\"> </a>"%>
             <%
-                }
+                } }
             %>
 
         </div>

@@ -25,22 +25,25 @@ function collection() {
         url: "favorite",
         type: "POST",
         success: function (res) {
-            favItems =JSON.parse(res);
+            favItems =JSON.parse(res)[0];
+            times=JSON.parse(res)[1];
             var form="";
             for(var i=0;i<favItems.length;i+=4){
                 for(var j=0;j<favItems.length-i&&j<4;j++) {
                     form += " <div class=\"col-xs-6 col-sm-3 placeholder\" style=\"text-align:center\">" +
                         "<div class=\"row clearfix\" >" +
                         "<div class=\"col-md-12 column addText\" style=\"text-align:right\">" +
-                        "<form action=\"favoriteopen\" method=\"post\" ><button class=\"glyphicon glyphicon-eye-open addForm\" type=\"submit\" name=\"itemOpenName\" value=\""+
+                        "<form action=\"favoritechange\" method=\"post\" ><button class=\"glyphicon glyphicon-eye-open addForm\" type=\"submit\" name=\"itemOpenName\" value=\""+
                         favItems[i + j].name+
-                        "\" title=\"更改权限\"> </button></form>"+
+                        "\" title=\"更改权限\"> </button>"+
                         "<button class=\"glyphicon glyphicon-remove addForm\"  type=\"submit\"  name=\"itemChangeName\" value=\"" +
                         favItems[i + j].name+
-                        "\" title=\"取消收藏\"> </button>"+
+                        "\" title=\"取消收藏\"> </button></form>"+
                         "</div>" +
                         "</div>" +
-                        "<a href=\"#\"><img width=\"200\" height=\"200\" class=\"img-responsive\" alt=\"Generic placeholder thumbnail\" src=\"" +
+                        "<a href=\"itemdetail?itemName=" +
+                        favItems[i + j].name+
+                        "\"><img width=\"200\" height=\"200\" class=\"img-responsive\" alt=\"Generic placeholder thumbnail\" src=\"" +
                         favItems[i + j].picture +
                         "\"></a>" +
                         "<h4>" +
@@ -50,7 +53,7 @@ function collection() {
                         favItems[i + j].place +
                         "</h6>\n" +
                         "                <h6>收藏时间:<br>" +
-                        // favItems[i + j].collegetime +
+                        times[i + j]+
                         "</h6>\n" +
                         "                <h6>热度:" +
                         favItems[i + j].clickNum +
