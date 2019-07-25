@@ -30,7 +30,6 @@
     <script src="./styles/jquery-3.4.1.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/show.js"></script>
 
     <!-- 自定义的js -->
     <script src="./js/all.js"></script>

@@ -1,5 +1,5 @@
-<%@ page import="entity.Item" %>
-<%@ page import="entity.User" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="entity.Item" %><%--
   Created by IntelliJ IDEA.
   User: hexi4
   Date: 2019/7/20
@@ -10,7 +10,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>展品详情</title>
+    <title>作品管理</title>
 
     <meta charset="utf-8">
 
@@ -19,8 +19,8 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 
     <!-- 自定义的格式css -->
-    <link href="css/mycover.css" rel="stylesheet">
-    <link href="css/itemdetail.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+    <link href="css/favorite.css" rel="stylesheet">
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -36,6 +36,7 @@
 
     <!-- 自定义的js -->
     <script src="./js/all.js"></script>
+    <script src="./js/center.js"></script>
     <!-- 导航栏用户个人中心 -->
     <script>
         var user='${sessionScope.user.username}';
@@ -48,12 +49,9 @@
         }
     </script>
 
-    <%
-        Item item=(Item)request.getAttribute("item");
-        String fav=(String)request.getAttribute("fav");
-    %>
 </head>
 <body>
+
 <!--导航条-->
 <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation"  style="margin-bottom:0">
     <div class="navbar-header" >
@@ -73,7 +71,7 @@
         <form class="navbar-form navbar-left" role="search" action="show">
             <div class="form-group">
                 <input class="form-control" type="text" name="search"/>
-            </div> <button class="btn btn-default" type="submit">搜索</button>
+            </div> <button class="btn btn-default" >搜索</button>
         </form>
         <!--右侧用户操作-->
         <ul class="nav navbar-nav navbar-right" id="userManage">
@@ -83,85 +81,67 @@
 </nav>
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >
-    <h1 style="color: #000000;">
-        <%=item.getName()%>
+    <h1 style="color: #000000;" id="userNameShow">
+        ${sessionScope.user.username}
     </h1>
-    <p style="color: #000000;">
-        <%=item.getIntro()%>
+    <p style="color: #000000;" id="userSignNS">
+        ${sessionScope.user.intro}
     </p>
 </div>
-<!--展品详情-->
+<!--正文-->
 <div class="container">
-    <!--图片-->
-    <div class="row clearfix " style="text-align:center">
-        <div class="col-md-12 column" >
-            <img alt="图片" style="max-width: 100%" src="<%=item.getPicture()%>" />
-        </div>
-    </div>
-    <!--收藏按钮-->
-    <br>
-    <div class="row clearfix" style="text-align:center">
-        <div class="col-md-12 column">
-            <a class="glyphicon glyphicon-star-empty collectForm" href="favoritechange?itemChangeName=<%=item.getName()%>" title="收藏\取消收藏"> </a>
-            <%
-                User user=(User)session.getAttribute("user");
-                if(user!=null){
-                    char userAuth=user.getAuth();
-                    System.out.println("user.getAuth()="+user.getAuth());
-                    if(userAuth=='a'){
-                        System.out.println("manager:item.getName()="+item.getName());
-            %>
-            <%="<a class=\"glyphicon glyphicon-pencil collectForm\" href=\"itemchange?item="+item.getName()+"\"title=\"管理作品\"> </a>"%>
-            <%
-                } }
-            %>
+    <div class="row ">
+        <!--左侧-->
+        <div class="col-sm-3 col-md-2 sidebar" id="leftSide">
+            <!--<script>
+                var isAdmin;
+                var s='${sessionScope.user.auth}';
+                if(s == 'n' || s==""){
+                    isAdmin=false;
+                }else {
+                    isAdmin = true;
+                }
+                leftControl(isAdmin,8);
+            </script>-->
+            <script>leftControl(true,8);</script>
 
         </div>
-    </div>
 
-    <div class="row clearfix textForm" style="text-align:center">
-        <br><br>
-        <!--文字详情-->
-        <div class="col-md-12 column">
-            <dl>
-                <dt>
-                    <%=item.getName()%>
-                </dt>
-                <dd>
-                    <%=item.getIntro()%>
-                </dd>
-                <br>
-                馆藏地点：
-                <dd>
-                    <%=item.getPlace()%>
-                </dd>
-                <br>
-                出土时间/作品完成时间：
-                <dd>
-                    <%=item.getTime()%>
-                </dd>
+        <!--右侧-->
+        <%
+            ArrayList<Item> items=(ArrayList<Item>)request.getAttribute("items");
+        %>
+        <div class="col-sm-9 right">
+            <br><br>
+            <!--第一行-->
+            <%for(int i=0;i<items.size();i+=4){%>
+                <div class="row placeholders">
+                    <%for(int j=0;j<items.size()-i&&j<4;j++){%>
+                        <!--藏品1-->
+                        <div class="col-xs-6 col-sm-3 placeholder" style="text-align:center">
+                            <!--按钮-->
+                            <div class="row clearfix" >
+                                <div class="col-md-12 column addText" style="text-align:right">
+                                    <form action="itemmanage" method="post">
+                                    <a class="glyphicon glyphicon-pencil addForm" href="itemchange?item=<%=items.get(i+j).getName()%>" title="点击修改"> </a>
+                                    <button class="glyphicon glyphicon-remove addForm" name="deleteItem" value="<%=items.get(i+j).getName()%>" type="submit" title="点击删除"> </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <a href="itemdetail?itemName=<%=items.get(i+j).getName()%>"><img width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail" src="<%=items.get(i+j).getPicture()%>"></a>
+                            <h4><%=items.get(i+j).getName()%></h4>
+                            <span class="text-muted"><%=items.get(i+j).getIntro()%></span>
+                        </div>
+                    <%}%>
+                </div>
+                <br> <br>
+            <%}%>
 
-                <dt>
-                    热度<%=item.getClickNum()%>
-                </dt>
-            </dl>
         </div>
-        <!--媒体-->
-        <div class="row clearfix topSpace" style="text-align:center" >
-            <div class="col-md-12 column">
-                <video width="1120" height="630" controls autoplay>
-                    <source src="<%=item.getVideo()%>" type="video/mp4">
-                </video>
-            </div>
-        </div>
+
+
     </div>
 </div>
-
-<script>
-    var url=window.location.href;
-    sessionStorage.setItem("loginBeforeUrl",url);
-    console.log(sessionStorage.getItem("loginBeforeUrl"));
-</script>
 
 </body>
 </html>

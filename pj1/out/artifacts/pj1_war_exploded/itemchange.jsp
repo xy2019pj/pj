@@ -1,5 +1,4 @@
-<%@ page import="entity.Item" %>
-<%@ page import="entity.User" %><%--
+<%@ page import="entity.Item" %><%--
   Created by IntelliJ IDEA.
   User: hexi4
   Date: 2019/7/20
@@ -10,7 +9,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>展品详情</title>
+    <title>作品修改</title>
 
     <meta charset="utf-8">
 
@@ -19,8 +18,8 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 
     <!-- 自定义的格式css -->
-    <link href="css/mycover.css" rel="stylesheet">
-    <link href="css/itemdetail.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+    <link href="css/favorite.css" rel="stylesheet">
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -36,6 +35,8 @@
 
     <!-- 自定义的js -->
     <script src="./js/all.js"></script>
+    <script src="./js/center.js"></script>
+    <script src="./js/itemchange.js"></script>
     <!-- 导航栏用户个人中心 -->
     <script>
         var user='${sessionScope.user.username}';
@@ -48,12 +49,10 @@
         }
     </script>
 
-    <%
-        Item item=(Item)request.getAttribute("item");
-        String fav=(String)request.getAttribute("fav");
-    %>
+
 </head>
 <body>
+
 <!--导航条-->
 <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation"  style="margin-bottom:0">
     <div class="navbar-header" >
@@ -83,85 +82,73 @@
 </nav>
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >
-    <h1 style="color: #000000;">
-        <%=item.getName()%>
+    <h1 style="color: #000000;" id="userNameShow">
+        ${sessionScope.user.username}
     </h1>
-    <p style="color: #000000;">
-        <%=item.getIntro()%>
+    <p style="color: #000000;" id="userSignNS">
+        ${sessionScope.user.intro}
     </p>
 </div>
-<!--展品详情-->
+<!--正文-->
 <div class="container">
-    <!--图片-->
-    <div class="row clearfix " style="text-align:center">
-        <div class="col-md-12 column" >
-            <img alt="图片" style="max-width: 100%" src="<%=item.getPicture()%>" />
+    <div class="row ">
+        <!--左侧-->
+        <div class="col-sm-3 col-md-2 sidebar" id="leftSide">
+            <!--<script>
+                var isAdmin;
+                var s='${sessionScope.user.auth}';
+                if(s == 'n' || s==""){
+                    isAdmin=false;
+                }else {
+                    isAdmin = true;
+                }
+                leftControl(isAdmin,8);
+            </script>-->
+            <script>leftControl(true,8);</script>
+
         </div>
-    </div>
-    <!--收藏按钮-->
-    <br>
-    <div class="row clearfix" style="text-align:center">
-        <div class="col-md-12 column">
-            <a class="glyphicon glyphicon-star-empty collectForm" href="favoritechange?itemChangeName=<%=item.getName()%>" title="收藏\取消收藏"> </a>
+
+        <!--右侧-->
+        <div class="col-sm-9 right">
+            <br><br>
+
             <%
-                User user=(User)session.getAttribute("user");
-                if(user!=null){
-                    char userAuth=user.getAuth();
-                    System.out.println("user.getAuth()="+user.getAuth());
-                    if(userAuth=='a'){
-                        System.out.println("manager:item.getName()="+item.getName());
+                String name=request.getParameter("item");
+                 request.setAttribute("oldName",name);
+                 Item item=(Item)request.getAttribute("item");
+
             %>
-            <%="<a class=\"glyphicon glyphicon-pencil collectForm\" href=\"itemchange?item="+item.getName()+"\"title=\"管理作品\"> </a>"%>
-            <%
-                } }
-            %>
-
-        </div>
-    </div>
-
-    <div class="row clearfix textForm" style="text-align:center">
-        <br><br>
-        <!--文字详情-->
-        <div class="col-md-12 column">
-            <dl>
-                <dt>
-                    <%=item.getName()%>
-                </dt>
-                <dd>
-                    <%=item.getIntro()%>
-                </dd>
-                <br>
-                馆藏地点：
-                <dd>
-                    <%=item.getPlace()%>
-                </dd>
-                <br>
-                出土时间/作品完成时间：
-                <dd>
-                    <%=item.getTime()%>
-                </dd>
-
-                <dt>
-                    热度<%=item.getClickNum()%>
-                </dt>
-            </dl>
-        </div>
-        <!--媒体-->
-        <div class="row clearfix topSpace" style="text-align:center" >
-            <div class="col-md-12 column">
-                <video width="1120" height="630" controls autoplay>
-                    <source src="<%=item.getVideo()%>" type="video/mp4">
-                </video>
+            <script>console.log("item="+"<%=item%>")</script>
+            <form role="form" action="itemchange" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">展品名称</label><input class="form-control" id="exampleInputEmail1" type="text" name="name" value="<%=item.getName()%>"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">展品简介</label><input class="form-control" id="exampleInputPassword1" type="text" name="intro" value="<%=item.getIntro()%>"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">馆藏地点</label><input class="form-control" id="exampleInputPassword2" type="text" name="place" value="<%=item.getPlace()%>"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">出土年份或作品完成时间</label><input class="form-control" id="exampleInputPassword3" type="text" name="time" value="<%=item.getTime()%>"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">上传图片</label><input id="exampleInputFile" type="file" name="picture"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">上传视频</label><input id="exampleInputFile2" type="file" name="video"/>
+                </div>
+                <input type="hidden" name="oldName" value="<%=request.getParameter("item")%>"></input>
+                <button class="btn btn-default" type="submit" >确认上传</button>
+            </form>
             </div>
+
+
         </div>
+
+
     </div>
 </div>
-
-<script>
-    var url=window.location.href;
-    sessionStorage.setItem("loginBeforeUrl",url);
-    console.log(sessionStorage.getItem("loginBeforeUrl"));
-</script>
 
 </body>
 </html>

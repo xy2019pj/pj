@@ -1,5 +1,4 @@
-<%@ page import="entity.Item" %>
-<%@ page import="entity.User" %><%--
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: hexi4
   Date: 2019/7/20
@@ -10,7 +9,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>展品详情</title>
+    <title>添加好友</title>
 
     <meta charset="utf-8">
 
@@ -19,8 +18,8 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 
     <!-- 自定义的格式css -->
-    <link href="css/mycover.css" rel="stylesheet">
-    <link href="css/itemdetail.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+    <link href="css/favorite.css" rel="stylesheet">
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -36,6 +35,8 @@
 
     <!-- 自定义的js -->
     <script src="./js/all.js"></script>
+    <script src="./js/center.js"></script>
+    <script src="./js/friendrequest.js"></script>
     <!-- 导航栏用户个人中心 -->
     <script>
         var user='${sessionScope.user.username}';
@@ -47,13 +48,12 @@
             userAuth=null;
         }
     </script>
-
     <%
-        Item item=(Item)request.getAttribute("item");
-        String fav=(String)request.getAttribute("fav");
+        ArrayList<String> friendRequest=(ArrayList<String>) request.getAttribute("friendRequest");
     %>
 </head>
 <body>
+
 <!--导航条-->
 <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation"  style="margin-bottom:0">
     <div class="navbar-header" >
@@ -83,85 +83,80 @@
 </nav>
 <!--大字报-->
 <div class="jumbotron" style=" text-align:center; background:url(images/museum.jpg) " >
-    <h1 style="color: #000000;">
-        <%=item.getName()%>
+    <h1 style="color: #000000;" id="userNameShow">
+        ${sessionScope.user.username}
     </h1>
-    <p style="color: #000000;">
-        <%=item.getIntro()%>
+    <p style="color: #000000;" id="userSignNS">
+        ${sessionScope.user.intro}
     </p>
 </div>
-<!--展品详情-->
+<!--正文-->
 <div class="container">
-    <!--图片-->
-    <div class="row clearfix " style="text-align:center">
-        <div class="col-md-12 column" >
-            <img alt="图片" style="max-width: 100%" src="<%=item.getPicture()%>" />
+    <div class="row ">
+        <!--左侧-->
+        <div class="col-sm-3 col-md-2 sidebar" id="leftSide">
+            <script>
+                var isAdmin;
+                var s='${sessionScope.user.auth}';
+                if(s == 'n' || s==""){
+                    isAdmin=false;
+                }else {
+                    isAdmin = true;
+                }
+                leftControl(isAdmin,5);
+            </script>
         </div>
-    </div>
-    <!--收藏按钮-->
-    <br>
-    <div class="row clearfix" style="text-align:center">
-        <div class="col-md-12 column">
-            <a class="glyphicon glyphicon-star-empty collectForm" href="favoritechange?itemChangeName=<%=item.getName()%>" title="收藏\取消收藏"> </a>
-            <%
-                User user=(User)session.getAttribute("user");
-                if(user!=null){
-                    char userAuth=user.getAuth();
-                    System.out.println("user.getAuth()="+user.getAuth());
-                    if(userAuth=='a'){
-                        System.out.println("manager:item.getName()="+item.getName());
-            %>
-            <%="<a class=\"glyphicon glyphicon-pencil collectForm\" href=\"itemchange?item="+item.getName()+"\"title=\"管理作品\"> </a>"%>
-            <%
-                } }
-            %>
 
-        </div>
-    </div>
-
-    <div class="row clearfix textForm" style="text-align:center">
-        <br><br>
-        <!--文字详情-->
-        <div class="col-md-12 column">
-            <dl>
-                <dt>
-                    <%=item.getName()%>
-                </dt>
-                <dd>
-                    <%=item.getIntro()%>
-                </dd>
+        <!--右侧-->
+        <div class="col-sm-9 right">
+            <br>
+            <% if(friendRequest.size()==0){%>
+            <div class="outline">
                 <br>
-                馆藏地点：
-                <dd>
-                    <%=item.getPlace()%>
-                </dd>
-                <br>
-                出土时间/作品完成时间：
-                <dd>
-                    <%=item.getTime()%>
-                </dd>
-
-                <dt>
-                    热度<%=item.getClickNum()%>
-                </dt>
-            </dl>
-        </div>
-        <!--媒体-->
-        <div class="row clearfix topSpace" style="text-align:center" >
-            <div class="col-md-12 column">
-                <video width="1120" height="630" controls autoplay>
-                    <source src="<%=item.getVideo()%>" type="video/mp4">
-                </video>
+                暂无消息
             </div>
+            <%}%>
+
+            <%for(int i=0;i<friendRequest.size();i++){%>
+            <div class="outline">
+                <br>
+                <div class="row clearfix " >
+                    <b class="col-md-12 column col-sm-offset-1">
+                        <%=friendRequest.get(i)%>
+                    </b>
+                    <div class="col-md-12 column col-sm-offset-1">
+                        请求添加您为好友
+                    </div>
+                    <!--按钮-->
+                    <div class="col-md-12 column addText" style="text-align:right">
+                        <a class="glyphicon glyphicon-ok addForm" href="friendconfirm?confirm=true&friName=<%=friendRequest.get(i)%>" title="同意"> </a>
+                        <a class="glyphicon glyphicon-remove addForm" href="friendconfirm?confirm=false&friName=<%=friendRequest.get(i)%>" title="拒绝"> </a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <%}%>
+
+            <!--收藏夹-->
+            <!--搜索表单-->
+            <div class="container ">
+                <div class="row clearfix col-sm-9" style="text-align:center">
+                    <form class="navbar-form" role="search" id="searchForm" name="searchForm" onsubmit="return false;">
+                        <div class="form-group">
+                            <input class="form-control" type="text" id="search" name="search"/>
+                        </div> <button class="btn btn-default"  onclick="friendSearch();">搜索</button>
+                    </form>
+                </div>
+            </div>
+
+            <br>
+            <div id="searchuser"></div>
         </div>
+
+
+
     </div>
 </div>
-
-<script>
-    var url=window.location.href;
-    sessionStorage.setItem("loginBeforeUrl",url);
-    console.log(sessionStorage.getItem("loginBeforeUrl"));
-</script>
 
 </body>
 </html>
