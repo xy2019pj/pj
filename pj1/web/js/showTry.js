@@ -166,7 +166,7 @@ function changePage(pageN) {
     var form=creatPage(pageN);
     document.getElementById("showGround").innerHTML=form;
 }
-
+//
 function preEvent() {
     if(nowN>0){
         nowN--;
