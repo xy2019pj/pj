@@ -109,6 +109,7 @@ function f3(requestS,categoryS) {
     return false;
 }
 function getItems(category,search) {
+    console.log("category="+category+";search="+search);
     $.ajax({
         url:'show',
         type:'post',
@@ -122,7 +123,13 @@ function getItems(category,search) {
             }
             nowN=0;//按钮变量0开始 0-p1
             var form=creatPage(nowN);
+            console.log("items.length:"+items.length);//
+            console.log("pagen:"+pagen);//
+            console.log("nowN="+nowN);//
+            var allpageN=pagen+1;
+            document.getElementById("allpage").innerHTML=""+allpageN;
             document.getElementById('showGround').innerHTML=form;
+            changeBtnLessthan5();
         },
         error:function () {
             window.alert('????');
@@ -134,7 +141,7 @@ function creatPage(nowN) {
     for(var i=0;(i<9) && ((nowN*9+i)<items.length);i++){
         form+="<div class=\"col-md-4 column\">\n" +
             "            <div class=\"imgcontrol\">\n" +
-            "                <img src=\"" +
+            "                <img width=\"320\" height=\"320\" class=\"img-responsive\"  src=\"" +
            items[nowN*9+i].picture +
             "\" align=\"center\">\n" +
             "            </div>\n" +
@@ -164,7 +171,12 @@ function preEvent() {
     if(nowN>0){
         nowN--;
         changePage(nowN);
-        changeBtn();
+        if(pagen+1<5){
+            changeBtnLessthan5()
+        }else{
+            changeBtn();
+        }
+
     }
 }
 
@@ -172,14 +184,22 @@ function nextEvent() {
     if(nowN<pagen){
         nowN++;
         changePage(nowN);
-        changeBtn();
+        if(pagen+1<5){
+            changeBtnLessthan5()
+        }else{
+            changeBtn();
+        }
     }
 }
 
 function btnEvent(i) {
     nowN=i;
     changePage(nowN);
-    changeBtn();
+    if(pagen+1<5){
+        changeBtnLessthan5()
+    }else{
+        changeBtn();
+    }
 }
 
 function changeBtn() {
@@ -240,5 +260,54 @@ function changeBtn() {
     document.getElementById("now2Btn").innerHTML=forms[2];
     document.getElementById("now3Btn").innerHTML=forms[3];
     document.getElementById("now4Btn").innerHTML=forms[4];
+
+}
+
+function changeBtnLessthan5() {
+    console.log("into changeBtnLessthan5,nowN="+nowN);
+
+    var forms=new Array();
+    for(var i=0;i<=pagen;i++){
+        var t=i+1;
+        forms[i]="<a onclick=\"btnEvent(" +i + ")\" >" + t + "</a>";
+        console.log("forms[i]="+forms[i]);
+    }
+    var t=nowN+1;
+    forms[nowN]="<a onclick=\"btnEvent(" + nowN + ")\" style=\"background-color: #0c3347;color: #e2e2e2\">" + t + "</a>";
+
+    switch (pagen+1) {
+        case 1:
+            console.log("case1:pagen="+pagen+";nowN="+nowN+"\nform1="+forms[0]);
+            document.getElementById("now0Btn").innerHTML=forms[0];
+            document.getElementById("now1Btn").style="display:none";
+            document.getElementById("now2Btn").style="display:none";
+            document.getElementById("now3Btn").style="display:none";
+            document.getElementById("now4Btn").style="display:none";
+            break;
+        case 2:
+            console.log("case2:pagen="+pagen+";nowN="+nowN+"\nform1="+forms[0]+"\nform2="+forms[1]);
+            document.getElementById("now0Btn").innerHTML=forms[0];
+            document.getElementById("now1Btn").innerHTML=forms[1];
+            document.getElementById("now2Btn").style="display:none";
+            document.getElementById("now3Btn").style="display:none";
+            document.getElementById("now4Btn").style="display:none";
+            break;
+        case 3:
+            console.log("case3:pagen="+pagen+";nowN="+nowN);
+            document.getElementById("now0Btn").innerHTML=forms[0];
+            document.getElementById("now1Btn").innerHTML=forms[1];
+            document.getElementById("now2Btn").innerHTML=forms[2];
+            document.getElementById("now3Btn").style="display:none";
+            document.getElementById("now4Btn").style="display:none";
+            break;
+        case 4:
+            console.log("case4:pagen="+pagen+";nowN="+nowN);
+            document.getElementById("now0Btn").innerHTML=forms[0];
+            document.getElementById("now1Btn").innerHTML=forms[1];
+            document.getElementById("now2Btn").innerHTML=forms[2];
+            document.getElementById("now2Btn").innerHTML=forms[3];
+            document.getElementById("now4Btn").style="display:none";
+            break;
+    }
 
 }

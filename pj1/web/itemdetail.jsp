@@ -93,8 +93,8 @@
 <div class="container">
     <!--图片-->
     <div class="row clearfix " style="text-align:center">
-        <div class="col-md-12 column">
-            <img alt="图片" src="<%=item.getPicture()%>" />
+        <div class="col-md-12 column" >
+            <img alt="图片" style="max-width: 100%" src="<%=item.getPicture()%>" />
         </div>
     </div>
     <!--收藏按钮-->

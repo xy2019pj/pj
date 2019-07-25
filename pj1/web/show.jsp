@@ -73,7 +73,8 @@
                 }else {
                     nowLocation(3);
                 }
-                getItems(category,null);
+                var search='<%=request.getParameter("search")%>';
+                getItems(category,search);
             </script>
         </ul>
         <!--搜索-->

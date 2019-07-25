@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.IOException;
+import java.sql.Timestamp;
 
 @WebServlet("/itemadd")
 @MultipartConfig()
@@ -34,11 +35,14 @@ public class ItemAdd extends HttpServlet {
             String time=req.getParameter("time");
             Part photo = req.getPart("picture");
             String picture="picture\\Others\\"+name+".jpg";
-            photo.write("D:\\1_学习\\1卓越软件开发基础\\pj\\picture\\Others\\"+name+".jpg");
+//            photo.write("D:\\1_学习\\1卓越软件开发基础\\pj\\picture\\Others\\"+name+".jpg");
+            photo.write("D:\\codeDev\\java\\workplace\\pj\\pj1\\out\\artifacts\\pj1_war_exploded\\picture\\Others\\"+name+".jpg");
             Part video = req.getPart("video");
             String videoName="video\\"+name+".mp4";
-            video.write("D:\\1_学习\\1卓越软件开发基础\\pj\\video\\"+name+".mp4");
-            Item newItem=new Item(name,"其他",picture,null,0,intro,place,time,videoName);
+//            video.write("D:\\1_学习\\1卓越软件开发基础\\pj\\video\\"+name+".mp4");
+            video.write("D:\\codeDev\\java\\workplace\\pj\\pj1\\out\\artifacts\\pj1_war_exploded\\video\\"+name+".mp4");
+            Timestamp currentTime = new Timestamp(new java.util.Date().getTime());
+            Item newItem=new Item(name,"其他",picture,currentTime,0,intro,place,time,videoName);
             int status=newItem.add();
             req.setAttribute("status",status);
             req.getRequestDispatcher("itemadd.jsp").forward(req,resp);
