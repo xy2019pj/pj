@@ -141,7 +141,7 @@ function creatPage(nowN) {
     for(var i=0;(i<9) && ((nowN*9+i)<items.length);i++){
         form+="<div class=\"col-md-4 column\">\n" +
             "            <div class=\"imgcontrol\">\n" +
-            "                <img width=\"320\" height=\"320\" class=\"img-responsive\"  src=\"" +
+            "                <img src=\"" +
            items[nowN*9+i].picture +
             "\" align=\"center\">\n" +
             "            </div>\n" +
